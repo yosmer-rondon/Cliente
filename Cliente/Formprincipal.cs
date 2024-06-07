@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica;
 using CapaLogica;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cliente
 {
@@ -18,19 +19,37 @@ namespace Cliente
         {
             InitializeComponent();
         }
-
-        public void listarCliente()
-        {
-            dgvCliente.DataSource = logCliente.Instancia.ListarCliente();
-        }
         private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listarCliente();
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string servidor = comboBox1.Text;
+            string baseDatos = comboBox2.Text;
+            CapaDatos.Conexion.Instancia.ser = servidor;
+            CapaDatos.Conexion.Instancia.bd = baseDatos;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Manempleado em = new Manempleado();
+            em.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Mancliente clie = new Mancliente();
+            clie.Show();
         }
     }
 }
