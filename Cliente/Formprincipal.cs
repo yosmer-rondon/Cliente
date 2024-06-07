@@ -51,5 +51,20 @@ namespace Cliente
             Mancliente clie = new Mancliente();
             clie.Show();
         }
+
+        private void Formprincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
