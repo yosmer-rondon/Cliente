@@ -1,7 +1,7 @@
 ﻿
 namespace Cliente
 {
-    partial class Form2
+    partial class Manempleado
     {
         /// <summary>
         /// Required designer variable.
