@@ -400,7 +400,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Cliente.Properties.Resources._915de47eedf8115237ddae8882141a16;
-            this.ClientSize = new System.Drawing.Size(959, 653);
+            this.ClientSize = new System.Drawing.Size(962, 660);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -414,6 +414,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Mancliente";
             this.Text = "Mancliente";
+            this.Load += new System.EventHandler(this.Mancliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

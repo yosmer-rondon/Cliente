@@ -197,7 +197,7 @@ namespace Cliente
             // 
             // Formprincipal
             // 
-            this.ClientSize = new System.Drawing.Size(940, 557);
+            this.ClientSize = new System.Drawing.Size(962, 660);
             this.Controls.Add(this.tabControl1);
             this.Name = "Formprincipal";
             this.Load += new System.EventHandler(this.Formprincipal_Load);
