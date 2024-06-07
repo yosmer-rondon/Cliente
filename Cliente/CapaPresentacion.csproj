@@ -69,6 +69,9 @@
     <EmbeddedResource Include="Formprincipal.resx">
       <DependentUpon>Formprincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mancliente.resx">
+      <DependentUpon>Mancliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -104,6 +108,15 @@
       <Project>{b32e1a98-4a2c-4618-9380-427b968fc574}</Project>
       <Name>CapaLogica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\915de47eedf8115237ddae8882141a16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23337c6f7d948babc21d0986d14c265d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23337c6f7d948babc21d0986d14c265d1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
