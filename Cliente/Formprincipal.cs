@@ -12,9 +12,9 @@ using CapaLogica;
 
 namespace Cliente
 {
-    public partial class Form1 : Form
+    public partial class Formprincipal : Form
     {
-        public Form1()
+        public Formprincipal()
         {
             InitializeComponent();
         }
