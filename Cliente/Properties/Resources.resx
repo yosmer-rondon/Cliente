@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="1689dc56ff421a60db1549d29340154d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1689dc56ff421a60db1549d29340154d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="23337c6f7d948babc21d0986d14c265d" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\23337c6f7d948babc21d0986d14c265d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,7 +127,19 @@
   <data name="23337c6f7d948babc21d0986d14c265d1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\23337c6f7d948babc21d0986d14c265d1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Imagen de WhatsApp 2024-06-07 a las 18.38.02_35348d3b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen de WhatsApp 2024-06-07 a las 18.38.02_35348d3b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1689dc56ff421a60db1549d29340154d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1689dc56ff421a60db1549d29340154d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="401156" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\401156.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hospedaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hospedaje.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

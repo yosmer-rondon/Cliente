@@ -38,6 +38,7 @@ namespace Cliente
             string baseDatos = comboBox2.Text;
             CapaDatos.Conexion.Instancia.ser = servidor;
             CapaDatos.Conexion.Instancia.bd = baseDatos;
+            label3.Text = "se conecto correctamente";
         }
 
         private void button3_Click(object sender, EventArgs e)
