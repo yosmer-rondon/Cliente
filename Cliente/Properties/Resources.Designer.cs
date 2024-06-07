@@ -63,6 +63,16 @@ namespace Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1689dc56ff421a60db1549d29340154d {
+            get {
+                object obj = ResourceManager.GetObject("1689dc56ff421a60db1549d29340154d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _23337c6f7d948babc21d0986d14c265d {
             get {
                 object obj = ResourceManager.GetObject("23337c6f7d948babc21d0986d14c265d", resourceCulture);
