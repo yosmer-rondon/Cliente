@@ -17,11 +17,11 @@ namespace Cliente
         public Mancliente()
         {
             InitializeComponent();
-            listar();
+            
         }
         public void listar()
         {
-            dataGridView1.DataSource = datCliente.Instancia.ListarCliente();
+            
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -36,6 +36,16 @@ namespace Cliente
         private void Mancliente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -93,6 +93,16 @@ namespace Cliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _401156 {
+            get {
+                object obj = ResourceManager.GetObject("401156", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _915de47eedf8115237ddae8882141a16 {
             get {
                 object obj = ResourceManager.GetObject("915de47eedf8115237ddae8882141a16", resourceCulture);
