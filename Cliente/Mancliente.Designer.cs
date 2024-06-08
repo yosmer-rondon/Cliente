@@ -398,6 +398,7 @@
             // 
             // Mancliente
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
@@ -414,6 +415,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Mancliente";
             this.Text = "Mancliente";
             this.Load += new System.EventHandler(this.Mancliente_Load);
