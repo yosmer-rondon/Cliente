@@ -56,6 +56,7 @@ namespace Cliente
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -355,12 +356,25 @@ namespace Cliente
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Black;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(264, 232);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(149, 51);
+            this.button8.TabIndex = 25;
+            this.button8.Text = "Buscar";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // Manempleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cliente.Properties.Resources._401156;
             this.ClientSize = new System.Drawing.Size(964, 651);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label9);
@@ -410,5 +424,6 @@ namespace Cliente
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button8;
     }
 }

@@ -70,6 +70,12 @@
     <Compile Include="Manhabitacion.Designer.cs">
       <DependentUpon>Manhabitacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantipohabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantipohabitacion.Designer.cs">
+      <DependentUpon>Mantipohabitacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manhabitacion.resx">
       <DependentUpon>Manhabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantipohabitacion.resx">
+      <DependentUpon>Mantipohabitacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pago.resx">
       <DependentUpon>Pago.cs</DependentUpon>

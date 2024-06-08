@@ -16,5 +16,16 @@ namespace Cliente
         {
             InitializeComponent();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Mantipohabitacion tih = new Mantipohabitacion();
+            tih.Show();
+        }
     }
 }
