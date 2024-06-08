@@ -46,12 +46,16 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -66,7 +70,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 254);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(844, 240);
+            this.groupBox1.Size = new System.Drawing.Size(844, 279);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RESERVA";
@@ -115,7 +119,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(322, 68);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 38);
+            this.textBox3.Size = new System.Drawing.Size(137, 38);
             this.textBox3.TabIndex = 4;
             // 
             // label3
@@ -149,7 +153,7 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(322, 143);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 38);
+            this.textBox4.Size = new System.Drawing.Size(137, 38);
             this.textBox4.TabIndex = 8;
             // 
             // comboBox1
@@ -224,11 +228,27 @@
             this.button6.Text = "Realizar Factura";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 194);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(292, 31);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Tiempo de hospedaje";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(12, 228);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 38);
+            this.textBox5.TabIndex = 10;
+            // 
             // reservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 506);
+            this.ClientSize = new System.Drawing.Size(868, 537);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label5);
@@ -266,5 +286,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label6;
     }
 }

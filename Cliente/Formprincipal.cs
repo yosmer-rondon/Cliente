@@ -73,5 +73,35 @@ namespace Cliente
             Manhabitacion mah = new Manhabitacion();
             mah.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Mantipohabitacion tih = new Mantipohabitacion();
+            tih.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Manmetododepago metp = new Manmetododepago();
+            metp.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            reservas res = new reservas();
+            res.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Hospedaje hos = new Hospedaje();
+            hos.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Pago pag = new Pago();
+            pag.Show();
+        }
     }
 }

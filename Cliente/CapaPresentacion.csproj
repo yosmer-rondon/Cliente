@@ -52,6 +52,12 @@
     <Compile Include="Formprincipal.Designer.cs">
       <DependentUpon>Formprincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hospedaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospedaje.Designer.cs">
+      <DependentUpon>Hospedaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manempleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="Manhabitacion.Designer.cs">
       <DependentUpon>Manhabitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manmetododepago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manmetododepago.Designer.cs">
+      <DependentUpon>Manmetododepago.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantipohabitacion.cs">
       <SubType>Form</SubType>
@@ -92,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="Formprincipal.resx">
       <DependentUpon>Formprincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospedaje.resx">
+      <DependentUpon>Hospedaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mancliente.resx">
       <DependentUpon>Mancliente.cs</DependentUpon>
