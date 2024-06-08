@@ -16,5 +16,10 @@ namespace Cliente
         {
             InitializeComponent();
         }
+
+        private void Pago_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

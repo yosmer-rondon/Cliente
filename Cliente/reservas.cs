@@ -16,5 +16,22 @@ namespace Cliente
         {
             InitializeComponent();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Mancliente manc = new Mancliente();
+            manc.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Pago pag = new Pago();
+            pag.Show();
+        }
     }
 }
