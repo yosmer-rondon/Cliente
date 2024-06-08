@@ -43,6 +43,7 @@ namespace Cliente
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -186,6 +187,7 @@ namespace Cliente
             // 
             this.tabPage2.BackgroundImage = global::Cliente.Properties.Resources.Captura;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,6 +227,19 @@ namespace Cliente
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DimGray;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(216, 41);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(141, 34);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Habitacion";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Formprincipal
             // 
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
@@ -258,6 +273,7 @@ namespace Cliente
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button4;
     }
 }
 
