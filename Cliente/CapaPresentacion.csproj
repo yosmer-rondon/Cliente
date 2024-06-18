@@ -58,6 +58,12 @@
     <Compile Include="Hospedaje.Designer.cs">
       <DependentUpon>Hospedaje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Limpiezadehabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Limpiezadehabitaciones.Designer.cs">
+      <DependentUpon>Limpiezadehabitaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manempleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="Manmetododepago.Designer.cs">
       <DependentUpon>Manmetododepago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoCorrectivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoCorrectivo.Designer.cs">
+      <DependentUpon>MantenimientoCorrectivo.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantipohabitacion.cs">
       <SubType>Form</SubType>
@@ -108,6 +120,9 @@
     <EmbeddedResource Include="Hospedaje.resx">
       <DependentUpon>Hospedaje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Limpiezadehabitaciones.resx">
+      <DependentUpon>Limpiezadehabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mancliente.resx">
       <DependentUpon>Mancliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manhabitacion.resx">
       <DependentUpon>Manhabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoCorrectivo.resx">
+      <DependentUpon>MantenimientoCorrectivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantipohabitacion.resx">
       <DependentUpon>Mantipohabitacion.cs</DependentUpon>
