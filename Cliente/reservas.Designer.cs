@@ -47,13 +47,23 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -152,7 +162,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(436, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(322, 22);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(419, 245);
             this.dataGridView1.TabIndex = 1;
@@ -160,9 +170,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(436, 278);
+            this.button3.Location = new System.Drawing.Point(322, 273);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 63);
+            this.button3.Size = new System.Drawing.Size(130, 48);
             this.button3.TabIndex = 5;
             this.button3.Text = "Habitaciones \r\ndisponibles";
             this.button3.UseVisualStyleBackColor = true;
@@ -170,9 +180,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(721, 470);
+            this.button4.Location = new System.Drawing.Point(188, 438);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(134, 59);
+            this.button4.Size = new System.Drawing.Size(99, 58);
             this.button4.TabIndex = 6;
             this.button4.Text = "Agregar cliente";
             this.button4.UseVisualStyleBackColor = true;
@@ -239,6 +249,61 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DNI de cliente";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Location = new System.Drawing.Point(577, 410);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(283, 125);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Buscar Reserva";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 31);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "ID";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(66, 36);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(138, 38);
+            this.textBox5.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(85, 80);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 39);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(747, 22);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(113, 41);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "Listar";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(747, 69);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(113, 41);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Anular";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // reservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,6 +317,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -277,5 +344,11 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button7;
     }
 }
