@@ -47,7 +47,7 @@ namespace CapaDatos
                     Cli.DNI = Convert.ToInt32(dr["DNI"]);
                     Cli.Telefono = Convert.ToInt32(dr["Telefono"]);
                     Cli.TipoCliente = dr["TipoCliente"].ToString();
-                    Cli.FechaRegistro = Convert.ToDateTime(dr["fecRegCliente"]);
+                    Cli.FechaRegistro = Convert.ToDateTime(dr["FechaRegistro"]);
                     Cli.Correo = dr["Correo"].ToString();
                     lista.Add(Cli);
                 }
