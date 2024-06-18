@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
+using CapaLogica;
 
 namespace Cliente
 {
@@ -17,11 +18,12 @@ namespace Cliente
         public Mancliente()
         {
             InitializeComponent();
+            listar();
             
         }
         public void listar()
         {
-            
+            dataGridView1.DataSource = logCliente.Instancia.ListarCliente();    
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -46,6 +48,11 @@ namespace Cliente
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
