@@ -74,7 +74,7 @@ namespace Cliente
                 c.Telefono = int.Parse(textBox8.Text.Trim());
                 c.FechaRegistro = FechaRegistroCliente.Value;
 
-                logCliente.Instancia.InsertaCliente(c);
+                logCliente.Instancia.InsertarCliente(c);
             }
             catch (Exception ex)
             {
