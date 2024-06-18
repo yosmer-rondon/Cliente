@@ -122,6 +122,21 @@ namespace Cliente
             listar();
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dataGridView1.Rows[e.RowIndex]; //
+            textBox9.Text = filaActual.Cells[0].Value.ToString();
+            textBox6.Text = filaActual.Cells[1].Value.ToString();
+            textBox11.Text = filaActual.Cells[2].Value.ToString();
+            textBox12.Text = filaActual.Cells[3].Value.ToString();
+            textBox8.Text = filaActual.Cells[4].Value.ToString();
+            textBox10.Text = filaActual.Cells[5].Value.ToString();
+            FechaRegistroCliente.Text = filaActual.Cells[6].Value.ToString();
+            textBox7.Text = filaActual.Cells[7].Value.ToString();
+            //cbkEstadoCliente.Checked = Convert.ToBoolean(filaActual.Cells[5].Value);
+
+        }
     }
 }
 
