@@ -68,11 +68,11 @@ namespace Cliente
                 entCliente c = new entCliente();
                 c.Nombre = textBox6.Text.Trim();
                 c.Apellido = textBox11.Text.Trim();
-                c.TipoCliente = textBox10.Text.Trim();
-                c.Correo = textBox7.Text.Trim();
                 c.DNI = int.Parse(textBox12.Text.Trim());
                 c.Telefono = int.Parse(textBox8.Text.Trim());
+                c.TipoCliente = textBox10.Text.Trim();
                 c.FechaRegistro = FechaRegistroCliente.Value;
+                c.Correo = textBox7.Text.Trim();
 
                 logCliente.Instancia.InsertarCliente(c);
             }
