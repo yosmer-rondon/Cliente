@@ -33,5 +33,10 @@ namespace Cliente
             Pago pag = new Pago();
             pag.Show();
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
