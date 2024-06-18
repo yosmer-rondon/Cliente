@@ -33,23 +33,7 @@ namespace CapaLogica
         {
             return datCliente.Instancia.ListarCliente();
         }
-        ///inserta
-        public void InsertaCliente(entCliente Cli)
-        {
-            datCliente.Instancia.InsertarCliente(Cli);
-        }
 
-        //edita
-        public void EditaCliente(entCliente Cli)
-        {
-            datCliente.Instancia.EditarCliente(Cli);
-        }
-        public void DeshabilitarCliente(entCliente Cli)
-        {
-            datCliente.Instancia.DeshabilitarCliente(Cli);
-        }
         #endregion metodos
-
     }
-
 }
