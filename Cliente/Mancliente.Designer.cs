@@ -54,6 +54,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.FechaRegistroCliente = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +85,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.FechaRegistroCliente);
             this.groupBox1.Controls.Add(this.textBox12);
             this.groupBox1.Controls.Add(this.textBox11);
             this.groupBox1.Controls.Add(this.textBox10);
@@ -102,7 +106,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(-1, 362);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(960, 228);
+            this.groupBox1.Size = new System.Drawing.Size(960, 321);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL CLIENTE";
@@ -178,7 +182,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(403, 151);
+            this.label6.Location = new System.Drawing.Point(403, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 27);
             this.label6.TabIndex = 12;
@@ -239,6 +243,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Agregar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -367,13 +372,31 @@
             this.textBox5.Text = "⍈";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // FechaRegistroCliente
+            // 
+            this.FechaRegistroCliente.Location = new System.Drawing.Point(408, 275);
+            this.FechaRegistroCliente.Name = "FechaRegistroCliente";
+            this.FechaRegistroCliente.Size = new System.Drawing.Size(483, 34);
+            this.FechaRegistroCliente.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(403, 230);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(210, 27);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Fecha de Registro:";
+            // 
             // Mancliente
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(962, 586);
+            this.ClientSize = new System.Drawing.Size(962, 683);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -424,5 +447,7 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker FechaRegistroCliente;
     }
 }
