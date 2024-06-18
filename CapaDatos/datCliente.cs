@@ -94,6 +94,39 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return inserta;
         }
+
+        //////////////////////////////////EditaCliente
+        public Boolean EditarCliente(entCliente Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEditarCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IDCliente", Cli.IDCliente);
+                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
+                cmd.Parameters.AddWithValue("@Apellido", Cli.Apellido);
+                cmd.Parameters.AddWithValue("@DNI", Cli.DNI);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
+                cmd.Parameters.AddWithValue("@TipoCliente", Cli.TipoCliente);
+                cmd.Parameters.AddWithValue("@FechaRegistro", Cli.FechaRegistro);
+                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
+        }
         #endregion metodos
     }
 }

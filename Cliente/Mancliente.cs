@@ -21,6 +21,8 @@ namespace Cliente
             InitializeComponent();
             listar();
             groupBox1.Enabled = false;
+            textBox9.Enabled = false;
+
 
         }
         public void listar()
