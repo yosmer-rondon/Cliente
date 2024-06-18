@@ -63,7 +63,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(535, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -85,7 +85,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackgroundImage = global::Cliente.Properties.Resources._1689dc56ff421a60db1549d29340154d;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.groupBox1.Controls.Add(this.textBox12);
             this.groupBox1.Controls.Add(this.textBox11);
             this.groupBox1.Controls.Add(this.textBox10);
@@ -115,6 +115,8 @@
             // 
             // textBox12
             // 
+            this.textBox12.BackColor = System.Drawing.Color.White;
+            this.textBox12.ForeColor = System.Drawing.Color.Black;
             this.textBox12.Location = new System.Drawing.Point(449, 104);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(209, 34);
@@ -122,6 +124,8 @@
             // 
             // textBox11
             // 
+            this.textBox11.BackColor = System.Drawing.Color.White;
+            this.textBox11.ForeColor = System.Drawing.Color.Black;
             this.textBox11.Location = new System.Drawing.Point(168, 104);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(178, 34);
@@ -129,6 +133,8 @@
             // 
             // textBox10
             // 
+            this.textBox10.BackColor = System.Drawing.Color.White;
+            this.textBox10.ForeColor = System.Drawing.Color.Black;
             this.textBox10.Location = new System.Drawing.Point(194, 148);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(178, 34);
@@ -136,6 +142,8 @@
             // 
             // textBox9
             // 
+            this.textBox9.BackColor = System.Drawing.Color.White;
+            this.textBox9.ForeColor = System.Drawing.Color.Black;
             this.textBox9.Location = new System.Drawing.Point(145, 197);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(201, 34);
@@ -143,6 +151,8 @@
             // 
             // textBox8
             // 
+            this.textBox8.BackColor = System.Drawing.Color.White;
+            this.textBox8.ForeColor = System.Drawing.Color.Black;
             this.textBox8.Location = new System.Drawing.Point(133, 243);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(200, 34);
@@ -150,6 +160,8 @@
             // 
             // textBox7
             // 
+            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
             this.textBox7.Location = new System.Drawing.Point(482, 57);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(196, 34);
@@ -157,6 +169,8 @@
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.Color.White;
+            this.textBox6.ForeColor = System.Drawing.Color.Black;
             this.textBox6.Location = new System.Drawing.Point(105, 57);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(206, 34);
@@ -165,16 +179,20 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.White;
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
             this.checkBox1.Location = new System.Drawing.Point(381, 167);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(222, 31);
             this.checkBox1.TabIndex = 14;
             this.checkBox1.Text = "Estado del Cliente";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(376, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 27);
@@ -184,6 +202,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(6, 243);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 27);
@@ -193,6 +213,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(6, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 27);
@@ -202,6 +224,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(376, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 27);
@@ -211,6 +235,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(6, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(177, 27);
@@ -220,6 +246,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(6, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 27);
@@ -229,6 +257,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(6, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 27);
@@ -379,8 +409,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Cliente.Properties.Resources._915de47eedf8115237ddae8882141a16;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(962, 660);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
