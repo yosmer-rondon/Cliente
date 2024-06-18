@@ -98,6 +98,30 @@ namespace Cliente
             textBox12.Text = " ";
             textBox8.Text = " ";
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCliente c = new entCliente();
+                c.Nombre = textBox6.Text.Trim();
+                c.Apellido = textBox11.Text.Trim();
+                c.DNI = int.Parse(textBox12.Text.Trim());
+                c.Telefono = int.Parse(textBox8.Text.Trim());
+                c.TipoCliente = textBox10.Text.Trim();
+                c.FechaRegistro = FechaRegistroCliente.Value;
+                c.Correo = textBox7.Text.Trim();
+                logCliente.Instancia.EditarCliente(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            groupBox1.Enabled = false;
+            listar();
+
+        }
     }
 }
 
