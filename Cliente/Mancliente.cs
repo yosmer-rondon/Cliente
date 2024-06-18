@@ -104,6 +104,7 @@ namespace Cliente
             try
             {
                 entCliente c = new entCliente();
+                c.IDCliente = int.Parse(textBox9.Text.Trim());
                 c.Nombre = textBox6.Text.Trim();
                 c.Apellido = textBox11.Text.Trim();
                 c.DNI = int.Parse(textBox12.Text.Trim());
