@@ -28,6 +28,12 @@ namespace CapaLogica
             datCliente.Instancia.InsertarCliente(Cli);
         }
 
+        public void EditarCliente(entCliente Cli)
+        {
+            datCliente.Instancia.EditarCliente(Cli);
+        }
+
+
         #endregion singleton
 
         #region metodos
