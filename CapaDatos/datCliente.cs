@@ -63,37 +63,6 @@ namespace CapaDatos
             }
             return lista;
         }
-        /////////////////////////InsertaCliente
-        public Boolean InsertarCliente(entCliente Cli)
-        {
-            SqlCommand cmd = null;
-            Boolean inserta = false;
-            try
-            {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCliente", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
-                cmd.Parameters.AddWithValue("@Apellido", Cli.Apellido);
-                cmd.Parameters.AddWithValue("@DNI", Cli.DNI);
-                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
-                cmd.Parameters.AddWithValue("@TipoCliente", Cli.TipoCliente);
-                cmd.Parameters.AddWithValue("@FechaRegistro", Cli.FechaRegistro);
-                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
-                cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    inserta = true;
-                }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
-            return inserta;
-        }
         #endregion metodos
     }
 }

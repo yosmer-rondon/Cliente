@@ -23,12 +23,6 @@ namespace CapaLogica
                 return logCliente._instancia;
             }
         }
-        ///inserta
-        public void InsertaCliente(entCliente Cli)
-        {
-            datCliente.Instancia.InsertarCliente(Cli);
-        }
-
         #endregion singleton
 
         #region metodos

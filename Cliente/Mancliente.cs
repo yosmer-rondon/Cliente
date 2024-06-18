@@ -9,9 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
-using CapaEntidad;
 using CapaLogica;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Cliente
 {
@@ -21,8 +19,7 @@ namespace Cliente
         {
             InitializeComponent();
             listar();
-            groupBox1.Enabled = false;
-
+            
         }
         public void listar()
         {
@@ -45,11 +42,6 @@ namespace Cliente
 
         private void button1_Click(object sender, EventArgs e)
         {
-            groupBox1.Enabled = true;
-            btnModificar.Enabled = true;
-            btnAgregar.Visible = true;
-            //LimpiarVariables();
-            btnModificar.Visible = false;
 
         }
 
@@ -59,39 +51,6 @@ namespace Cliente
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grupBoxDatos1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                entCliente c = new entCliente();
-                c.Nombre = txtRazonSocial.Text.Trim();
-                c.idTipoCliente = int.Parse(txtidTipoCliente.Text.Trim());
-                c.fecRegCliente = dtPickerRegCliente.Value;
-                c.idCiudad = int.Parse(txtidCiudad.Text.Trim());
-                c.estCliente = cbkEstadoCliente.Checked;
-                logCliente.Instancia.InsertaCliente(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            grupBoxDatos.Enabled = false;
-            listarCliente();
-        }
-
-    }
-
-    private void btnModificar_Click(object sender, EventArgs e)
         {
 
         }
