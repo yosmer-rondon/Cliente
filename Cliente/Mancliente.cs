@@ -20,7 +20,8 @@ namespace Cliente
         {
             InitializeComponent();
             listar();
-            
+            groupBox1.Enabled = false;
+
         }
         public void listar()
         {
@@ -43,7 +44,11 @@ namespace Cliente
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            groupBox1.Enabled = true;
+            btnModificar.Enabled = true;
+            btnAgregar.Visible = true;
+            LimpiarVariables();
+            btnModificar.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e)

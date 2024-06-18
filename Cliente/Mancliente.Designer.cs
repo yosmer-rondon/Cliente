@@ -43,13 +43,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -99,9 +99,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.btnAgregar);
+            this.groupBox1.Controls.Add(this.btnModificar);
+            this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(-1, 362);
@@ -232,93 +232,93 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Nombre de Cliente";
             // 
-            // button7
+            // btnAgregar
             // 
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(807, 33);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(120, 51);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Agregar";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnAgregar.BackColor = System.Drawing.Color.Black;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(807, 33);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(120, 51);
+            this.btnAgregar.TabIndex = 6;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // btnModificar
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(807, 93);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(120, 51);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Modificar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnModificar.BackColor = System.Drawing.Color.Black;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(807, 93);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(120, 51);
+            this.btnModificar.TabIndex = 5;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnCancelar
             // 
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(807, 157);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 51);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(807, 157);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(120, 51);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnNuevo
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(78, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 51);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNuevo.BackColor = System.Drawing.Color.Black;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(78, 80);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(149, 51);
+            this.btnNuevo.TabIndex = 3;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnEditar
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(356, 80);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 51);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnEditar.BackColor = System.Drawing.Color.Black;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(356, 80);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(118, 51);
+            this.btnEditar.TabIndex = 4;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnDeshabilitar
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(78, 187);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 51);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Deshabilitar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDeshabilitar.BackColor = System.Drawing.Color.Black;
+            this.btnDeshabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeshabilitar.ForeColor = System.Drawing.Color.White;
+            this.btnDeshabilitar.Location = new System.Drawing.Point(78, 187);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(149, 51);
+            this.btnDeshabilitar.TabIndex = 5;
+            this.btnDeshabilitar.Text = "Deshabilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnSalir
             // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(356, 187);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 51);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Salir";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnSalir.BackColor = System.Drawing.Color.Black;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(356, 187);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(118, 51);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox2
             // 
@@ -401,10 +401,10 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnDeshabilitar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
@@ -424,17 +424,17 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnDeshabilitar;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
