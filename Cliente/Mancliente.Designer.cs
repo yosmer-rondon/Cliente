@@ -34,14 +34,11 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -89,14 +86,11 @@
             this.groupBox1.Controls.Add(this.textBox12);
             this.groupBox1.Controls.Add(this.textBox11);
             this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox9);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -108,7 +102,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(-1, 362);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(960, 295);
+            this.groupBox1.Size = new System.Drawing.Size(960, 228);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL CLIENTE";
@@ -117,7 +111,7 @@
             // 
             this.textBox12.BackColor = System.Drawing.Color.White;
             this.textBox12.ForeColor = System.Drawing.Color.Black;
-            this.textBox12.Location = new System.Drawing.Point(449, 104);
+            this.textBox12.Location = new System.Drawing.Point(523, 101);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(209, 34);
             this.textBox12.TabIndex = 23;
@@ -126,7 +120,7 @@
             // 
             this.textBox11.BackColor = System.Drawing.Color.White;
             this.textBox11.ForeColor = System.Drawing.Color.Black;
-            this.textBox11.Location = new System.Drawing.Point(168, 104);
+            this.textBox11.Location = new System.Drawing.Point(222, 101);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(178, 34);
             this.textBox11.TabIndex = 22;
@@ -140,20 +134,11 @@
             this.textBox10.Size = new System.Drawing.Size(178, 34);
             this.textBox10.TabIndex = 21;
             // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.ForeColor = System.Drawing.Color.Black;
-            this.textBox9.Location = new System.Drawing.Point(145, 197);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(201, 34);
-            this.textBox9.TabIndex = 20;
-            // 
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.Color.White;
             this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(133, 243);
+            this.textBox8.Location = new System.Drawing.Point(536, 148);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(200, 34);
             this.textBox8.TabIndex = 19;
@@ -162,7 +147,7 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.White;
             this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(482, 57);
+            this.textBox7.Location = new System.Drawing.Point(536, 54);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(196, 34);
             this.textBox7.TabIndex = 18;
@@ -171,29 +156,18 @@
             // 
             this.textBox6.BackColor = System.Drawing.Color.White;
             this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(105, 57);
+            this.textBox6.Location = new System.Drawing.Point(219, 54);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(206, 34);
             this.textBox6.TabIndex = 17;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.White;
-            this.checkBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkBox1.Location = new System.Drawing.Point(381, 167);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(222, 31);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "Estado del Cliente";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(376, 104);
+            this.label7.Location = new System.Drawing.Point(457, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 27);
             this.label7.TabIndex = 13;
@@ -204,29 +178,18 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(6, 243);
+            this.label6.Location = new System.Drawing.Point(403, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 27);
             this.label6.TabIndex = 12;
             this.label6.Text = "Teléfono:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(6, 197);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 27);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Direccion:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(376, 57);
+            this.label4.Location = new System.Drawing.Point(439, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 27);
             this.label4.TabIndex = 10;
@@ -250,9 +213,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(6, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 27);
+            this.label2.Size = new System.Drawing.Size(210, 27);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Razon Social:";
+            this.label2.Text = "Apellido de Cliente";
             // 
             // label1
             // 
@@ -261,9 +224,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(6, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 27);
+            this.label1.Size = new System.Drawing.Size(207, 27);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Cliente:";
+            this.label1.Text = "Nombre de Cliente";
             // 
             // button7
             // 
@@ -410,7 +373,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(962, 660);
+            this.ClientSize = new System.Drawing.Size(962, 586);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -450,17 +413,14 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
