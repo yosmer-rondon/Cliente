@@ -33,6 +33,11 @@ namespace CapaLogica
             datCliente.Instancia.EditarCliente(Cli);
         }
 
+        public void DeshabilitarCliente(entCliente Cli)
+        {
+            datCliente.Instancia.DeshabilitarCliente(Cli);
+        }
+
 
         #endregion singleton
 

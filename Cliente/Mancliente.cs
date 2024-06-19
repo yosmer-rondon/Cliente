@@ -138,6 +138,25 @@ namespace Cliente
             //cbkEstadoCliente.Checked = Convert.ToBoolean(filaActual.Cells[5].Value);
 
         }
+
+        private void btnDeshabilitar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCliente c = new entCliente();
+
+                c.IDCliente = int.Parse(textBox9.Text.Trim());
+                logCliente.Instancia.DeshabilitarCliente(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            groupBox1.Enabled = false;
+            listar();
+
+        }
     }
 }
 

@@ -312,6 +312,7 @@
             this.btnDeshabilitar.TabIndex = 5;
             this.btnDeshabilitar.Text = "Deshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = false;
+            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
             // 
             // btnSalir
             // 
