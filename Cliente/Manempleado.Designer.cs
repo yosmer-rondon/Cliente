@@ -35,14 +35,14 @@ namespace Cliente
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.dni = new System.Windows.Forms.TextBox();
+            this.tipoempleado = new System.Windows.Forms.TextBox();
+            this.direccion = new System.Windows.Forms.TextBox();
+            this.telefono = new System.Windows.Forms.TextBox();
+            this.correo = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fecha = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -127,14 +127,14 @@ namespace Cliente
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = global::Cliente.Properties.Resources._1689dc56ff421a60db1549d29340154d;
-            this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.dni);
+            this.groupBox1.Controls.Add(this.tipoempleado);
+            this.groupBox1.Controls.Add(this.direccion);
+            this.groupBox1.Controls.Add(this.telefono);
+            this.groupBox1.Controls.Add(this.correo);
+            this.groupBox1.Controls.Add(this.nombre);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.fecha);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -153,47 +153,47 @@ namespace Cliente
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL EMPLEADO";
             // 
-            // textBox12
+            // dni
             // 
-            this.textBox12.Location = new System.Drawing.Point(510, 110);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(209, 34);
-            this.textBox12.TabIndex = 23;
+            this.dni.Location = new System.Drawing.Point(510, 110);
+            this.dni.Name = "dni";
+            this.dni.Size = new System.Drawing.Size(209, 34);
+            this.dni.TabIndex = 23;
             // 
-            // textBox10
+            // tipoempleado
             // 
-            this.textBox10.Location = new System.Drawing.Point(207, 115);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(178, 34);
-            this.textBox10.TabIndex = 21;
+            this.tipoempleado.Location = new System.Drawing.Point(207, 115);
+            this.tipoempleado.Name = "tipoempleado";
+            this.tipoempleado.Size = new System.Drawing.Size(178, 34);
+            this.tipoempleado.TabIndex = 21;
             // 
-            // textBox9
+            // direccion
             // 
-            this.textBox9.Location = new System.Drawing.Point(145, 174);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(201, 34);
-            this.textBox9.TabIndex = 20;
+            this.direccion.Location = new System.Drawing.Point(145, 174);
+            this.direccion.Name = "direccion";
+            this.direccion.Size = new System.Drawing.Size(201, 34);
+            this.direccion.TabIndex = 20;
             // 
-            // textBox8
+            // telefono
             // 
-            this.textBox8.Location = new System.Drawing.Point(133, 237);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(200, 34);
-            this.textBox8.TabIndex = 19;
+            this.telefono.Location = new System.Drawing.Point(133, 237);
+            this.telefono.Name = "telefono";
+            this.telefono.Size = new System.Drawing.Size(200, 34);
+            this.telefono.TabIndex = 19;
             // 
-            // textBox7
+            // correo
             // 
-            this.textBox7.Location = new System.Drawing.Point(510, 61);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(209, 34);
-            this.textBox7.TabIndex = 18;
+            this.correo.Location = new System.Drawing.Point(510, 61);
+            this.correo.Name = "correo";
+            this.correo.Size = new System.Drawing.Size(209, 34);
+            this.correo.TabIndex = 18;
             // 
-            // textBox6
+            // nombre
             // 
-            this.textBox6.Location = new System.Drawing.Point(105, 64);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(206, 34);
-            this.textBox6.TabIndex = 17;
+            this.nombre.Location = new System.Drawing.Point(105, 64);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(206, 34);
+            this.nombre.TabIndex = 17;
             // 
             // label8
             // 
@@ -205,14 +205,14 @@ namespace Cliente
             this.label8.TabIndex = 16;
             this.label8.Text = "Fecha de Registro:";
             // 
-            // dateTimePicker1
+            // fecha
             // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.White;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.Location = new System.Drawing.Point(381, 214);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(466, 34);
-            this.dateTimePicker1.TabIndex = 15;
+            this.fecha.CalendarForeColor = System.Drawing.Color.White;
+            this.fecha.CalendarTitleForeColor = System.Drawing.Color.Black;
+            this.fecha.Location = new System.Drawing.Point(381, 214);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(466, 34);
+            this.fecha.TabIndex = 15;
             // 
             // label7
             // 
@@ -270,9 +270,9 @@ namespace Cliente
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(6, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 27);
+            this.label1.Size = new System.Drawing.Size(101, 27);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Cliente:";
+            this.label1.Text = "Nombre:";
             // 
             // button7
             // 
@@ -285,6 +285,7 @@ namespace Cliente
             this.button7.TabIndex = 6;
             this.button7.Text = "Agregar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -403,14 +404,14 @@ namespace Cliente
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox dni;
+        private System.Windows.Forms.TextBox tipoempleado;
+        private System.Windows.Forms.TextBox direccion;
+        private System.Windows.Forms.TextBox telefono;
+        private System.Windows.Forms.TextBox correo;
+        private System.Windows.Forms.TextBox nombre;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fecha;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
