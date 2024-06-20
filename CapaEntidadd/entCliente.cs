@@ -18,4 +18,9 @@ namespace CapaEntidad
         public string Correo { get; set; }
 
     }
+    public class ent
+        {
+        
+        }
+
 }
