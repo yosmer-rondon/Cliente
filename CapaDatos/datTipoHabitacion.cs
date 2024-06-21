@@ -64,6 +64,65 @@ namespace CapaDatos
             }
             return lista;
         }
+        /////////////////////////Insertar Tipo Habitacion
+        public Boolean InsertarTipoHabitacion(entTipoHabitacion Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean inserta = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInsertarTipoHabitacion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
+                cmd.Parameters.AddWithValue("@Vistas", Cli.Vistas);
+                cmd.Parameters.AddWithValue("@Costo", Cli.Costo);
+                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return inserta;
+        }
+
+
+        //////////////////////////////////Editando Tipo Habitacion
+        public Boolean EditarTipoHabitacion(entTipoHabitacion Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEditarTipoHabitacion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.IDTipoHabitacion);
+                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
+                cmd.Parameters.AddWithValue("@Vistas", Cli.Vistas);
+                cmd.Parameters.AddWithValue("@Costo", Cli.Costo);
+                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
+        }
         #endregion metodos
     }
 }

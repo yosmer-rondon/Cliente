@@ -70,7 +70,7 @@ namespace Cliente
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Manhabitacion mah = new Manhabitacion();
+            manHabitaciones mah = new manHabitaciones();
             mah.Show();
         }
 

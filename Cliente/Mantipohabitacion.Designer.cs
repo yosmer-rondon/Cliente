@@ -28,61 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.groupBoxDatosTipoHabitacion = new System.Windows.Forms.GroupBox();
+            this.XD = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textCosto = new System.Windows.Forms.TextBox();
+            this.textIDTipoHabitacion = new System.Windows.Forms.TextBox();
+            this.checkBoxEstadoTipo = new System.Windows.Forms.CheckBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnDeshabilitarTipo = new System.Windows.Forms.Button();
+            this.btnEditarTipo = new System.Windows.Forms.Button();
+            this.btnNuevoTipo = new System.Windows.Forms.Button();
+            this.dgvTipoHabitacion = new System.Windows.Forms.DataGridView();
+            this.textNombreTipo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.textVistasTipo = new System.Windows.Forms.TextBox();
+            this.groupBoxDatosTipoHabitacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoHabitacion)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBoxDatosTipoHabitacion
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Location = new System.Drawing.Point(4, 196);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 198);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos de Tipo Habitacion";
+            this.groupBoxDatosTipoHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textVistasTipo);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.label2);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textNombreTipo);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.XD);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.label3);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.label1);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textCosto);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textIDTipoHabitacion);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.checkBoxEstadoTipo);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.btnAgregar);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.btnModificar);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.btnCancelar);
+            this.groupBoxDatosTipoHabitacion.Location = new System.Drawing.Point(4, 196);
+            this.groupBoxDatosTipoHabitacion.Name = "groupBoxDatosTipoHabitacion";
+            this.groupBoxDatosTipoHabitacion.Size = new System.Drawing.Size(488, 198);
+            this.groupBoxDatosTipoHabitacion.TabIndex = 11;
+            this.groupBoxDatosTipoHabitacion.TabStop = false;
+            this.groupBoxDatosTipoHabitacion.Text = "Datos de Tipo Habitacion";
             // 
-            // label5
+            // XD
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.PowderBlue;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 16);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Costo de Tipo Habitacion";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.XD.AutoSize = true;
+            this.XD.BackColor = System.Drawing.Color.PowderBlue;
+            this.XD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XD.Location = new System.Drawing.Point(3, 64);
+            this.XD.Name = "XD";
+            this.XD.Size = new System.Drawing.Size(184, 16);
+            this.XD.TabIndex = 16;
+            this.XD.Text = "Costo de Tipo Habitacion";
+            this.XD.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label3
             // 
@@ -108,138 +108,146 @@
             this.label1.Text = "ID Tipo Habitacion";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // textBox3
+            // textCosto
             // 
-            this.textBox3.Location = new System.Drawing.Point(206, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(45, 20);
-            this.textBox3.TabIndex = 11;
+            this.textCosto.Location = new System.Drawing.Point(206, 60);
+            this.textCosto.Name = "textCosto";
+            this.textCosto.Size = new System.Drawing.Size(45, 20);
+            this.textCosto.TabIndex = 11;
             // 
-            // textBox1
+            // textIDTipoHabitacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 20);
-            this.textBox1.TabIndex = 8;
+            this.textIDTipoHabitacion.Location = new System.Drawing.Point(150, 28);
+            this.textIDTipoHabitacion.Name = "textIDTipoHabitacion";
+            this.textIDTipoHabitacion.Size = new System.Drawing.Size(101, 20);
+            this.textIDTipoHabitacion.TabIndex = 8;
             // 
-            // checkBox1
+            // checkBoxEstadoTipo
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(3, 170);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(137, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Estado Tipo Habitacion";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBoxEstadoTipo.AutoSize = true;
+            this.checkBoxEstadoTipo.Location = new System.Drawing.Point(3, 170);
+            this.checkBoxEstadoTipo.Name = "checkBoxEstadoTipo";
+            this.checkBoxEstadoTipo.Size = new System.Drawing.Size(137, 17);
+            this.checkBoxEstadoTipo.TabIndex = 5;
+            this.checkBoxEstadoTipo.Text = "Estado Tipo Habitacion";
+            this.checkBoxEstadoTipo.UseVisualStyleBackColor = true;
+            this.checkBoxEstadoTipo.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // button7
+            // btnAgregar
             // 
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(307, 19);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(159, 42);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Agregar";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.Black;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(307, 19);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(159, 42);
+            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // button6
+            // btnModificar
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(307, 73);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 42);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Modificar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnModificar.BackColor = System.Drawing.Color.Black;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(307, 73);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(159, 42);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // button5
+            // btnCancelar
             // 
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(307, 132);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(159, 42);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(307, 132);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(159, 42);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // button4
+            // btnSalir
             // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(499, 352);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(217, 42);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Salir";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnSalir.BackColor = System.Drawing.Color.Black;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(499, 352);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(217, 42);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // button3
+            // btnDeshabilitarTipo
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(499, 303);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 42);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Deshabilitar Tipo Habitacion";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDeshabilitarTipo.BackColor = System.Drawing.Color.Black;
+            this.btnDeshabilitarTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeshabilitarTipo.ForeColor = System.Drawing.Color.White;
+            this.btnDeshabilitarTipo.Location = new System.Drawing.Point(499, 303);
+            this.btnDeshabilitarTipo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDeshabilitarTipo.Name = "btnDeshabilitarTipo";
+            this.btnDeshabilitarTipo.Size = new System.Drawing.Size(217, 42);
+            this.btnDeshabilitarTipo.TabIndex = 9;
+            this.btnDeshabilitarTipo.Text = "Deshabilitar Tipo Habitacion";
+            this.btnDeshabilitarTipo.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnEditarTipo
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(499, 250);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 42);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Editar Tipo Habitacion";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEditarTipo.BackColor = System.Drawing.Color.Black;
+            this.btnEditarTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarTipo.ForeColor = System.Drawing.Color.White;
+            this.btnEditarTipo.Location = new System.Drawing.Point(499, 250);
+            this.btnEditarTipo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnEditarTipo.Name = "btnEditarTipo";
+            this.btnEditarTipo.Size = new System.Drawing.Size(217, 42);
+            this.btnEditarTipo.TabIndex = 8;
+            this.btnEditarTipo.Text = "Editar Tipo Habitacion";
+            this.btnEditarTipo.UseVisualStyleBackColor = false;
+            this.btnEditarTipo.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnNuevoTipo
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(499, 202);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 42);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Nuevo Tipo Habitacion";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnNuevoTipo.BackColor = System.Drawing.Color.Black;
+            this.btnNuevoTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoTipo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevoTipo.Location = new System.Drawing.Point(499, 202);
+            this.btnNuevoTipo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnNuevoTipo.Name = "btnNuevoTipo";
+            this.btnNuevoTipo.Size = new System.Drawing.Size(217, 42);
+            this.btnNuevoTipo.TabIndex = 7;
+            this.btnNuevoTipo.Text = "Nuevo Tipo Habitacion";
+            this.btnNuevoTipo.UseVisualStyleBackColor = false;
+            this.btnNuevoTipo.Click += new System.EventHandler(this.btnNuevoTipo_Click);
             // 
-            // dataGridView1
+            // dgvTipoHabitacion
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 24);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(703, 161);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvTipoHabitacion.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTipoHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipoHabitacion.Location = new System.Drawing.Point(13, 24);
+            this.dgvTipoHabitacion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvTipoHabitacion.Name = "dgvTipoHabitacion";
+            this.dgvTipoHabitacion.Size = new System.Drawing.Size(703, 161);
+            this.dgvTipoHabitacion.TabIndex = 6;
+            this.dgvTipoHabitacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoHabitacion_CellClick);
+            this.dgvTipoHabitacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // textBox2
+            // textNombreTipo
             // 
-            this.textBox2.Location = new System.Drawing.Point(186, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(101, 20);
-            this.textBox2.TabIndex = 17;
+            this.textNombreTipo.Location = new System.Drawing.Point(186, 99);
+            this.textNombreTipo.Name = "textNombreTipo";
+            this.textNombreTipo.Size = new System.Drawing.Size(101, 20);
+            this.textNombreTipo.TabIndex = 17;
             // 
             // label2
             // 
@@ -253,12 +261,12 @@
             this.label2.Text = "Vistas";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // textBox4
+            // textVistasTipo
             // 
-            this.textBox4.Location = new System.Drawing.Point(70, 128);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(101, 20);
-            this.textBox4.TabIndex = 19;
+            this.textVistasTipo.Location = new System.Drawing.Point(70, 128);
+            this.textVistasTipo.Name = "textVistasTipo";
+            this.textVistasTipo.Size = new System.Drawing.Size(101, 20);
+            this.textVistasTipo.TabIndex = 19;
             // 
             // Mantipohabitacion
             // 
@@ -266,40 +274,40 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(723, 395);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.groupBoxDatosTipoHabitacion);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnDeshabilitarTipo);
+            this.Controls.Add(this.btnEditarTipo);
+            this.Controls.Add(this.btnNuevoTipo);
+            this.Controls.Add(this.dgvTipoHabitacion);
             this.Name = "Mantipohabitacion";
             this.Text = "Mantipohabitacion";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBoxDatosTipoHabitacion.ResumeLayout(false);
+            this.groupBoxDatosTipoHabitacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoHabitacion)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBoxDatosTipoHabitacion;
+        private System.Windows.Forms.TextBox textNombreTipo;
+        private System.Windows.Forms.Label XD;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textCosto;
+        private System.Windows.Forms.TextBox textIDTipoHabitacion;
+        private System.Windows.Forms.CheckBox checkBoxEstadoTipo;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnDeshabilitarTipo;
+        private System.Windows.Forms.Button btnEditarTipo;
+        private System.Windows.Forms.Button btnNuevoTipo;
+        private System.Windows.Forms.DataGridView dgvTipoHabitacion;
+        private System.Windows.Forms.TextBox textVistasTipo;
         private System.Windows.Forms.Label label2;
     }
 }

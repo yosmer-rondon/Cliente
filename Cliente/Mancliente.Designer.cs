@@ -31,6 +31,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.FechaRegistroCliente = new System.Windows.Forms.DateTimePicker();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -54,10 +58,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.FechaRegistroCliente = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +115,45 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL CLIENTE";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.White;
+            this.textBox9.ForeColor = System.Drawing.Color.Black;
+            this.textBox9.Location = new System.Drawing.Point(139, 203);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(178, 34);
+            this.textBox9.TabIndex = 27;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(6, 206);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 27);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "ID Cliente:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(403, 230);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(210, 27);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Fecha de Registro:";
+            // 
+            // FechaRegistroCliente
+            // 
+            this.FechaRegistroCliente.Location = new System.Drawing.Point(408, 275);
+            this.FechaRegistroCliente.Name = "FechaRegistroCliente";
+            this.FechaRegistroCliente.Size = new System.Drawing.Size(483, 34);
+            this.FechaRegistroCliente.TabIndex = 24;
             // 
             // textBox12
             // 
@@ -274,6 +313,7 @@
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnNuevo
             // 
@@ -378,44 +418,6 @@
             this.textBox5.TabIndex = 10;
             this.textBox5.Text = "⍈";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // FechaRegistroCliente
-            // 
-            this.FechaRegistroCliente.Location = new System.Drawing.Point(408, 275);
-            this.FechaRegistroCliente.Name = "FechaRegistroCliente";
-            this.FechaRegistroCliente.Size = new System.Drawing.Size(483, 34);
-            this.FechaRegistroCliente.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(403, 230);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(210, 27);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Fecha de Registro:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(6, 206);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 27);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "ID Cliente:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.ForeColor = System.Drawing.Color.Black;
-            this.textBox9.Location = new System.Drawing.Point(139, 203);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(178, 34);
-            this.textBox9.TabIndex = 27;
             // 
             // Mancliente
             // 

@@ -63,7 +63,7 @@ namespace CapaDatos
             }
             return lista;
         }
-        /////////////////////////InsertaCliente
+        /////////////////////////Insertando Cliente
         public Boolean InsertarCliente(entCliente Cli)
         {
             SqlCommand cmd = null;
@@ -95,7 +95,7 @@ namespace CapaDatos
             return inserta;
         }
 
-        //////////////////////////////////EditaCliente
+        //////////////////////////////////Editando Cliente
         public Boolean EditarCliente(entCliente Cli)
         {
             SqlCommand cmd = null;
@@ -127,6 +127,7 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return edita;
         }
+        ///////////////////////// Deshabilitando Cliente
 
         public Boolean DeshabilitarCliente(entCliente Cli)
         {

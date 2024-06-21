@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
 using CapaEntidad;
+using CapaEntidadd;
 
 namespace CapaLogica
 {
@@ -22,15 +23,25 @@ namespace CapaLogica
                 return logTipoHabitacion._instancia;
             }
         }
+
+        public void InsertarTipoHabitacion(entTipoHabitacion Cli)
+        {
+            datTipoHabitacion.Instancia.InsertarTipoHabitacion(Cli);
+        }
+
+        public void EditarTipoHabitacion(entTipoHabitacion Cli)
+        {
+            datTipoHabitacion.Instancia.EditarTipoHabitacion(Cli);
+        }
         #endregion singleton
 
         #region metodos
 
         ///listado
 
-        public List<entCliente> ListarCliente()
+        public List<entTipoHabitacion> ListarTipoHabitacion()
         {
-            return datCliente.Instancia.ListarCliente();
+            return datTipoHabitacion.Instancia.ListarTipoHabitacion();
         }
 
         #endregion metodos
