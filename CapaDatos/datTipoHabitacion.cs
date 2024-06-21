@@ -30,7 +30,7 @@ namespace CapaDatos
         #endregion singleton
 
         #region metodos
-        ////////////////////listado de Clientes
+        ////////////////////listado de Tipo de Habitaciones
         public List<entTipoHabitacion> ListarTipoHabitacion()
         {
             SqlCommand cmd = null;
@@ -38,21 +38,18 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spListarCliente", cn);
+                cmd = new SqlCommand("spListarTipoHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entCliente Cli = new entCliente();
-                    Cli.IDCliente = Convert.ToInt32(dr["IDCliente"]);
+                    entTipoHabitacion Cli = new entTipoHabitacion();
+                    Cli.IDTipoHabitacion = Convert.ToInt32(dr["IDTipoHabitacion"]);
                     Cli.Nombre = dr["Nombre"].ToString();
-                    Cli.Apellido = dr["Apellido"].ToString();
-                    Cli.DNI = Convert.ToInt32(dr["DNI"]);
-                    Cli.Telefono = Convert.ToInt32(dr["Telefono"]);
-                    Cli.TipoCliente = dr["TipoCliente"].ToString();
-                    Cli.FechaRegistro = Convert.ToDateTime(dr["FechaRegistro"]);
-                    Cli.Correo = dr["Correo"].ToString();
+                    Cli.Vistas = dr["Vistas"].ToString();
+                    Cli.Costo = Convert.ToInt32(dr["Costo"]);
+                    Cli.Estado = Convert.ToBoolean(dr["Estado"]);
                     lista.Add(Cli);
                 }
 

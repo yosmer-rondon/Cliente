@@ -8,7 +8,33 @@ using CapaEntidad;
 
 namespace CapaLogica
 {
-    internal class logTipoHabitacion
+    public class logTipoHabitacion
     {
+        #region sigleton
+        //Patron Singleton
+        // Variable estática para la instancia
+        private static readonly logTipoHabitacion _instancia = new logTipoHabitacion();
+        //privado para evitar la instanciación directa
+        public static logTipoHabitacion Instancia
+        {
+            get
+            {
+                return logTipoHabitacion._instancia;
+            }
+        }
+        #endregion singleton
+
+        #region metodos
+
+        ///listado
+
+        public List<entCliente> ListarCliente()
+        {
+            return datCliente.Instancia.ListarCliente();
+        }
+
+        #endregion metodos
     }
 }
+
+
