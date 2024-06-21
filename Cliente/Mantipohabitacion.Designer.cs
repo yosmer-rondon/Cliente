@@ -71,6 +71,7 @@
             this.groupBoxDatosTipoHabitacion.TabIndex = 11;
             this.groupBoxDatosTipoHabitacion.TabStop = false;
             this.groupBoxDatosTipoHabitacion.Text = "Datos de Tipo Habitacion";
+            this.groupBoxDatosTipoHabitacion.Enter += new System.EventHandler(this.groupBoxDatosTipoHabitacion_Enter);
             // 
             // XD
             // 
@@ -201,6 +202,7 @@
             this.btnDeshabilitarTipo.TabIndex = 9;
             this.btnDeshabilitarTipo.Text = "Deshabilitar Tipo Habitacion";
             this.btnDeshabilitarTipo.UseVisualStyleBackColor = false;
+            this.btnDeshabilitarTipo.Click += new System.EventHandler(this.btnDeshabilitarTipo_Click);
             // 
             // btnEditarTipo
             // 

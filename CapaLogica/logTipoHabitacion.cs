@@ -24,15 +24,24 @@ namespace CapaLogica
             }
         }
 
+        //INSERTAR
         public void InsertarTipoHabitacion(entTipoHabitacion Cli)
         {
             datTipoHabitacion.Instancia.InsertarTipoHabitacion(Cli);
         }
 
+        //EDITAR
         public void EditarTipoHabitacion(entTipoHabitacion Cli)
         {
             datTipoHabitacion.Instancia.EditarTipoHabitacion(Cli);
         }
+
+        //DESHABILITAR
+        public void DeshabilitarTipoHabitacion(entTipoHabitacion Cli)
+        {
+            datTipoHabitacion.Instancia.DeshabilitarTipoHabitacion(Cli);
+        }
+
         #endregion singleton
 
         #region metodos

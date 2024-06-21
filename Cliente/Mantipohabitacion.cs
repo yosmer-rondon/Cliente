@@ -132,5 +132,30 @@ namespace Cliente
             listar();
 
         }
+
+        private void btnDeshabilitarTipo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTipoHabitacion c = new entTipoHabitacion();
+
+                c.IDTipoHabitacion = int.Parse(textIDTipoHabitacion.Text.Trim());
+                logTipoHabitacion.Instancia.DeshabilitarTipoHabitacion(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            groupBoxDatosTipoHabitacion.Enabled = false;
+            listar();
+
+
+        }
+
+        private void groupBoxDatosTipoHabitacion_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -123,6 +123,34 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return edita;
         }
+
+        //////////////Deshabilitando Tipo de Habitacion
+
+        public Boolean DeshabilitarTipoHabitacion(entTipoHabitacion Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spDeshabilitarTipoHabitacion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.IDTipoHabitacion);
+                //cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
         #endregion metodos
     }
 }
