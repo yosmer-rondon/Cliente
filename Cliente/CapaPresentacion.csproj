@@ -76,12 +76,6 @@
     <Compile Include="Mancliente.Designer.cs">
       <DependentUpon>Mancliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manhabitacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manhabitacion.Designer.cs">
-      <DependentUpon>Manhabitacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manmetododepago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,8 +117,8 @@
     <EmbeddedResource Include="Manempleado.resx">
       <DependentUpon>Manempleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manhabitacion.resx">
-      <DependentUpon>Manhabitacion.cs</DependentUpon>
+    <EmbeddedResource Include="Manmetododepago.resx">
+      <DependentUpon>Manmetododepago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantipohabitacion.resx">
       <DependentUpon>Mantipohabitacion.cs</DependentUpon>
