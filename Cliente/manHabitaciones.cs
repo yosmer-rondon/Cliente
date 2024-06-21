@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cliente
 {
-    public partial class Manmetododepago : Form
+    public partial class manHabitaciones : Form
     {
-        public Manmetododepago()
+        public manHabitaciones()
         {
             InitializeComponent();
         }
