@@ -1,4 +1,5 @@
-﻿using CapaLogica;
+﻿using CapaEntidadd;
+using CapaLogica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,16 @@ namespace Cliente
             dgvMetodoPago.Columns.Add("Estado", "Estado");
             dgvMetodoPago.Columns["Estado"].DataPropertyName = "Estado";
             dgvMetodoPago.DataSource = logMetodoPago.Instancia.ListarMetodoPago();
+        }
+        private void dgvMetodoPago_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dgvMetodoPago.Rows[e.RowIndex];
+            txtId.Text = filaActual.Cells[0].Value.ToString();
+            txtNomMetodoPago.Text = filaActual.Cells[1].Value.ToString();
+            if (filaActual.Cells[2].Value.ToString() == "Activo")
+            {
+                cbxActivo.Checked = true;
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -75,7 +86,7 @@ namespace Cliente
             {
                 entMetodoPago fp = new entMetodoPago();
                 fp.N_TPago = txtNomMetodoPago.Text;
-                logMetodosPago.Instancia.InsertarMetodoPago(fp);
+                logMetodoPago.Instancia.InsertarMetodoPago(fp);
                 llenarDatos();
             }
             catch (Exception)
