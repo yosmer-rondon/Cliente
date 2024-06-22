@@ -82,6 +82,12 @@
     <Compile Include="manHabitaciones.Designer.cs">
       <DependentUpon>manHabitaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManMetodoDePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManMetodoDePago.Designer.cs">
+      <DependentUpon>ManMetodoDePago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantipohabitacion.cs">
       <SubType>Form</SubType>
     </Compile>
