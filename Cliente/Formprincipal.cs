@@ -82,7 +82,7 @@ namespace Cliente
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Manmetododepago metp = new Manmetododepago();
+            ManMetodoDePago metp = new ManMetodoDePago();
             metp.Show();
         }
 

@@ -126,6 +126,9 @@
     <EmbeddedResource Include="Manhabitacion.resx">
       <DependentUpon>Manhabitacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manmetododepago.resx">
+      <DependentUpon>Manmetododepago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantipohabitacion.resx">
       <DependentUpon>Mantipohabitacion.cs</DependentUpon>
     </EmbeddedResource>

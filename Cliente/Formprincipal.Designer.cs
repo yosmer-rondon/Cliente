@@ -70,10 +70,10 @@ namespace Cliente
             this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.button5);
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(952, 169);
+            this.tabPage3.Size = new System.Drawing.Size(952, 165);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Transacciones";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -128,11 +128,11 @@ namespace Cliente
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(952, 169);
+            this.tabPage2.Size = new System.Drawing.Size(952, 165);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenedores";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -213,11 +213,11 @@ namespace Cliente
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(952, 169);
+            this.tabPage1.Size = new System.Drawing.Size(952, 165);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Conexion sql";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@ namespace Cliente
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label3.Location = new System.Drawing.Point(592, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 25);
+            this.label3.Size = new System.Drawing.Size(34, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "...";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -240,10 +240,11 @@ namespace Cliente
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "baseprueba",
-            "Hotel Proyecto Moanso"});
+            "Hotel Proyecto Moanso",
+            "Hotel"});
             this.comboBox2.Location = new System.Drawing.Point(284, 76);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(230, 33);
+            this.comboBox2.Size = new System.Drawing.Size(230, 37);
             this.comboBox2.TabIndex = 4;
             // 
             // label2
@@ -252,7 +253,7 @@ namespace Cliente
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(279, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
+            this.label2.Size = new System.Drawing.Size(150, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Base datos";
             // 
@@ -262,7 +263,7 @@ namespace Cliente
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(21, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 25);
+            this.label1.Size = new System.Drawing.Size(115, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Servidor";
             // 
@@ -285,10 +286,11 @@ namespace Cliente
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "DESKTOP-NM28KG4\\MSSQLSERVER01",
-            "DESKTOP-MSSFJKR\\SQLEXPRESS"});
+            "DESKTOP-MSSFJKR\\SQLEXPRESS",
+            "HP"});
             this.comboBox1.Location = new System.Drawing.Point(26, 77);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 33);
+            this.comboBox1.Size = new System.Drawing.Size(230, 37);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
