@@ -23,9 +23,22 @@ namespace CapaLogica
                 return logHabitacion._instancia;
             }
         }
+        //INSERTAR
         public void InsertarHabiacion(entHabitacion Cli)
         {
             datHabitacion.Instancia.InsertarHabitacion(Cli);
+        }
+
+        //EDITAR
+        public void EditarHabitacion(entHabitacion Cli)
+        {
+            datHabitacion.Instancia.EditarHabitacion(Cli);
+        }
+
+        //DESHABILITAR
+        public void DeshabilitarHabitacion(entHabitacion Cli)
+        {
+            datHabitacion.Instancia.DeshabilitarHabitacion(Cli);
         }
         #endregion singleton
 

@@ -22,6 +22,9 @@ namespace Cliente
         {
             InitializeComponent();
             Listar();
+            groupDatosHabitacion.Enabled = false;
+            textIDHabitacion.Enabled = false;
+
         }
 
         public void Listar()
@@ -48,5 +51,123 @@ namespace Cliente
         {
 
         }
+
+        private void btnNuevaHabitacion_Click(object sender, EventArgs e)
+        {
+            groupDatosHabitacion.Enabled = true;
+
+            btnAgregarHabitacion.Visible = true;
+            //LimpiarVariables();
+            btnModificarHabitacion.Visible = false;
+
+        }
+
+        private void btnAgregarHabitacion_Click(object sender, EventArgs e)
+        {
+            //insertar
+            try
+            {
+                entHabitacion c = new entHabitacion();
+                c.Habitacion = int.Parse(textHabitacion.Text.Trim());
+                c.IDTipoHabitacion = int.Parse(textIDTipoHabitacion.Text.Trim());
+                c.Piso = int.Parse(textPisoHabitacion.Text.Trim());
+                c.Capacidad = textCapacidadHabitacion.Text.Trim();
+                c.Costo = int.Parse(textCostoHabitacion.Text.Trim());
+                c.Estado = checkEstadoHabitacion.Checked;
+                logHabitacion.Instancia.InsertarHabiacion(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            groupDatosHabitacion.Enabled = false;
+            Listar();
+        }
+
+        private void LimpiarVariables()
+        {
+            textHabitacion.Text = "";
+            textIDTipoHabitacion.Text = " ";
+            textPisoHabitacion.Text = " ";
+            textCapacidadHabitacion.Text = " ";
+            textCostoHabitacion.Text = " ";
+            checkEstadoHabitacion.Checked = false;
+
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            groupDatosHabitacion.Enabled = false;
+        }
+
+        private void dgvHabitaciones_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dgvHabitaciones.Rows[e.RowIndex]; //
+            textIDHabitacion.Text = filaActual.Cells[0].Value.ToString();
+            textHabitacion.Text = filaActual.Cells[1].Value.ToString();
+            textIDTipoHabitacion.Text = filaActual.Cells[2].Value.ToString();
+            textPisoHabitacion.Text = filaActual.Cells[3].Value.ToString();
+            textCapacidadHabitacion.Text = filaActual.Cells[4].Value.ToString();
+            textCostoHabitacion.Text = filaActual.Cells[5].Value.ToString();
+            checkEstadoHabitacion.Checked = Convert.ToBoolean(filaActual.Cells[6].Value);
+
+        }
+
+        private void btnEditarHabitacion_Click(object sender, EventArgs e)
+        {
+            groupDatosHabitacion.Enabled = true;
+            btnModificarHabitacion.Visible = true;
+            btnAgregarHabitacion.Visible = false;
+
+        }
+
+        private void btnModificarHabitacion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entHabitacion c = new entHabitacion();
+                c.IDHabitacion = int.Parse(textIDHabitacion.Text.Trim());
+                c.Habitacion = int.Parse(textHabitacion.Text.Trim());
+                c.IDTipoHabitacion = int.Parse(textIDTipoHabitacion.Text.Trim());
+                c.Piso = int.Parse(textPisoHabitacion.Text.Trim());
+                c.Capacidad = textCapacidadHabitacion.Text.Trim();
+                c.Costo = int.Parse(textCostoHabitacion.Text.Trim());
+                c.Estado = checkEstadoHabitacion.Checked;
+                logHabitacion.Instancia.EditarHabitacion(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            groupDatosHabitacion.Enabled = false;
+            Listar();
+        }
+
+        private void btnDeshabilitarHabitacion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entHabitacion c = new entHabitacion();
+
+                c.IDHabitacion = int.Parse(textIDHabitacion.Text.Trim());
+                logHabitacion.Instancia.DeshabilitarHabitacion(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            groupDatosHabitacion.Enabled = false;
+            Listar();
+        }
     }
 }
+
