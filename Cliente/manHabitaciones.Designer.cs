@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvHabitaciones = new System.Windows.Forms.DataGridView();
             this.btnNuevaHabitacion = new System.Windows.Forms.Button();
             this.btnEditarHabitacion = new System.Windows.Forms.Button();
             this.btnDeshabilitarHabitacion = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupDatosHabitacion = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,20 +50,20 @@
             this.textIDTipoHabitacion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
+            this.groupDatosHabitacion.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvHabitaciones
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(58, 12);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(835, 161);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvHabitaciones.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHabitaciones.Location = new System.Drawing.Point(58, 12);
+            this.dgvHabitaciones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvHabitaciones.Name = "dgvHabitaciones";
+            this.dgvHabitaciones.Size = new System.Drawing.Size(835, 161);
+            this.dgvHabitaciones.TabIndex = 0;
+            this.dgvHabitaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnNuevaHabitacion
             // 
@@ -117,30 +117,30 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             // 
-            // groupBox1
+            // groupDatosHabitacion
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textIDTipoHabitacion);
-            this.groupBox1.Controls.Add(this.textPisoHabitacion);
-            this.groupBox1.Controls.Add(this.textCapacidadHabitacion);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.CostoHabitacion);
-            this.groupBox1.Controls.Add(this.textIDHabitacion);
-            this.groupBox1.Controls.Add(this.checkEstadoHabitacion);
-            this.groupBox1.Controls.Add(this.btnAgregarHabitacion);
-            this.groupBox1.Controls.Add(this.btnModificarHabitacion);
-            this.groupBox1.Controls.Add(this.btnCancelar);
-            this.groupBox1.Location = new System.Drawing.Point(58, 264);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(835, 189);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos de Habitacion";
+            this.groupDatosHabitacion.Controls.Add(this.textBox1);
+            this.groupDatosHabitacion.Controls.Add(this.label6);
+            this.groupDatosHabitacion.Controls.Add(this.textIDTipoHabitacion);
+            this.groupDatosHabitacion.Controls.Add(this.textPisoHabitacion);
+            this.groupDatosHabitacion.Controls.Add(this.textCapacidadHabitacion);
+            this.groupDatosHabitacion.Controls.Add(this.label5);
+            this.groupDatosHabitacion.Controls.Add(this.label4);
+            this.groupDatosHabitacion.Controls.Add(this.label3);
+            this.groupDatosHabitacion.Controls.Add(this.label2);
+            this.groupDatosHabitacion.Controls.Add(this.label1);
+            this.groupDatosHabitacion.Controls.Add(this.CostoHabitacion);
+            this.groupDatosHabitacion.Controls.Add(this.textIDHabitacion);
+            this.groupDatosHabitacion.Controls.Add(this.checkEstadoHabitacion);
+            this.groupDatosHabitacion.Controls.Add(this.btnAgregarHabitacion);
+            this.groupDatosHabitacion.Controls.Add(this.btnModificarHabitacion);
+            this.groupDatosHabitacion.Controls.Add(this.btnCancelar);
+            this.groupDatosHabitacion.Location = new System.Drawing.Point(58, 264);
+            this.groupDatosHabitacion.Name = "groupDatosHabitacion";
+            this.groupDatosHabitacion.Size = new System.Drawing.Size(835, 189);
+            this.groupDatosHabitacion.TabIndex = 5;
+            this.groupDatosHabitacion.TabStop = false;
+            this.groupDatosHabitacion.Text = "Datos de Habitacion";
             // 
             // label5
             // 
@@ -311,31 +311,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(950, 449);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupDatosHabitacion);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDeshabilitarHabitacion);
             this.Controls.Add(this.btnEditarHabitacion);
             this.Controls.Add(this.btnNuevaHabitacion);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvHabitaciones);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "manHabitaciones";
             this.Text = "manHabitaciones";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
+            this.groupDatosHabitacion.ResumeLayout(false);
+            this.groupDatosHabitacion.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHabitaciones;
         private System.Windows.Forms.Button btnNuevaHabitacion;
         private System.Windows.Forms.Button btnEditarHabitacion;
         private System.Windows.Forms.Button btnDeshabilitarHabitacion;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupDatosHabitacion;
         private System.Windows.Forms.Button btnAgregarHabitacion;
         private System.Windows.Forms.Button btnModificarHabitacion;
         private System.Windows.Forms.Button btnCancelar;
