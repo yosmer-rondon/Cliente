@@ -126,9 +126,6 @@ namespace Cliente
 
         private void manHabitaciones_Load(object sender, EventArgs e)
         {
-            //CapaDatos.Conexion.Instancia.ser = ".";
-            //CapaDatos.Conexion.Instancia.bd = "RaymiMOANSOV1";
-
             cboTipo.ValueMember = "IDTipoHabitacion";
             cboTipo.DisplayMember = "Nombre";
             ListarTiposHabitacion();
