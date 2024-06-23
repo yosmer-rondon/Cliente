@@ -1,7 +1,11 @@
-﻿using CapaDatos;
-using CapaEntidad;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using CapaDatos;
+using CapaEntidad;
+using CapaEntidadd;
 
 namespace CapaLogica
 {
@@ -19,25 +23,23 @@ namespace CapaLogica
                 return logHabitacion._instancia;
             }
         }
-
         //INSERTAR
-        public bool InsertarHabitacion(entHabitacion habitacion)
+        public void InsertarHabiacion(entHabitacion Cli)
         {
-            return datHabitacion.Instancia.InsertarTipoHabitacion(habitacion);
+            datHabitacion.Instancia.InsertarHabitacion(Cli);
         }
 
         //EDITAR
-        public bool EditarHabitacion(entHabitacion habitacion)
+        public void EditarHabitacion(entHabitacion Cli)
         {
-            return datHabitacion.Instancia.EditarTipoHabitacion(habitacion);
+            datHabitacion.Instancia.EditarHabitacion(Cli);
         }
 
         //DESHABILITAR
-        public bool DeshabilitarHabitacion(int idHabitacion)
+        public void DeshabilitarHabitacion(entHabitacion Cli)
         {
-            return datHabitacion.Instancia.DeshabilitarTipoHabitacion(idHabitacion);
+            datHabitacion.Instancia.DeshabilitarHabitacion(Cli);
         }
-
         #endregion singleton
 
         #region metodos
@@ -51,4 +53,5 @@ namespace CapaLogica
 
         #endregion metodos
     }
+
 }
