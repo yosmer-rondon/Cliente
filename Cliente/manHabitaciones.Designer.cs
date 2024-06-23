@@ -59,8 +59,10 @@
             this.dataGridView1.Location = new System.Drawing.Point(58, 12);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(835, 161);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -144,7 +146,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(331, 115);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.Size = new System.Drawing.Size(69, 25);
             this.label5.TabIndex = 16;
             this.label5.Text = "Costo";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -156,7 +158,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(331, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 16);
+            this.label4.Size = new System.Drawing.Size(224, 25);
             this.label4.TabIndex = 15;
             this.label4.Text = "Capacidad Habitacion";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -168,7 +170,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 16);
+            this.label3.Size = new System.Drawing.Size(163, 25);
             this.label3.TabIndex = 14;
             this.label3.Text = "Tipo Habitacion";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -178,9 +180,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FloralWhite;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 77);
+            this.label2.Location = new System.Drawing.Point(7, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 16);
+            this.label2.Size = new System.Drawing.Size(162, 25);
             this.label2.TabIndex = 13;
             this.label2.Text = "Piso Habitacion";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -192,7 +194,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.Size = new System.Drawing.Size(141, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "ID Habitacion";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -201,38 +203,38 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(401, 111);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(45, 20);
+            this.textBox3.Size = new System.Drawing.Size(45, 26);
             this.textBox3.TabIndex = 11;
             // 
             // domainUpDown2
             // 
-            this.domainUpDown2.Location = new System.Drawing.Point(126, 73);
+            this.domainUpDown2.Location = new System.Drawing.Point(184, 70);
             this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.Size = new System.Drawing.Size(42, 20);
+            this.domainUpDown2.Size = new System.Drawing.Size(42, 26);
             this.domainUpDown2.TabIndex = 9;
             this.domainUpDown2.SelectedItemChanged += new System.EventHandler(this.domainUpDown2_SelectedItemChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 31);
+            this.textBox1.Location = new System.Drawing.Point(150, 29);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 20);
+            this.textBox1.Size = new System.Drawing.Size(101, 26);
             this.textBox1.TabIndex = 8;
             // 
             // domainUpDown1
             // 
             this.domainUpDown1.Location = new System.Drawing.Point(499, 73);
             this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(41, 20);
+            this.domainUpDown1.Size = new System.Drawing.Size(41, 26);
             this.domainUpDown1.TabIndex = 7;
             this.domainUpDown1.SelectedItemChanged += new System.EventHandler(this.domainUpDown1_SelectedItemChanged);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(130, 114);
+            this.comboBox1.Location = new System.Drawing.Point(175, 120);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -241,7 +243,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(334, 34);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 17);
+            this.checkBox1.Size = new System.Drawing.Size(189, 24);
             this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Estado Habitacion";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -287,7 +289,7 @@
             // 
             // manHabitaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(950, 449);
