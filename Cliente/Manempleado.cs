@@ -74,5 +74,10 @@ namespace Cliente
         {
             dataGridView1.DataSource = LogEmpleado.Instancia.ListarEmpleado();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
