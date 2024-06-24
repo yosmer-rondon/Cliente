@@ -31,32 +31,34 @@ namespace Cliente
         {
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dni = new System.Windows.Forms.TextBox();
-            this.tipoempleado = new System.Windows.Forms.TextBox();
-            this.direccion = new System.Windows.Forms.TextBox();
-            this.telefono = new System.Windows.Forms.TextBox();
-            this.correo = new System.Windows.Forms.TextBox();
-            this.nombre = new System.Windows.Forms.TextBox();
+            this.textdni = new System.Windows.Forms.TextBox();
+            this.texttipoempleado = new System.Windows.Forms.TextBox();
+            this.textdireccion = new System.Windows.Forms.TextBox();
+            this.texttelefono = new System.Windows.Forms.TextBox();
+            this.textcorreo = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.fecha = new System.Windows.Forms.DateTimePicker();
+            this.dtfechareg = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textIDEmpleado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -87,29 +89,29 @@ namespace Cliente
             this.textBox3.Text = "✍";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button3
+            // btnDeshabilitar
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(80, 289);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 51);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Deshabilitar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDeshabilitar.BackColor = System.Drawing.Color.Black;
+            this.btnDeshabilitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeshabilitar.ForeColor = System.Drawing.Color.White;
+            this.btnDeshabilitar.Location = new System.Drawing.Point(80, 289);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(149, 51);
+            this.btnDeshabilitar.TabIndex = 16;
+            this.btnDeshabilitar.Text = "Deshabilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnEditar
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(295, 289);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 51);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.Black;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(295, 289);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(118, 51);
+            this.btnEditar.TabIndex = 15;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -126,74 +128,76 @@ namespace Cliente
             // 
             // groupBox1
             // 
-            this.groupBox1.BackgroundImage = global::Cliente.Properties.Resources._1689dc56ff421a60db1549d29340154d;
-            this.groupBox1.Controls.Add(this.dni);
-            this.groupBox1.Controls.Add(this.tipoempleado);
-            this.groupBox1.Controls.Add(this.direccion);
-            this.groupBox1.Controls.Add(this.telefono);
-            this.groupBox1.Controls.Add(this.correo);
-            this.groupBox1.Controls.Add(this.nombre);
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.groupBox1.Controls.Add(this.textIDEmpleado);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textdni);
+            this.groupBox1.Controls.Add(this.texttipoempleado);
+            this.groupBox1.Controls.Add(this.textdireccion);
+            this.groupBox1.Controls.Add(this.texttelefono);
+            this.groupBox1.Controls.Add(this.textcorreo);
+            this.groupBox1.Controls.Add(this.textNombre);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.fecha);
+            this.groupBox1.Controls.Add(this.dtfechareg);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.btnAgregar);
+            this.groupBox1.Controls.Add(this.btnModificar);
+            this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(1, 365);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(960, 284);
+            this.groupBox1.Size = new System.Drawing.Size(960, 343);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL EMPLEADO";
             // 
-            // dni
+            // textdni
             // 
-            this.dni.Location = new System.Drawing.Point(510, 110);
-            this.dni.Name = "dni";
-            this.dni.Size = new System.Drawing.Size(209, 34);
-            this.dni.TabIndex = 23;
+            this.textdni.Location = new System.Drawing.Point(510, 110);
+            this.textdni.Name = "textdni";
+            this.textdni.Size = new System.Drawing.Size(209, 34);
+            this.textdni.TabIndex = 23;
             // 
-            // tipoempleado
+            // texttipoempleado
             // 
-            this.tipoempleado.Location = new System.Drawing.Point(207, 115);
-            this.tipoempleado.Name = "tipoempleado";
-            this.tipoempleado.Size = new System.Drawing.Size(178, 34);
-            this.tipoempleado.TabIndex = 21;
+            this.texttipoempleado.Location = new System.Drawing.Point(207, 115);
+            this.texttipoempleado.Name = "texttipoempleado";
+            this.texttipoempleado.Size = new System.Drawing.Size(178, 34);
+            this.texttipoempleado.TabIndex = 21;
             // 
-            // direccion
+            // textdireccion
             // 
-            this.direccion.Location = new System.Drawing.Point(145, 174);
-            this.direccion.Name = "direccion";
-            this.direccion.Size = new System.Drawing.Size(201, 34);
-            this.direccion.TabIndex = 20;
+            this.textdireccion.Location = new System.Drawing.Point(145, 174);
+            this.textdireccion.Name = "textdireccion";
+            this.textdireccion.Size = new System.Drawing.Size(201, 34);
+            this.textdireccion.TabIndex = 20;
             // 
-            // telefono
+            // texttelefono
             // 
-            this.telefono.Location = new System.Drawing.Point(133, 237);
-            this.telefono.Name = "telefono";
-            this.telefono.Size = new System.Drawing.Size(200, 34);
-            this.telefono.TabIndex = 19;
+            this.texttelefono.Location = new System.Drawing.Point(133, 237);
+            this.texttelefono.Name = "texttelefono";
+            this.texttelefono.Size = new System.Drawing.Size(200, 34);
+            this.texttelefono.TabIndex = 19;
             // 
-            // correo
+            // textcorreo
             // 
-            this.correo.Location = new System.Drawing.Point(510, 61);
-            this.correo.Name = "correo";
-            this.correo.Size = new System.Drawing.Size(209, 34);
-            this.correo.TabIndex = 18;
+            this.textcorreo.Location = new System.Drawing.Point(510, 61);
+            this.textcorreo.Name = "textcorreo";
+            this.textcorreo.Size = new System.Drawing.Size(209, 34);
+            this.textcorreo.TabIndex = 18;
             // 
-            // nombre
+            // textNombre
             // 
-            this.nombre.Location = new System.Drawing.Point(105, 64);
-            this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(206, 34);
-            this.nombre.TabIndex = 17;
+            this.textNombre.Location = new System.Drawing.Point(105, 64);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(206, 34);
+            this.textNombre.TabIndex = 17;
             // 
             // label8
             // 
@@ -205,14 +209,14 @@ namespace Cliente
             this.label8.TabIndex = 16;
             this.label8.Text = "Fecha de Registro:";
             // 
-            // fecha
+            // dtfechareg
             // 
-            this.fecha.CalendarForeColor = System.Drawing.Color.White;
-            this.fecha.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.fecha.Location = new System.Drawing.Point(381, 214);
-            this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(466, 34);
-            this.fecha.TabIndex = 15;
+            this.dtfechareg.CalendarForeColor = System.Drawing.Color.White;
+            this.dtfechareg.CalendarTitleForeColor = System.Drawing.Color.Black;
+            this.dtfechareg.Location = new System.Drawing.Point(381, 214);
+            this.dtfechareg.Name = "dtfechareg";
+            this.dtfechareg.Size = new System.Drawing.Size(466, 34);
+            this.dtfechareg.TabIndex = 15;
             // 
             // label7
             // 
@@ -274,42 +278,42 @@ namespace Cliente
             this.label1.TabIndex = 7;
             this.label1.Text = "Nombre:";
             // 
-            // button7
+            // btnAgregar
             // 
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(807, 33);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(120, 51);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Agregar";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnAgregar.BackColor = System.Drawing.Color.Black;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(807, 33);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(120, 51);
+            this.btnAgregar.TabIndex = 6;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // btnModificar
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(807, 93);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(120, 51);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Modificar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnModificar.BackColor = System.Drawing.Color.Black;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(807, 93);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(120, 51);
+            this.btnModificar.TabIndex = 5;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnCancelar
             // 
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(807, 157);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 51);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Cancelar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(807, 157);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(120, 51);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -345,51 +349,69 @@ namespace Cliente
             this.textBox2.Text = "+";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button4
+            // btnNuevo
             // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(80, 232);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 51);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Nuevo";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnNuevo.BackColor = System.Drawing.Color.Black;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(80, 232);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(149, 51);
+            this.btnNuevo.TabIndex = 24;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button8
+            // btnBuscar
             // 
-            this.button8.BackColor = System.Drawing.Color.Black;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(264, 232);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(149, 51);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "Buscar";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnBuscar.BackColor = System.Drawing.Color.Black;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(264, 232);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(149, 51);
+            this.btnBuscar.TabIndex = 25;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(6, 293);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(153, 27);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "ID Empleado:";
+            // 
+            // textIDEmpleado
+            // 
+            this.textIDEmpleado.Location = new System.Drawing.Point(165, 286);
+            this.textIDEmpleado.Name = "textIDEmpleado";
+            this.textIDEmpleado.Size = new System.Drawing.Size(200, 34);
+            this.textIDEmpleado.TabIndex = 25;
             // 
             // Manempleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Cliente.Properties.Resources._401156;
-            this.ClientSize = new System.Drawing.Size(964, 651);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button4);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(964, 705);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDeshabilitar);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Manempleado";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Manempleado_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -401,31 +423,33 @@ namespace Cliente
         #endregion
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDeshabilitar;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox dni;
-        private System.Windows.Forms.TextBox tipoempleado;
-        private System.Windows.Forms.TextBox direccion;
-        private System.Windows.Forms.TextBox telefono;
-        private System.Windows.Forms.TextBox correo;
-        private System.Windows.Forms.TextBox nombre;
+        private System.Windows.Forms.TextBox textdni;
+        private System.Windows.Forms.TextBox texttipoempleado;
+        private System.Windows.Forms.TextBox textdireccion;
+        private System.Windows.Forms.TextBox texttelefono;
+        private System.Windows.Forms.TextBox textcorreo;
+        private System.Windows.Forms.TextBox textNombre;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker fecha;
+        private System.Windows.Forms.DateTimePicker dtfechareg;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox textIDEmpleado;
+        private System.Windows.Forms.Label label2;
     }
 }

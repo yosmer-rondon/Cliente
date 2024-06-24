@@ -20,6 +20,9 @@ namespace Cliente
         {
             InitializeComponent();
             listar();
+            groupBox1.Enabled = false;
+            textIDEmpleado.Enabled = false;
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -29,6 +32,11 @@ namespace Cliente
 
         private void button4_Click(object sender, EventArgs e)
         {
+            groupBox1.Enabled = true;
+
+            btnAgregar.Visible = true;
+            LimpiarVariables();
+            btnModificar.Visible = false;
 
         }
 
@@ -42,13 +50,13 @@ namespace Cliente
             try
             {
                 entEmpleado c = new entEmpleado();
-                c.nombre = nombre.Text.Trim();
-                c.tipoempleado = tipoempleado.Text.Trim();
-                c.direccion = direccion.Text.Trim();
-                c.Telefono = int.Parse(telefono.Text.Trim());
-                c.correo = correo.Text.Trim();
-                c.dni = int.Parse(dni.Text.Trim());
-                c.fechareg = fecha.Value;
+                c.nombre = textNombre.Text.Trim();
+                c.tipoempleado = texttipoempleado.Text.Trim();
+                c.direccion = textdireccion.Text.Trim();
+                c.Telefono = int.Parse(texttelefono.Text.Trim());
+                c.correo = textcorreo.Text.Trim();
+                c.dni = int.Parse(textdni.Text.Trim());
+                c.fechareg = dtfechareg.Value;
 
                 LogEmpleado.Instancia.InsertarEmpleado(c);
             }
@@ -62,13 +70,13 @@ namespace Cliente
         }
         private void LimpiarVariables()
         {
-            nombre.Text = "";
-            tipoempleado.Text = " ";
-            direccion.Text = " ";
-            telefono.Text = " ";
-            correo.Text = " ";
-            dni.Text = " ";
-            telefono.Text = " ";
+            textNombre.Text = "";
+            texttipoempleado.Text = " ";
+            textdireccion.Text = " ";
+            texttelefono.Text = " ";
+            textcorreo.Text = " ";
+            textdni.Text = " ";
+            texttelefono.Text = " ";
         }
         public void listar()
         {
@@ -76,6 +84,11 @@ namespace Cliente
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Manempleado_Load(object sender, EventArgs e)
         {
 
         }

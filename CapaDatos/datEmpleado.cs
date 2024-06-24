@@ -26,7 +26,7 @@ namespace CapaDatos
         }
         #endregion singleton
         #region metodos
-        ////////////////////listado de Clientes
+        ////////////////////listado de Empleados
         public List<entEmpleado> ListarEmpleado()
         {
             SqlCommand cmd = null;
@@ -62,7 +62,7 @@ namespace CapaDatos
             }
             return lista;
         }
-        /////////////////////////InsertaCliente
+        /////////////////////////Insertar Empleado
         public Boolean InsertarEmpleado(entEmpleado Cli)
         {
             SqlCommand cmd = null;
@@ -70,7 +70,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCliente", cn);
+                cmd = new SqlCommand("spInsertarEmpleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
                 cmd.Parameters.AddWithValue("@tipoempleado", Cli.tipoempleado);
@@ -92,6 +92,38 @@ namespace CapaDatos
             }
             finally { cmd.Connection.Close(); }
             return inserta;
+        }
+        //////////////////////////////////Editando Empleado
+        public Boolean EditarCliente(entCliente Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEditarCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IDCliente", Cli.IDCliente);
+                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
+                cmd.Parameters.AddWithValue("@Apellido", Cli.Apellido);
+                cmd.Parameters.AddWithValue("@DNI", Cli.DNI);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
+                cmd.Parameters.AddWithValue("@TipoCliente", Cli.TipoCliente);
+                cmd.Parameters.AddWithValue("@FechaRegistro", Cli.FechaRegistro);
+                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
         }
         #endregion metodos
     }
