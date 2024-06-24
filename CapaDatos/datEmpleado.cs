@@ -94,23 +94,23 @@ namespace CapaDatos
             return inserta;
         }
         //////////////////////////////////Editando Empleado
-        public Boolean EditarCliente(entCliente Cli)
+        public Boolean EditarEmpleado(entEmpleado Cli)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarCliente", cn);
+                cmd = new SqlCommand("spEditarEmpleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDCliente", Cli.IDCliente);
-                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
-                cmd.Parameters.AddWithValue("@Apellido", Cli.Apellido);
-                cmd.Parameters.AddWithValue("@DNI", Cli.DNI);
-                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
-                cmd.Parameters.AddWithValue("@TipoCliente", Cli.TipoCliente);
-                cmd.Parameters.AddWithValue("@FechaRegistro", Cli.FechaRegistro);
-                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
+                cmd.Parameters.AddWithValue("@Idempleado", Cli.Idempleado);
+                cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@tipoempleado", Cli.tipoempleado);
+                cmd.Parameters.AddWithValue("@direccion", Cli.direccion);
+                cmd.Parameters.AddWithValue("@telefono", Cli.Telefono);
+                cmd.Parameters.AddWithValue("@correo", Cli.correo);
+                cmd.Parameters.AddWithValue("@dni", Cli.dni);
+                cmd.Parameters.AddWithValue("@fechareg", Cli.fechareg);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

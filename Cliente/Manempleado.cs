@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDatos;
 using CapaEntidad;
 using CapaEntidadd;
 using CapaLogica;
@@ -77,6 +78,7 @@ namespace Cliente
             textcorreo.Text = " ";
             textdni.Text = " ";
             texttelefono.Text = " ";
+            dtfechareg.Text = " ";
         }
         public void listar()
         {
@@ -90,6 +92,23 @@ namespace Cliente
 
         private void Manempleado_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dgvCliente.Rows[e.RowIndex]; //
+            txtidCliente.Text = filaActual.Cells[0].Value.ToString();
+            txtRazonSocial.Text = filaActual.Cells[1].Value.ToString();
+            txtidTipoCliente.Text = filaActual.Cells[2].Value.ToString();
+            dtPickerRegCliente.Text = filaActual.Cells[3].Value.ToString();
+            txtidCiudad.Text = filaActual.Cells[4].Value.ToString();
+            cbkEstadoCliente.Checked = Convert.ToBoolean(filaActual.Cells[5].Value);
 
         }
     }

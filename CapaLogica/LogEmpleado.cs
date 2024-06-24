@@ -23,15 +23,25 @@ namespace CapaLogica
                 return LogEmpleado._instancia;
             }
         }
+
+
+        //INSERTA
         public void InsertarEmpleado(entEmpleado Cli)
         {
             datEmpleado.Instancia.InsertarEmpleado(Cli);
         }
-            #endregion singleton
 
-            #region metodos
+        //EDITA
+        public void EditarEmpleado(entEmpleado Cli)
+        {
+            datEmpleado.Instancia.EditarEmpleado(Cli);
+        }
 
-            ///listado
+        #endregion singleton
+
+        #region metodos
+
+        ///listado
 
         public List<entEmpleado> ListarEmpleado()
         {
