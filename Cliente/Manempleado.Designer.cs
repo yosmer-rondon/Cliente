@@ -35,6 +35,8 @@ namespace Cliente
             this.btnEditar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textIDEmpleado = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.textdni = new System.Windows.Forms.TextBox();
             this.texttipoempleado = new System.Windows.Forms.TextBox();
             this.textdireccion = new System.Windows.Forms.TextBox();
@@ -57,8 +59,6 @@ namespace Cliente
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textIDEmpleado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.SuspendLayout();
@@ -158,6 +158,23 @@ namespace Cliente
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL EMPLEADO";
             // 
+            // textIDEmpleado
+            // 
+            this.textIDEmpleado.Location = new System.Drawing.Point(165, 286);
+            this.textIDEmpleado.Name = "textIDEmpleado";
+            this.textIDEmpleado.Size = new System.Drawing.Size(200, 34);
+            this.textIDEmpleado.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(6, 293);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(153, 27);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "ID Empleado:";
+            // 
             // textdni
             // 
             this.textdni.Location = new System.Drawing.Point(510, 110);
@@ -199,6 +216,7 @@ namespace Cliente
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(206, 34);
             this.textNombre.TabIndex = 17;
+            this.textNombre.TextChanged += new System.EventHandler(this.textNombre_TextChanged);
             // 
             // label8
             // 
@@ -258,6 +276,7 @@ namespace Cliente
             this.label4.Size = new System.Drawing.Size(91, 27);
             this.label4.TabIndex = 10;
             this.label4.Text = "Correo:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -378,23 +397,6 @@ namespace Cliente
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(6, 293);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 27);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "ID Empleado:";
-            // 
-            // textIDEmpleado
-            // 
-            this.textIDEmpleado.Location = new System.Drawing.Point(165, 286);
-            this.textIDEmpleado.Name = "textIDEmpleado";
-            this.textIDEmpleado.Size = new System.Drawing.Size(200, 34);
-            this.textIDEmpleado.TabIndex = 25;
             // 
             // Manempleado
             // 
