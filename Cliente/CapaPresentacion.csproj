@@ -117,6 +117,9 @@
     <EmbeddedResource Include="Formprincipal.resx">
       <DependentUpon>Formprincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantipoEmpleado.resx">
+      <DependentUpon>MantipoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManTipoTrabajo.resx">
       <DependentUpon>ManTipoTrabajo.cs</DependentUpon>
     </EmbeddedResource>
