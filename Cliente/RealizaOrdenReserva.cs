@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace Cliente
 {
-    public partial class Hospedaje : Form
+    public partial class RealizaOrdenReserva : Form
     {
-        public Hospedaje()
+        public RealizaOrdenReserva()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            reservas res = new reservas();
-            res.Show();
+            Mancliente manc = new Mancliente();
+            manc.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -34,7 +34,12 @@ namespace Cliente
             pag.Show();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

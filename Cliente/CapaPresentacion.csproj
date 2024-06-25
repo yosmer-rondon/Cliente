@@ -52,17 +52,23 @@
     <Compile Include="Formprincipal.Designer.cs">
       <DependentUpon>Formprincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hospedaje.cs">
+    <Compile Include="MantipoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hospedaje.Designer.cs">
-      <DependentUpon>Hospedaje.cs</DependentUpon>
+    <Compile Include="MantipoEmpleado.Designer.cs">
+      <DependentUpon>MantipoEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Limpiezadehabitaciones.cs">
+    <Compile Include="ManTipoTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Limpiezadehabitaciones.Designer.cs">
-      <DependentUpon>Limpiezadehabitaciones.cs</DependentUpon>
+    <Compile Include="ManTipoTrabajo.Designer.cs">
+      <DependentUpon>ManTipoTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealizaOrdenHospedaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizaOrdenHospedaje.Designer.cs">
+      <DependentUpon>RealizaOrdenHospedaje.cs</DependentUpon>
     </Compile>
     <Compile Include="Manempleado.cs">
       <SubType>Form</SubType>
@@ -94,28 +100,28 @@
     <Compile Include="Mantipohabitacion.Designer.cs">
       <DependentUpon>Mantipohabitacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pago.Designer.cs">
-      <DependentUpon>Pago.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="reservas.cs">
+    <Compile Include="RealizaOrdenTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reservas.Designer.cs">
-      <DependentUpon>reservas.cs</DependentUpon>
+    <Compile Include="RealizaOrdenTrabajo.Designer.cs">
+      <DependentUpon>RealizaOrdenTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealizaOrdenReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizaOrdenReserva.Designer.cs">
+      <DependentUpon>RealizaOrdenReserva.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Formprincipal.resx">
       <DependentUpon>Formprincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hospedaje.resx">
-      <DependentUpon>Hospedaje.cs</DependentUpon>
+    <EmbeddedResource Include="ManTipoTrabajo.resx">
+      <DependentUpon>ManTipoTrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Limpiezadehabitaciones.resx">
-      <DependentUpon>Limpiezadehabitaciones.cs</DependentUpon>
+    <EmbeddedResource Include="RealizaOrdenHospedaje.resx">
+      <DependentUpon>RealizaOrdenHospedaje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mancliente.resx">
       <DependentUpon>Mancliente.cs</DependentUpon>
@@ -132,9 +138,6 @@
     <EmbeddedResource Include="Mantipohabitacion.resx">
       <DependentUpon>Mantipohabitacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pago.resx">
-      <DependentUpon>Pago.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -145,8 +148,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="reservas.resx">
-      <DependentUpon>reservas.cs</DependentUpon>
+    <EmbeddedResource Include="RealizaOrdenReserva.resx">
+      <DependentUpon>RealizaOrdenReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealizaOrdenTrabajo.resx">
+      <DependentUpon>RealizaOrdenTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace Cliente
 {
-    partial class Hospedaje
+    partial class RealizaOrdenHospedaje
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hospedaje));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RealizaOrdenHospedaje));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -62,15 +56,9 @@
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button3);
@@ -126,46 +114,6 @@
             this.textBox5.Size = new System.Drawing.Size(141, 30);
             this.textBox5.TabIndex = 2;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Peru;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 230);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(177, 30);
-            this.dateTimePicker1.TabIndex = 27;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 6, 18, 15, 54, 55, 0);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(3, 287);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(180, 30);
-            this.dateTimePicker2.TabIndex = 26;
-            this.dateTimePicker2.Value = new System.DateTime(2024, 6, 18, 15, 54, 55, 0);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Peru;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(2, 260);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 25);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Fecha de salida";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Peru;
-            this.label5.Location = new System.Drawing.Point(4, 203);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 25);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Fecha de entrada";
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Peru;
@@ -200,28 +148,10 @@
             this.button2.Text = "Listar";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.PapayaWhip;
-            this.textBox3.Location = new System.Drawing.Point(3, 163);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(177, 30);
-            this.textBox3.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Peru;
-            this.label3.Location = new System.Drawing.Point(4, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 25);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Num habitacion";
-            // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.PapayaWhip;
-            this.textBox2.Location = new System.Drawing.Point(3, 107);
+            this.textBox2.Location = new System.Drawing.Point(3, 54);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(177, 30);
             this.textBox2.TabIndex = 13;
@@ -230,11 +160,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Peru;
-            this.label2.Location = new System.Drawing.Point(4, 80);
+            this.label2.Location = new System.Drawing.Point(4, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 25);
+            this.label2.Size = new System.Drawing.Size(148, 25);
             this.label2.TabIndex = 12;
-            this.label2.Text = "DNI cliente";
+            this.label2.Text = "ID_Hospedaje";
             // 
             // button3
             // 
@@ -328,20 +258,14 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

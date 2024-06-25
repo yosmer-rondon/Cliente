@@ -46,6 +46,7 @@
     <Compile Include="datEmpleado.cs" />
     <Compile Include="datHabitacion.cs" />
     <Compile Include="datMetodoPago.cs" />
+    <Compile Include="datODReserva.cs" />
     <Compile Include="datTipoHabitacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Cliente
 {
-    public partial class Pago : Form
+    public partial class RealizaOrdenTrabajo : Form
     {
-        public Pago()
+        public RealizaOrdenTrabajo()
         {
             InitializeComponent();
-        }
-
-        private void Pago_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

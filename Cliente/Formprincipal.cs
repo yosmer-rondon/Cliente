@@ -88,13 +88,13 @@ namespace Cliente
 
         private void button5_Click(object sender, EventArgs e)
         {
-            reservas res = new reservas();
+            RealizaOrdenReserva res = new RealizaOrdenReserva();
             res.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Hospedaje hos = new Hospedaje();
+            RealizaOrdenHospedaje hos = new RealizaOrdenHospedaje();
             hos.Show();
         }
 

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Cliente
 {
-    public partial class Limpieza_de_habitaciones : Form
+    public partial class ManTipoTrabajo : Form
     {
-        public Limpieza_de_habitaciones()
+        public ManTipoTrabajo()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
