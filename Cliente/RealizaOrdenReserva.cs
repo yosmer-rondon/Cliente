@@ -28,12 +28,6 @@ namespace Cliente
             manc.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Pago pag = new Pago();
-            pag.Show();
-        }
-
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 

@@ -28,13 +28,13 @@ namespace Cliente
             res.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Pago pag = new Pago();
-            pag.Show();
-        }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }

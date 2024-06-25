@@ -98,10 +98,5 @@ namespace Cliente
             hos.Show();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Pago pag = new Pago();
-            pag.Show();
-        }
     }
 }

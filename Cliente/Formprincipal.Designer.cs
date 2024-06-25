@@ -33,7 +33,6 @@ namespace Cliente
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
@@ -70,13 +69,12 @@ namespace Cliente
             // 
             this.tabPage3.BackgroundImage = global::Cliente.Properties.Resources.marco;
             this.tabPage3.Controls.Add(this.button7);
-            this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.button5);
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(952, 160);
+            this.tabPage3.Size = new System.Drawing.Size(952, 164);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Transacciones";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -93,19 +91,6 @@ namespace Cliente
             this.button7.Text = "Hospedaje";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DimGray;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(527, 45);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(205, 50);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Pago";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -131,11 +116,11 @@ namespace Cliente
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(952, 160);
+            this.tabPage2.Size = new System.Drawing.Size(952, 164);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenedores";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -216,11 +201,11 @@ namespace Cliente
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(952, 160);
+            this.tabPage1.Size = new System.Drawing.Size(952, 164);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Conexion sql";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -233,7 +218,7 @@ namespace Cliente
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Location = new System.Drawing.Point(544, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 29);
+            this.label3.Size = new System.Drawing.Size(27, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "...";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -248,7 +233,7 @@ namespace Cliente
             "Hotel"});
             this.comboBox2.Location = new System.Drawing.Point(285, 63);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(230, 37);
+            this.comboBox2.Size = new System.Drawing.Size(230, 33);
             this.comboBox2.TabIndex = 4;
             // 
             // label2
@@ -258,7 +243,7 @@ namespace Cliente
             this.label2.ForeColor = System.Drawing.Color.Chocolate;
             this.label2.Location = new System.Drawing.Point(279, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 29);
+            this.label2.Size = new System.Drawing.Size(120, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Base datos";
             // 
@@ -269,7 +254,7 @@ namespace Cliente
             this.label1.ForeColor = System.Drawing.Color.Chocolate;
             this.label1.Location = new System.Drawing.Point(29, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 29);
+            this.label1.Size = new System.Drawing.Size(93, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Servidor";
             // 
@@ -297,7 +282,7 @@ namespace Cliente
             "HP"});
             this.comboBox1.Location = new System.Drawing.Point(26, 63);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 37);
+            this.comboBox1.Size = new System.Drawing.Size(230, 33);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -337,7 +322,6 @@ namespace Cliente
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button9;
