@@ -66,6 +66,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label7);
@@ -118,13 +119,14 @@
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.Honeydew;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(778, 480);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(102, 67);
             this.button8.TabIndex = 3;
             this.button8.Text = "Anular Reserva";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // textBox6
             // 
@@ -146,13 +148,14 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Honeydew;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(670, 480);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 67);
             this.button2.TabIndex = 2;
             this.button2.Text = "Buscar Reserva";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // textBox3
             // 
@@ -204,13 +207,14 @@
             // 
             // button11
             // 
+            this.button11.BackColor = System.Drawing.Color.Honeydew;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button11.Location = new System.Drawing.Point(57, 75);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(119, 36);
             this.button11.TabIndex = 3;
             this.button11.Text = "Buscar";
-            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -233,13 +237,14 @@
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.Honeydew;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(747, 22);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 41);
             this.button6.TabIndex = 14;
             this.button6.Text = "Listar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -277,34 +282,37 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Honeydew;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(747, 69);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(113, 48);
             this.button3.TabIndex = 5;
             this.button3.Text = "Habitaciones \r\ndisponibles";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Honeydew;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(562, 480);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 67);
             this.button4.TabIndex = 6;
             this.button4.Text = "Agregar cliente";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Honeydew;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(433, 480);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 67);
             this.button1.TabIndex = 6;
             this.button1.Text = "Realizar Hospedaje";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
@@ -344,13 +352,14 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Honeydew;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(325, 480);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(102, 67);
             this.button5.TabIndex = 26;
             this.button5.Text = "Realizar Reservar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // RealizaOrdenReserva
             // 

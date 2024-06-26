@@ -58,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -163,39 +164,43 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.Location = new System.Drawing.Point(11, 456);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 58);
             this.button1.TabIndex = 11;
             this.button1.Text = "Crear orden de trabajo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button2.Location = new System.Drawing.Point(154, 456);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 58);
             this.button2.TabIndex = 12;
             this.button2.Text = "Listar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button3.Location = new System.Drawing.Point(297, 456);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 58);
             this.button3.TabIndex = 13;
             this.button3.Text = "Anular";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button4.Location = new System.Drawing.Point(727, 322);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(136, 89);
             this.button4.TabIndex = 14;
             this.button4.Text = "Listar Habitaciones sucias";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // RealizaOrdenTrabajo
             // 
