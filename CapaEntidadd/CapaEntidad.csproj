@@ -46,7 +46,10 @@
     <Compile Include="entHabitacion.cs" />
     <Compile Include="entMetodoPago.cs" />
     <Compile Include="entODReserva.cs" />
+    <Compile Include="entODTrabajo.cs" />
+    <Compile Include="entTipoEmpleado.cs" />
     <Compile Include="entTipoHabitacion.cs" />
+    <Compile Include="entTipoTrabajo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
