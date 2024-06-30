@@ -157,6 +157,7 @@ namespace Cliente
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL EMPLEADO";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textIDEmpleado
             // 

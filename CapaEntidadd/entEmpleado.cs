@@ -10,7 +10,7 @@ namespace CapaEntidadd
     {
         public int Idempleado { get; set; }
         public string nombre { get; set; }
-        public string tipoempleado { get; set; }
+        public string tipoempleado { get; set; }//IDTIPOCLIENTE
         public string direccion { get; set; }
         public int Telefono { get; set; }
         public string correo { get; set; }
