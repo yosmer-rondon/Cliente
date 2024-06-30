@@ -41,13 +41,13 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entCliente Cli = new entCliente();
-                    Cli.IDCliente = Convert.ToInt32(dr["id"]);
-                    Cli.Nombre = dr["nombre"].ToString();
-                    Cli.Apellido = dr["apellido"].ToString();
-                    Cli.DNI = Convert.ToInt32(dr["dni"]);
-                    Cli.Telefono = Convert.ToInt32(dr["telefono"]);
-                    Cli.Correo = dr["correo"].ToString();
-                    Cli.Estado = dr["estado"].ToString();
+                    Cli.id = Convert.ToInt32(dr["id"]);
+                    Cli.nombre = dr["nombre"].ToString();
+                    Cli.apellido = dr["apellido"].ToString();
+                    Cli.dni = Convert.ToInt32(dr["dni"]);
+                    Cli.telefono = Convert.ToInt32(dr["telefono"]);
+                    Cli.correo = dr["correo"].ToString();
+                    Cli.estado = dr["estado"].ToString();
                     lista.Add(Cli);
                 }
 
@@ -72,12 +72,12 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("agregarcliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
-                cmd.Parameters.AddWithValue("@Apellido", Cli.Apellido);
-                cmd.Parameters.AddWithValue("@DNI", Cli.DNI);
-                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
-                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
-                cmd.Parameters.AddWithValue("@estado", Cli.Estado);
+                cmd.Parameters.AddWithValue("@Nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@Apellido", Cli.apellido);
+                cmd.Parameters.AddWithValue("@DNI", Cli.dni);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.telefono);
+                cmd.Parameters.AddWithValue("@Correo", Cli.correo);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -103,13 +103,13 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEditarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDCliente", Cli.IDCliente);
-                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
-                cmd.Parameters.AddWithValue("@Apellido", Cli.Apellido);
-                cmd.Parameters.AddWithValue("@DNI", Cli.DNI);
-                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
-                cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
-                cmd.Parameters.AddWithValue("@estado", Cli.Estado);
+                cmd.Parameters.AddWithValue("@IDCliente", Cli.id);
+                cmd.Parameters.AddWithValue("@Nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@Apellido", Cli.apellido);
+                cmd.Parameters.AddWithValue("@DNI", Cli.dni);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.telefono);
+                cmd.Parameters.AddWithValue("@Correo", Cli.correo);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -135,7 +135,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDeshabilitarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDCliente", Cli.IDCliente);
+                cmd.Parameters.AddWithValue("@IDCliente", Cli.id);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

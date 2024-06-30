@@ -31,6 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.ID_cliente = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dni = new System.Windows.Forms.TextBox();
@@ -55,9 +56,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.direccion = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -96,8 +94,6 @@
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.direccion);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.ID_cliente);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.dni);
@@ -123,6 +119,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL CLIENTE";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(438, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(94, 29);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Estado:";
             // 
             // ID_cliente
             // 
@@ -175,7 +182,7 @@
             // 
             this.telefono.BackColor = System.Drawing.Color.White;
             this.telefono.ForeColor = System.Drawing.Color.Black;
-            this.telefono.Location = new System.Drawing.Point(136, 229);
+            this.telefono.Location = new System.Drawing.Point(136, 188);
             this.telefono.Name = "telefono";
             this.telefono.Size = new System.Drawing.Size(271, 35);
             this.telefono.TabIndex = 19;
@@ -184,7 +191,7 @@
             // 
             this.correo.BackColor = System.Drawing.Color.White;
             this.correo.ForeColor = System.Drawing.Color.Black;
-            this.correo.Location = new System.Drawing.Point(136, 272);
+            this.correo.Location = new System.Drawing.Point(136, 229);
             this.correo.Name = "correo";
             this.correo.Size = new System.Drawing.Size(271, 35);
             this.correo.TabIndex = 18;
@@ -215,7 +222,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(6, 231);
+            this.label6.Location = new System.Drawing.Point(6, 191);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 29);
             this.label6.TabIndex = 12;
@@ -226,7 +233,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(11, 273);
+            this.label4.Location = new System.Drawing.Point(6, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 29);
             this.label4.TabIndex = 10;
@@ -397,37 +404,6 @@
             this.textBox5.Text = "⍈";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(6, 189);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 29);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Direccion:";
-            // 
-            // direccion
-            // 
-            this.direccion.BackColor = System.Drawing.Color.White;
-            this.direccion.ForeColor = System.Drawing.Color.Black;
-            this.direccion.Location = new System.Drawing.Point(136, 186);
-            this.direccion.Name = "direccion";
-            this.direccion.Size = new System.Drawing.Size(271, 35);
-            this.direccion.TabIndex = 29;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(438, 110);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 29);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Estado:";
-            // 
             // Mancliente
             // 
             this.AllowDrop = true;
@@ -488,7 +464,5 @@
         private System.Windows.Forms.TextBox ID_cliente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox direccion;
-        private System.Windows.Forms.Label label9;
     }
 }

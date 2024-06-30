@@ -19,7 +19,7 @@ namespace Cliente
         public Mancliente()
         {
             InitializeComponent();
-            //listar();
+            listar();
             groupBox1.Enabled = false;
             ID_cliente.Enabled = false;
 
@@ -71,12 +71,12 @@ namespace Cliente
             try
             {
                 entCliente c = new entCliente();
-                c.Nombre = nombre.Text.Trim();
-                c.Apellido = apellidos.Text.Trim();
-                c.DNI = int.Parse(dni.Text.Trim());
-                c.Telefono = int.Parse(telefono.Text.Trim());
-                c.Correo = correo.Text.Trim();
-                c.Estado = estado.Text.Trim();
+                c.nombre = nombre.Text.Trim();
+                c.apellido = apellidos.Text.Trim();
+                c.dni = int.Parse(dni.Text.Trim());
+                c.telefono = int.Parse(telefono.Text.Trim());
+                c.correo = correo.Text.Trim();
+                c.estado = estado.Text.Trim();
                 logCliente.Instancia.InsertarCliente(c);
             }
             catch (Exception ex)
@@ -98,7 +98,7 @@ namespace Cliente
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 entCliente c = new entCliente();
@@ -117,7 +117,7 @@ namespace Cliente
             }
             LimpiarVariables();
             groupBox1.Enabled = false;
-            listar();
+            listar();*/
 
         }
 
@@ -142,7 +142,7 @@ namespace Cliente
             {
                 entCliente c = new entCliente();
 
-                c.IDCliente = int.Parse(ID_cliente.Text.Trim());
+                c.id = int.Parse(ID_cliente.Text.Trim());
                 logCliente.Instancia.DeshabilitarCliente(c);
             }
             catch (Exception ex)
