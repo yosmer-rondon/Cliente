@@ -47,7 +47,6 @@ namespace CapaDatos
                     Cli.Telefono = Convert.ToInt32(dr["telefono"]);
                     Cli.correo = dr["correo"].ToString();
                     Cli.dni = Convert.ToInt32(dr["dni"]);
-                    Cli.fechareg = Convert.ToDateTime(dr["fechareg"]);
                     lista.Add(Cli);
                 }
 
@@ -110,7 +109,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@telefono", Cli.Telefono);
                 cmd.Parameters.AddWithValue("@correo", Cli.correo);
                 cmd.Parameters.AddWithValue("@dni", Cli.dni);
-                cmd.Parameters.AddWithValue("@fechareg", Cli.fechareg);
+                cmd.Parameters.AddWithValue("@dni", Cli.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

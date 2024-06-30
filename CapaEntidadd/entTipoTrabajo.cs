@@ -11,5 +11,6 @@ namespace CapaEntidadd
         public int IDTipoTrabajo { get; set; }
         public string nombre { get; set; }
         public int descripcion { get; set; }
+        public string estado { get; set; }
     }
 }

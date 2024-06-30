@@ -228,7 +228,7 @@ namespace Cliente
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "baseprueba",
+            "hotel_ms",
             "Hotel Proyecto Moanso",
             "Hotel"});
             this.comboBox2.Location = new System.Drawing.Point(285, 63);

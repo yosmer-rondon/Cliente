@@ -12,7 +12,6 @@ namespace CapaEntidadd
         public string Nombre { get; set; }
         public string Vistas { get; set; }
         public int Costo { get; set; }
-        public Boolean Estado { get; set; }
-
+        public string Estado { get; set; }
     }
 }

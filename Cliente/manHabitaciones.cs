@@ -69,11 +69,11 @@ namespace Cliente
             {
                 entHabitacion c = new entHabitacion();
                 c.Habitacion = int.Parse(textHabitacion.Text.Trim());
-                c.IDTipoHabitacion = int.Parse(textIDTipoHabitacion.Text.Trim());
+                c.IDTipoHabitacion = int.Parse(comboBox1.Text.Trim());
                 c.Piso = int.Parse(textPisoHabitacion.Text.Trim());
                 c.Capacidad = textCapacidadHabitacion.Text.Trim();
                 c.Costo = int.Parse(textCostoHabitacion.Text.Trim());
-                c.Estado = checkEstadoHabitacion.Checked;
+                c.Estado = textBox1.Text.Trim();
                 logHabitacion.Instancia.InsertarHabiacion(c);
             }
             catch (Exception ex)
@@ -88,11 +88,11 @@ namespace Cliente
         private void LimpiarVariables()
         {
             textHabitacion.Text = "";
-            textIDTipoHabitacion.Text = " ";
+            comboBox1.Text = " ";
             textPisoHabitacion.Text = " ";
             textCapacidadHabitacion.Text = " ";
             textCostoHabitacion.Text = " ";
-            checkEstadoHabitacion.Checked = false;
+            textBox1.Text = "";
 
 
         }
@@ -112,11 +112,11 @@ namespace Cliente
             DataGridViewRow filaActual = dgvHabitaciones.Rows[e.RowIndex]; //
             textIDHabitacion.Text = filaActual.Cells[0].Value.ToString();
             textHabitacion.Text = filaActual.Cells[1].Value.ToString();
-            textIDTipoHabitacion.Text = filaActual.Cells[2].Value.ToString();
+            comboBox1.Text = filaActual.Cells[2].Value.ToString();
             textPisoHabitacion.Text = filaActual.Cells[3].Value.ToString();
             textCapacidadHabitacion.Text = filaActual.Cells[4].Value.ToString();
             textCostoHabitacion.Text = filaActual.Cells[5].Value.ToString();
-            checkEstadoHabitacion.Checked = Convert.ToBoolean(filaActual.Cells[6].Value);
+            textBox1.Text = filaActual.Cells[6].Value.ToString();
 
         }
 

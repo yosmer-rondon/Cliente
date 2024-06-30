@@ -34,22 +34,23 @@
             this.btnDeshabilitarHabitacion = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupDatosHabitacion = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.textPisoHabitacion = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textHabitacion = new System.Windows.Forms.TextBox();
+            this.textCapacidadHabitacion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textCostoHabitacion = new System.Windows.Forms.TextBox();
             this.textIDHabitacion = new System.Windows.Forms.TextBox();
-            this.checkEstadoHabitacion = new System.Windows.Forms.CheckBox();
             this.btnAgregarHabitacion = new System.Windows.Forms.Button();
             this.btnModificarHabitacion = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.textCapacidadHabitacion = new System.Windows.Forms.TextBox();
-            this.textHabitacion = new System.Windows.Forms.TextBox();
-            this.textIDTipoHabitacion = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textPisoHabitacion = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
             this.groupDatosHabitacion.SuspendLayout();
             this.SuspendLayout();
@@ -124,9 +125,11 @@
             // 
             // groupDatosHabitacion
             // 
+            this.groupDatosHabitacion.Controls.Add(this.textBox1);
+            this.groupDatosHabitacion.Controls.Add(this.label8);
+            this.groupDatosHabitacion.Controls.Add(this.comboBox1);
             this.groupDatosHabitacion.Controls.Add(this.textPisoHabitacion);
             this.groupDatosHabitacion.Controls.Add(this.label6);
-            this.groupDatosHabitacion.Controls.Add(this.textIDTipoHabitacion);
             this.groupDatosHabitacion.Controls.Add(this.textHabitacion);
             this.groupDatosHabitacion.Controls.Add(this.textCapacidadHabitacion);
             this.groupDatosHabitacion.Controls.Add(this.label5);
@@ -136,35 +139,55 @@
             this.groupDatosHabitacion.Controls.Add(this.label1);
             this.groupDatosHabitacion.Controls.Add(this.textCostoHabitacion);
             this.groupDatosHabitacion.Controls.Add(this.textIDHabitacion);
-            this.groupDatosHabitacion.Controls.Add(this.checkEstadoHabitacion);
             this.groupDatosHabitacion.Controls.Add(this.btnAgregarHabitacion);
             this.groupDatosHabitacion.Controls.Add(this.btnModificarHabitacion);
             this.groupDatosHabitacion.Controls.Add(this.btnCancelar);
-            this.groupDatosHabitacion.Location = new System.Drawing.Point(58, 264);
+            this.groupDatosHabitacion.Location = new System.Drawing.Point(4, 264);
             this.groupDatosHabitacion.Name = "groupDatosHabitacion";
-            this.groupDatosHabitacion.Size = new System.Drawing.Size(835, 189);
+            this.groupDatosHabitacion.Size = new System.Drawing.Size(943, 189);
             this.groupDatosHabitacion.TabIndex = 5;
             this.groupDatosHabitacion.TabStop = false;
             this.groupDatosHabitacion.Text = "Datos de Habitacion";
             // 
-            // label5
+            // textPisoHabitacion
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FloralWhite;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(331, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Costo";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.textPisoHabitacion.Location = new System.Drawing.Point(149, 153);
+            this.textPisoHabitacion.Name = "textPisoHabitacion";
+            this.textPisoHabitacion.Size = new System.Drawing.Size(72, 20);
+            this.textPisoHabitacion.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FloralWhite;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 16);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Habitacion";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // textHabitacion
+            // 
+            this.textHabitacion.Location = new System.Drawing.Point(96, 73);
+            this.textHabitacion.Name = "textHabitacion";
+            this.textHabitacion.Size = new System.Drawing.Size(81, 20);
+            this.textHabitacion.TabIndex = 18;
+            // 
+            // textCapacidadHabitacion
+            // 
+            this.textCapacidadHabitacion.Location = new System.Drawing.Point(499, 27);
+            this.textCapacidadHabitacion.Name = "textCapacidadHabitacion";
+            this.textCapacidadHabitacion.Size = new System.Drawing.Size(61, 20);
+            this.textCapacidadHabitacion.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FloralWhite;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(331, 77);
+            this.label4.Location = new System.Drawing.Point(331, 31);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 16);
             this.label4.TabIndex = 15;
@@ -209,7 +232,7 @@
             // 
             // textCostoHabitacion
             // 
-            this.textCostoHabitacion.Location = new System.Drawing.Point(401, 111);
+            this.textCostoHabitacion.Location = new System.Drawing.Point(396, 63);
             this.textCostoHabitacion.Name = "textCostoHabitacion";
             this.textCostoHabitacion.Size = new System.Drawing.Size(45, 20);
             this.textCostoHabitacion.TabIndex = 11;
@@ -220,16 +243,6 @@
             this.textIDHabitacion.Name = "textIDHabitacion";
             this.textIDHabitacion.Size = new System.Drawing.Size(101, 20);
             this.textIDHabitacion.TabIndex = 8;
-            // 
-            // checkEstadoHabitacion
-            // 
-            this.checkEstadoHabitacion.AutoSize = true;
-            this.checkEstadoHabitacion.Location = new System.Drawing.Point(334, 34);
-            this.checkEstadoHabitacion.Name = "checkEstadoHabitacion";
-            this.checkEstadoHabitacion.Size = new System.Drawing.Size(130, 17);
-            this.checkEstadoHabitacion.TabIndex = 5;
-            this.checkEstadoHabitacion.Text = "Estado Habitacion";
-            this.checkEstadoHabitacion.UseVisualStyleBackColor = true;
             // 
             // btnAgregarHabitacion
             // 
@@ -273,52 +286,51 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // textCapacidadHabitacion
+            // comboBox1
             // 
-            this.textCapacidadHabitacion.Location = new System.Drawing.Point(499, 73);
-            this.textCapacidadHabitacion.Name = "textCapacidadHabitacion";
-            this.textCapacidadHabitacion.Size = new System.Drawing.Size(61, 20);
-            this.textCapacidadHabitacion.TabIndex = 17;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(149, 115);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 22;
             // 
-            // textHabitacion
+            // label5
             // 
-            this.textHabitacion.Location = new System.Drawing.Point(96, 73);
-            this.textHabitacion.Name = "textHabitacion";
-            this.textHabitacion.Size = new System.Drawing.Size(81, 20);
-            this.textHabitacion.TabIndex = 18;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FloralWhite;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(331, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Costo";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // textIDTipoHabitacion
+            // label8
             // 
-            this.textIDTipoHabitacion.Location = new System.Drawing.Point(149, 115);
-            this.textIDTipoHabitacion.Name = "textIDTipoHabitacion";
-            this.textIDTipoHabitacion.Size = new System.Drawing.Size(72, 20);
-            this.textIDTipoHabitacion.TabIndex = 19;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FloralWhite;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(331, 99);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 16);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Estado";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // label6
+            // textBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FloralWhite;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 16);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Habitacion";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // textPisoHabitacion
-            // 
-            this.textPisoHabitacion.Location = new System.Drawing.Point(149, 153);
-            this.textPisoHabitacion.Name = "textPisoHabitacion";
-            this.textPisoHabitacion.Size = new System.Drawing.Size(72, 20);
-            this.textPisoHabitacion.TabIndex = 21;
+            this.textBox1.Location = new System.Drawing.Point(396, 99);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(45, 20);
+            this.textBox1.TabIndex = 25;
             // 
             // manHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(950, 449);
+            this.ClientSize = new System.Drawing.Size(950, 455);
             this.Controls.Add(this.groupDatosHabitacion);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDeshabilitarHabitacion);
@@ -348,17 +360,18 @@
         private System.Windows.Forms.Button btnModificarHabitacion;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox textIDHabitacion;
-        private System.Windows.Forms.CheckBox checkEstadoHabitacion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textCostoHabitacion;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textIDTipoHabitacion;
         private System.Windows.Forms.TextBox textHabitacion;
         private System.Windows.Forms.TextBox textCapacidadHabitacion;
         private System.Windows.Forms.TextBox textPisoHabitacion;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
     }
 }

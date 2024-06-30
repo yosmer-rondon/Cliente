@@ -19,9 +19,9 @@ namespace Cliente
         public Mancliente()
         {
             InitializeComponent();
-            listar();
+            //listar();
             groupBox1.Enabled = false;
-            textBox9.Enabled = false;
+            ID_cliente.Enabled = false;
 
 
         }
@@ -71,14 +71,12 @@ namespace Cliente
             try
             {
                 entCliente c = new entCliente();
-                c.Nombre = textBox6.Text.Trim();
-                c.Apellido = textBox11.Text.Trim();
-                c.DNI = int.Parse(textBox12.Text.Trim());
-                c.Telefono = int.Parse(textBox8.Text.Trim());
-                c.TipoCliente = textBox10.Text.Trim();
-                c.FechaRegistro = FechaRegistroCliente.Value;
-                c.Correo = textBox7.Text.Trim();
-
+                c.Nombre = nombre.Text.Trim();
+                c.Apellido = apellidos.Text.Trim();
+                c.DNI = int.Parse(dni.Text.Trim());
+                c.Telefono = int.Parse(telefono.Text.Trim());
+                c.Correo = correo.Text.Trim();
+                c.Estado = estado.Text.Trim();
                 logCliente.Instancia.InsertarCliente(c);
             }
             catch (Exception ex)
@@ -91,12 +89,12 @@ namespace Cliente
         }
         private void LimpiarVariables()
         {
-            textBox6.Text = "";
-            textBox11.Text = " ";
-            textBox10.Text = " ";
-            textBox7.Text = " ";
-            textBox12.Text = " ";
-            textBox8.Text = " ";
+            nombre.Text = "";
+            apellidos.Text = " ";
+            estado.Text = " ";
+            correo.Text = " ";
+            dni.Text = " ";
+            telefono.Text = " ";
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -104,14 +102,13 @@ namespace Cliente
             try
             {
                 entCliente c = new entCliente();
-                c.IDCliente = int.Parse(textBox9.Text.Trim());
-                c.Nombre = textBox6.Text.Trim();
-                c.Apellido = textBox11.Text.Trim();
-                c.DNI = int.Parse(textBox12.Text.Trim());
-                c.Telefono = int.Parse(textBox8.Text.Trim());
-                c.TipoCliente = textBox10.Text.Trim();
-                c.FechaRegistro = FechaRegistroCliente.Value;
-                c.Correo = textBox7.Text.Trim();
+                c.IDCliente = int.Parse(ID_cliente.Text.Trim());
+                c.Nombre = nombre.Text.Trim();
+                c.Apellido = apellidos.Text.Trim();
+                c.DNI = int.Parse(dni.Text.Trim());
+                c.Telefono = int.Parse(telefono.Text.Trim());
+                c.Correo = correo.Text.Trim();
+                c.Estado = estado.Text.Trim();
                 logCliente.Instancia.EditarCliente(c);
             }
             catch (Exception ex)
@@ -127,14 +124,14 @@ namespace Cliente
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow filaActual = dataGridView1.Rows[e.RowIndex]; //
-            textBox9.Text = filaActual.Cells[0].Value.ToString();
-            textBox6.Text = filaActual.Cells[1].Value.ToString();
-            textBox11.Text = filaActual.Cells[2].Value.ToString();
-            textBox12.Text = filaActual.Cells[3].Value.ToString();
-            textBox8.Text = filaActual.Cells[4].Value.ToString();
-            textBox10.Text = filaActual.Cells[5].Value.ToString();
-            FechaRegistroCliente.Text = filaActual.Cells[6].Value.ToString();
-            textBox7.Text = filaActual.Cells[7].Value.ToString();
+            ID_cliente.Text = filaActual.Cells[0].Value.ToString();
+            nombre.Text = filaActual.Cells[1].Value.ToString();
+            apellidos.Text = filaActual.Cells[2].Value.ToString();
+            dni.Text = filaActual.Cells[3].Value.ToString();
+            telefono.Text = filaActual.Cells[4].Value.ToString();
+            estado.Text = filaActual.Cells[5].Value.ToString();
+            correo.Text = filaActual.Cells[7].Value.ToString();
+            estado.Text = filaActual.Cells[8].Value.ToString();
             //cbkEstadoCliente.Checked = Convert.ToBoolean(filaActual.Cells[5].Value);
 
         }
@@ -145,7 +142,7 @@ namespace Cliente
             {
                 entCliente c = new entCliente();
 
-                c.IDCliente = int.Parse(textBox9.Text.Trim());
+                c.IDCliente = int.Parse(ID_cliente.Text.Trim());
                 logCliente.Instancia.DeshabilitarCliente(c);
             }
             catch (Exception ex)

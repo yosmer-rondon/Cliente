@@ -34,21 +34,20 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spListarCliente", cn);
+                cmd = new SqlCommand("listarcliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     entCliente Cli = new entCliente();
-                    Cli.IDCliente = Convert.ToInt32(dr["IDCliente"]);
-                    Cli.Nombre = dr["Nombre"].ToString();
-                    Cli.Apellido = dr["Apellido"].ToString();
-                    Cli.DNI = Convert.ToInt32(dr["DNI"]);
-                    Cli.Telefono = Convert.ToInt32(dr["Telefono"]);
-                    Cli.TipoCliente = dr["TipoCliente"].ToString();
-                    Cli.FechaRegistro = Convert.ToDateTime(dr["FechaRegistro"]);
-                    Cli.Correo = dr["Correo"].ToString();
+                    Cli.IDCliente = Convert.ToInt32(dr["id"]);
+                    Cli.Nombre = dr["nombre"].ToString();
+                    Cli.Apellido = dr["apellido"].ToString();
+                    Cli.DNI = Convert.ToInt32(dr["dni"]);
+                    Cli.Telefono = Convert.ToInt32(dr["telefono"]);
+                    Cli.Correo = dr["correo"].ToString();
+                    Cli.Estado = dr["estado"].ToString();
                     lista.Add(Cli);
                 }
 
@@ -71,15 +70,14 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarCliente", cn);
+                cmd = new SqlCommand("agregarcliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
                 cmd.Parameters.AddWithValue("@Apellido", Cli.Apellido);
                 cmd.Parameters.AddWithValue("@DNI", Cli.DNI);
                 cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
-                cmd.Parameters.AddWithValue("@TipoCliente", Cli.TipoCliente);
-                cmd.Parameters.AddWithValue("@FechaRegistro", Cli.FechaRegistro);
                 cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
+                cmd.Parameters.AddWithValue("@estado", Cli.Estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -110,9 +108,8 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Apellido", Cli.Apellido);
                 cmd.Parameters.AddWithValue("@DNI", Cli.DNI);
                 cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
-                cmd.Parameters.AddWithValue("@TipoCliente", Cli.TipoCliente);
-                cmd.Parameters.AddWithValue("@FechaRegistro", Cli.FechaRegistro);
                 cmd.Parameters.AddWithValue("@Correo", Cli.Correo);
+                cmd.Parameters.AddWithValue("@estado", Cli.Estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

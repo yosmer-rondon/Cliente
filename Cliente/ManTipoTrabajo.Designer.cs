@@ -39,6 +39,8 @@
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonLista = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +83,7 @@
             // textBoxDescripcionTrabajo
             // 
             this.textBoxDescripcionTrabajo.Location = new System.Drawing.Point(18, 226);
-            this.textBoxDescripcionTrabajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDescripcionTrabajo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDescripcionTrabajo.Multiline = true;
             this.textBoxDescripcionTrabajo.Name = "textBoxDescripcionTrabajo";
             this.textBoxDescripcionTrabajo.Size = new System.Drawing.Size(217, 75);
@@ -94,7 +96,7 @@
             // 
             this.comboBoxtipodetrabajo.FormattingEnabled = true;
             this.comboBoxtipodetrabajo.Location = new System.Drawing.Point(18, 161);
-            this.comboBoxtipodetrabajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxtipodetrabajo.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxtipodetrabajo.Name = "comboBoxtipodetrabajo";
             this.comboBoxtipodetrabajo.Size = new System.Drawing.Size(157, 21);
             this.comboBoxtipodetrabajo.TabIndex = 5;
@@ -102,7 +104,7 @@
             // textBoxNombre
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(18, 94);
-            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombre.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(216, 20);
             this.textBoxNombre.TabIndex = 6;
@@ -114,7 +116,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(291, 65);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -125,8 +127,8 @@
             // 
             this.buttonAgregar.BackColor = System.Drawing.Color.LightBlue;
             this.buttonAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAgregar.Location = new System.Drawing.Point(71, 318);
-            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAgregar.Location = new System.Drawing.Point(71, 391);
+            this.buttonAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(93, 29);
             this.buttonAgregar.TabIndex = 8;
@@ -139,7 +141,7 @@
             this.buttonModificar.BackColor = System.Drawing.Color.LightBlue;
             this.buttonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificar.Location = new System.Drawing.Point(291, 318);
-            this.buttonModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonModificar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(67, 29);
             this.buttonModificar.TabIndex = 9;
@@ -152,7 +154,7 @@
             this.buttonEliminar.BackColor = System.Drawing.Color.LightBlue;
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar.Location = new System.Drawing.Point(375, 318);
-            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(69, 29);
             this.buttonEliminar.TabIndex = 10;
@@ -165,7 +167,7 @@
             this.buttonLista.BackColor = System.Drawing.Color.LightBlue;
             this.buttonLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLista.Location = new System.Drawing.Point(527, 318);
-            this.buttonLista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLista.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLista.Name = "buttonLista";
             this.buttonLista.Size = new System.Drawing.Size(84, 29);
             this.buttonLista.TabIndex = 11;
@@ -173,12 +175,33 @@
             this.buttonLista.UseVisualStyleBackColor = false;
             this.buttonLista.Click += new System.EventHandler(this.buttonLista_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(15, 318);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 17);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Estado";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(19, 337);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(69, 20);
+            this.textBox1.TabIndex = 13;
+            // 
             // ManTipoTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(687, 431);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonLista);
             this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.buttonModificar);
@@ -212,5 +235,7 @@
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonLista;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

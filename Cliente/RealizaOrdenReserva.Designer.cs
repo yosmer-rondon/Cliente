@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -58,7 +59,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.button5 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,6 +69,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label7);
@@ -99,10 +103,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RESERVA";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Honeydew;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(325, 480);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(102, 67);
+            this.button5.TabIndex = 26;
+            this.button5.Text = "Realizar Reservar";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(17, 413);
+            this.textBox5.Location = new System.Drawing.Point(19, 499);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(52, 29);
             this.textBox5.TabIndex = 25;
@@ -111,7 +126,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 385);
+            this.label7.Location = new System.Drawing.Point(20, 471);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(163, 25);
             this.label7.TabIndex = 24;
@@ -131,7 +146,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(17, 353);
+            this.textBox6.Location = new System.Drawing.Point(21, 439);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(52, 29);
             this.textBox6.TabIndex = 23;
@@ -140,7 +155,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 326);
+            this.label9.Location = new System.Drawing.Point(14, 401);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(187, 25);
             this.label9.TabIndex = 22;
@@ -350,16 +365,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DNI de cliente";
             // 
-            // button5
+            // label10
             // 
-            this.button5.BackColor = System.Drawing.Color.Honeydew;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(325, 480);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 67);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "Realizar Reservar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(19, 326);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(177, 24);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "fecha de atencion";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.Location = new System.Drawing.Point(19, 356);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 29);
+            this.dateTimePicker2.TabIndex = 28;
             // 
             // RealizaOrdenReserva
             // 
@@ -410,5 +433,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label10;
     }
 }

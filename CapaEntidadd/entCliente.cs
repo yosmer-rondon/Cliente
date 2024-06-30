@@ -13,9 +13,8 @@ namespace CapaEntidad
         public string Apellido { get; set; }
         public int DNI { get; set; }
         public int Telefono { get; set; }
-        public int IDtipocliente { get; set; } // IDtipocliente
-        public DateTime FechaRegistro { get; set; }
         public string Correo { get; set; }
+        public string Estado { get; set; }
 
     }
 }
