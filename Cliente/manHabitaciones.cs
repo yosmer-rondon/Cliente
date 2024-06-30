@@ -68,7 +68,7 @@ namespace Cliente
             try
             {
                 entHabitacion c = new entHabitacion();
-                c.Habitacion = int.Parse(textHabitacion.Text.Trim());
+                c.numHabitacion = int.Parse(textHabitacion.Text.Trim());
                 c.IDTipoHabitacion = int.Parse(comboBox1.Text.Trim());
                 c.Piso = int.Parse(textPisoHabitacion.Text.Trim());
                 c.Capacidad = textCapacidadHabitacion.Text.Trim();
@@ -134,12 +134,12 @@ namespace Cliente
             {
                 entHabitacion c = new entHabitacion();
                 c.IDHabitacion = int.Parse(textIDHabitacion.Text.Trim());
-                c.Habitacion = int.Parse(textHabitacion.Text.Trim());
-                c.IDTipoHabitacion = int.Parse(textIDTipoHabitacion.Text.Trim());
+                c.numHabitacion = int.Parse(textHabitacion.Text.Trim());
+                c.IDTipoHabitacion = int.Parse(comboBox1.Text.Trim());
                 c.Piso = int.Parse(textPisoHabitacion.Text.Trim());
                 c.Capacidad = textCapacidadHabitacion.Text.Trim();
                 c.Costo = int.Parse(textCostoHabitacion.Text.Trim());
-                c.Estado = checkEstadoHabitacion.Checked;
+                c.Estado = textBox1.Text.Trim();
                 logHabitacion.Instancia.EditarHabitacion(c);
             }
             catch (Exception ex)

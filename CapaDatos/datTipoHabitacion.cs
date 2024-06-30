@@ -49,7 +49,7 @@ namespace CapaDatos
                     Cli.Nombre = dr["Nombre"].ToString();
                     Cli.Vistas = dr["Vistas"].ToString();
                     Cli.Costo = Convert.ToInt32(dr["Costo"]);
-                    Cli.Estado = Convert.ToBoolean(dr["Estado"]);
+                    Cli.Estado = (dr["Estado"]).ToString();
                     lista.Add(Cli);
                 }
 

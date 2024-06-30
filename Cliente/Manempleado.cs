@@ -57,7 +57,6 @@ namespace Cliente
                 c.Telefono = int.Parse(texttelefono.Text.Trim());
                 c.correo = textcorreo.Text.Trim();
                 c.dni = int.Parse(textdni.Text.Trim());
-                c.fechareg = dtfechareg.Value;
 
                 LogEmpleado.Instancia.InsertarEmpleado(c);
             }
@@ -133,7 +132,6 @@ namespace Cliente
                 c.Telefono = int.Parse(texttelefono.Text.Trim());
                 c.correo = textcorreo.Text.Trim();
                 c.dni = int.Parse(textdni.Text.Trim());
-                c.fechareg = dtfechareg.Value;
                 LogEmpleado.Instancia.EditarEmpleado(c);
             }
             catch (Exception ex)

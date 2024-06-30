@@ -44,7 +44,7 @@ namespace CapaDatos
                 {
                     entHabitacion Cli = new entHabitacion();
                     Cli.IDHabitacion = Convert.ToInt32(dr["IDHabitacion"]);
-                    Cli.Habitacion = Convert.ToInt32(dr["Habitacion"]);
+                    Cli.numHabitacion = Convert.ToInt32(dr["Habitacion"]);
                     Cli.IDTipoHabitacion = Convert.ToInt32(dr["IDTipoHabitacion"]);
                     Cli.Piso = Convert.ToInt32(dr["Piso"]);
                     Cli.Capacidad = dr["Capacidad"].ToString();
@@ -74,7 +74,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Habitacion", Cli.Habitacion);
+                cmd.Parameters.AddWithValue("@Habitacion", Cli.numHabitacion);
                 cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.IDTipoHabitacion);
                 cmd.Parameters.AddWithValue("@Piso", Cli.Piso);
                 cmd.Parameters.AddWithValue("@Capacidad", Cli.Capacidad);
@@ -105,7 +105,7 @@ namespace CapaDatos
                 cmd = new SqlCommand("spEditarHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IDHabitacion", Cli.IDHabitacion);
-                cmd.Parameters.AddWithValue("@Habitacion", Cli.Habitacion);
+                cmd.Parameters.AddWithValue("@Habitacion", Cli.numHabitacion);
                 cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.IDTipoHabitacion);
                 cmd.Parameters.AddWithValue("@Piso", Cli.Piso);
                 cmd.Parameters.AddWithValue("@Capacidad", Cli.Capacidad);

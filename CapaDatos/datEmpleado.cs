@@ -77,7 +77,6 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@telefono", Cli.Telefono);
                 cmd.Parameters.AddWithValue("@correo", Cli.correo);
                 cmd.Parameters.AddWithValue("@dni", Cli.dni);
-                cmd.Parameters.AddWithValue("@fechareg", Cli.fechareg);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

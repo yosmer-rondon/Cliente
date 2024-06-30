@@ -67,7 +67,6 @@ namespace Cliente
                 c.Nombre = textNombreTipo.Text.Trim();
                 c.Vistas = textVistasTipo.Text.Trim();
                 c.Costo = int.Parse(textCosto.Text.Trim());
-                c.Estado = checkBoxEstadoTipo.Checked;
 
 
                 logTipoHabitacion.Instancia.InsertarTipoHabitacion(c);
@@ -120,7 +119,7 @@ namespace Cliente
                 c.Nombre = textNombreTipo.Text.Trim();
                 c.Vistas = textVistasTipo.Text.Trim();
                 c.Costo = int.Parse(textCosto.Text.Trim());;
-                c.Estado = checkBoxEstadoTipo.Checked;
+                c.Estado = textBox1.Text.Trim();
                 logTipoHabitacion.Instancia.EditarTipoHabitacion(c);
             }
             catch (Exception ex)
