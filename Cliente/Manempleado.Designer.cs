@@ -35,6 +35,7 @@ namespace Cliente
             this.btnEditar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textIDEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textdni = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@ namespace Cliente
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.SuspendLayout();
@@ -158,6 +158,15 @@ namespace Cliente
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL EMPLEADO";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(225, 110);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(153, 35);
+            this.comboBox1.TabIndex = 26;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textIDEmpleado
             // 
@@ -392,14 +401,6 @@ namespace Cliente
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(225, 110);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 35);
-            this.comboBox1.TabIndex = 26;
             // 
             // Manempleado
             // 
