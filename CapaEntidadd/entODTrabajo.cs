@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidadd
 {
-    internal class entODTrabajo
+    public class entODTrabajo
     {
         public int idODTrabajo { get; set; }
         public int idTipoTrabajo { get; set; }

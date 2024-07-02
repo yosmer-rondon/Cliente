@@ -52,7 +52,7 @@ namespace Cliente
             {
                 entEmpleado c = new entEmpleado();
                 c.nombre = textNombre.Text.Trim();
-                c.tipoempleado = texttipoempleado.Text.Trim();
+                c.tipoempleado = comboBox1.Text.Trim();
                 c.direccion = textdireccion.Text.Trim();
                 c.Telefono = int.Parse(texttelefono.Text.Trim());
                 c.correo = textcorreo.Text.Trim();
@@ -71,7 +71,7 @@ namespace Cliente
         private void LimpiarVariables()
         {
             textNombre.Text = "";
-            texttipoempleado.Text = " ";
+            comboBox1.Text = " ";
             textdireccion.Text = " ";
             texttelefono.Text = " ";
             textcorreo.Text = " ";
@@ -103,7 +103,7 @@ namespace Cliente
             DataGridViewRow filaActual = dgvEmpleado.Rows[e.RowIndex]; //
             textIDEmpleado.Text = filaActual.Cells[0].Value.ToString();
             textNombre.Text = filaActual.Cells[1].Value.ToString();
-            texttipoempleado.Text = filaActual.Cells[2].Value.ToString();
+            comboBox1.Text = filaActual.Cells[2].Value.ToString();
             textdireccion.Text = filaActual.Cells[3].Value.ToString();
             texttelefono.Text = filaActual.Cells[4].Value.ToString();
             textcorreo.Text = filaActual.Cells[5].Value.ToString();
@@ -127,7 +127,7 @@ namespace Cliente
                 entEmpleado c = new entEmpleado();
                 c.Idempleado = int.Parse(textIDEmpleado.Text.Trim());
                 c.nombre = textNombre.Text.Trim();
-                c.tipoempleado = texttipoempleado.Text.Trim();
+                c.tipoempleado = comboBox1.Text.Trim();
                 c.direccion = textdireccion.Text.Trim();
                 c.Telefono = int.Parse(texttelefono.Text.Trim());
                 c.correo = textcorreo.Text.Trim();

@@ -98,5 +98,10 @@ namespace Cliente
             hos.Show();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MantipoEmpleado mtp = new MantipoEmpleado();
+            mtp.Show();
+        }
     }
 }

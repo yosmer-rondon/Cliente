@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CapaEntidadd
 {
-    internal class entTipoEmpleado
+    public class entTipoEmpleado
     {
         public int IDTipoEmpleado { get; set; }
         public string nombre { get; set; }
-        public int descripcion { get; set; }
+        public string descripcion { get; set; }
         public string estado { get; set; }
     }
 }

@@ -38,7 +38,6 @@ namespace Cliente
             this.textIDEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textdni = new System.Windows.Forms.TextBox();
-            this.texttipoempleado = new System.Windows.Forms.TextBox();
             this.textdireccion = new System.Windows.Forms.TextBox();
             this.texttelefono = new System.Windows.Forms.TextBox();
             this.textcorreo = new System.Windows.Forms.TextBox();
@@ -59,6 +58,7 @@ namespace Cliente
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.SuspendLayout();
@@ -130,10 +130,10 @@ namespace Cliente
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textIDEmpleado);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textdni);
-            this.groupBox1.Controls.Add(this.texttipoempleado);
             this.groupBox1.Controls.Add(this.textdireccion);
             this.groupBox1.Controls.Add(this.texttelefono);
             this.groupBox1.Controls.Add(this.textcorreo);
@@ -183,13 +183,6 @@ namespace Cliente
             this.textdni.Size = new System.Drawing.Size(209, 34);
             this.textdni.TabIndex = 23;
             // 
-            // texttipoempleado
-            // 
-            this.texttipoempleado.Location = new System.Drawing.Point(207, 115);
-            this.texttipoempleado.Name = "texttipoempleado";
-            this.texttipoempleado.Size = new System.Drawing.Size(178, 34);
-            this.texttipoempleado.TabIndex = 21;
-            // 
             // textdireccion
             // 
             this.textdireccion.Location = new System.Drawing.Point(145, 174);
@@ -223,7 +216,7 @@ namespace Cliente
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(376, 168);
+            this.label8.Location = new System.Drawing.Point(410, 168);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(210, 27);
             this.label8.TabIndex = 16;
@@ -233,9 +226,10 @@ namespace Cliente
             // 
             this.dtfechareg.CalendarForeColor = System.Drawing.Color.White;
             this.dtfechareg.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.dtfechareg.Location = new System.Drawing.Point(381, 214);
+            this.dtfechareg.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtfechareg.Location = new System.Drawing.Point(415, 211);
             this.dtfechareg.Name = "dtfechareg";
-            this.dtfechareg.Size = new System.Drawing.Size(466, 34);
+            this.dtfechareg.Size = new System.Drawing.Size(186, 34);
             this.dtfechareg.TabIndex = 15;
             // 
             // label7
@@ -399,6 +393,14 @@ namespace Cliente
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(225, 110);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(153, 35);
+            this.comboBox1.TabIndex = 26;
+            // 
             // Manempleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,7 +438,6 @@ namespace Cliente
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textdni;
-        private System.Windows.Forms.TextBox texttipoempleado;
         private System.Windows.Forms.TextBox textdireccion;
         private System.Windows.Forms.TextBox texttelefono;
         private System.Windows.Forms.TextBox textcorreo;
@@ -459,5 +460,6 @@ namespace Cliente
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox textIDEmpleado;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

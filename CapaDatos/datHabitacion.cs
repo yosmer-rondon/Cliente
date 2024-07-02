@@ -64,7 +64,7 @@ namespace CapaDatos
             return lista;
         }
         /////////////////////////Insertar Tipo Habitacion
-        public bool InsertarTipoHabitacion(entHabitacion habitacion)
+        public bool InsertarHabitacion(entHabitacion habitacion)
         {
             SqlCommand cmd = null;
             bool inserta = false;
@@ -99,7 +99,7 @@ namespace CapaDatos
 
 
         //////////////////////////////////Editando Tipo Habitacion
-        public bool EditarTipoHabitacion(entHabitacion habitacion)
+        public bool EditarHabitacion(entHabitacion habitacion)
         {
             SqlCommand cmd = null;
             bool edita = false;
@@ -135,7 +135,7 @@ namespace CapaDatos
 
         //////////////Deshabilitando Tipo de Habitacion
 
-        public bool DeshabilitarTipoHabitacion(int idHabitacion)
+        public bool DeshabilitarHabitacion(int idHabitacion)
         {
             SqlCommand cmd = null;
             bool deshabilitado = false;

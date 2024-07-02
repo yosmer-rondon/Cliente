@@ -27,19 +27,19 @@ namespace CapaLogica
         //INSERTAR
         public bool InsertarHabitacion(entHabitacion habitacion)
         {
-            return datHabitacion.Instancia.InsertarTipoHabitacion(habitacion);
+            return datHabitacion.Instancia.InsertarHabitacion(habitacion);
         }
 
         //EDITAR
         public bool EditarHabitacion(entHabitacion habitacion)
         {
-            return datHabitacion.Instancia.EditarTipoHabitacion(habitacion);
+            return datHabitacion.Instancia.EditarHabitacion(habitacion);
         }
 
         //DESHABILITAR
         public bool DeshabilitarHabitacion(int idHabitacion)
         {
-            return datHabitacion.Instancia.DeshabilitarTipoHabitacion(idHabitacion);
+            return datHabitacion.Instancia.DeshabilitarHabitacion(idHabitacion);
         }
 
         #endregion singleton

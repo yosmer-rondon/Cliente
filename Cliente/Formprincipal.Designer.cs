@@ -48,6 +48,7 @@ namespace Cliente
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -109,6 +110,7 @@ namespace Cliente
             // 
             this.tabPage2.BackgroundImage = global::Cliente.Properties.Resources.marco;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button9);
             this.tabPage2.Controls.Add(this.button8);
             this.tabPage2.Controls.Add(this.button4);
@@ -145,7 +147,7 @@ namespace Cliente
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(462, 28);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(207, 103);
+            this.button8.Size = new System.Drawing.Size(207, 47);
             this.button8.TabIndex = 4;
             this.button8.Text = "Tipos de habitacion";
             this.button8.UseVisualStyleBackColor = false;
@@ -299,6 +301,19 @@ namespace Cliente
             this.tabControl1.Size = new System.Drawing.Size(960, 193);
             this.tabControl1.TabIndex = 0;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DimGray;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(462, 93);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(207, 65);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Tipos de empleado";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Formprincipal
             // 
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
@@ -337,6 +352,7 @@ namespace Cliente
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button button6;
     }
 }
 

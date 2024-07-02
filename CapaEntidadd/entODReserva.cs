@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidadd
 {
-    internal class entODReserva
+    public class entODReserva
     {
         public int idODReserva { get; set; }
         public int idCliente { get; set; }
