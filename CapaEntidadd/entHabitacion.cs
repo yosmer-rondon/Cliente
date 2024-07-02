@@ -8,13 +8,11 @@ namespace CapaEntidadd
 {
     public class entHabitacion
     {
-        public int IDHabitacion { get; set; }
-        public int numHabitacion { get; set; }
-        public int IDTipoHabitacion { get; set; }
+        public int ID { get; set; }
         public int Piso { get; set; }
-        public string Capacidad { get; set; }
-        public int Costo { get; set; }
-        public string Estado { get; set; }
-
+        public int IDTipo { get; set; }
+        public int Capacidad { get; set; }
+        public decimal Costo { get; set; }
+        public bool Estado { get; set; }
     }
 }

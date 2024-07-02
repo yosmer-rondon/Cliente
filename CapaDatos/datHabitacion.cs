@@ -16,7 +16,7 @@ namespace CapaDatos
         #region sigleton
         //Patron Singleton
         // Variable estática para la instancia
-        public static readonly datHabitacion  _instancia = new datHabitacion();
+        public static readonly datHabitacion _instancia = new datHabitacion();
         //privado para evitar la instanciación directa
         public static datHabitacion Instancia
         {
@@ -42,17 +42,16 @@ namespace CapaDatos
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entHabitacion Cli = new entHabitacion();
-                    Cli.IDHabitacion = Convert.ToInt32(dr["IDHabitacion"]);
-                    Cli.numHabitacion = Convert.ToInt32(dr["Habitacion"]);
-                    Cli.IDTipoHabitacion = Convert.ToInt32(dr["IDTipoHabitacion"]);
-                    Cli.Piso = Convert.ToInt32(dr["Piso"]);
-                    Cli.Capacidad = dr["Capacidad"].ToString();
-                    Cli.Costo = Convert.ToInt32(dr["Costo"]);
-                    Cli.Estado = dr["Estado"].ToString();
-                    lista.Add(Cli);
+                    lista.Add(new entHabitacion
+                    {
+                        ID = Convert.ToInt32(dr["IDHabitacion"]),
+                        Piso = Convert.ToInt32(dr["PisoHabitacion"]),
+                        IDTipo = Convert.ToInt32(dr["IDTipoHabitacion"]),
+                        Capacidad = Convert.ToInt32(dr["CapacidadHabitacion"]),
+                        Costo = Convert.ToDecimal(dr["CostoHabitacion"]),
+                        Estado = Convert.ToBoolean(dr["EstadoHabitacion"])
+                    });
                 }
-
             }
             catch (Exception e)
             {
@@ -64,22 +63,24 @@ namespace CapaDatos
             }
             return lista;
         }
-        /////////////////////////Insertando Habitacion
-        public Boolean InsertarHabitacion(entHabitacion Cli)
+        /////////////////////////Insertar Tipo Habitacion
+        public bool InsertarTipoHabitacion(entHabitacion habitacion)
         {
             SqlCommand cmd = null;
-            Boolean inserta = false;
+            bool inserta = false;
+
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Habitacion", Cli.numHabitacion);
-                cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.IDTipoHabitacion);
-                cmd.Parameters.AddWithValue("@Piso", Cli.Piso);
-                cmd.Parameters.AddWithValue("@Capacidad", Cli.Capacidad);
-                cmd.Parameters.AddWithValue("@Costo", Cli.Costo);
-                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+
+                cmd.Parameters.AddWithValue("@PisoHabitacion", habitacion.Piso);
+                cmd.Parameters.AddWithValue("@IDTipoHabitacion", habitacion.IDTipo);
+                cmd.Parameters.AddWithValue("@CapacidadHabitacion", habitacion.Capacidad);
+                cmd.Parameters.AddWithValue("@CostoHabitacion", habitacion.Costo);
+                cmd.Parameters.AddWithValue("@EstadoHabitacion", habitacion.Estado);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -92,25 +93,30 @@ namespace CapaDatos
                 throw e;
             }
             finally { cmd.Connection.Close(); }
+
             return inserta;
         }
-        //////////////////////////////////Editando Habitacion
-        public Boolean EditarHabitacion(entHabitacion Cli)
+
+
+        //////////////////////////////////Editando Tipo Habitacion
+        public bool EditarTipoHabitacion(entHabitacion habitacion)
         {
             SqlCommand cmd = null;
-            Boolean edita = false;
+            bool edita = false;
+
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEditarHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDHabitacion", Cli.IDHabitacion);
-                cmd.Parameters.AddWithValue("@Habitacion", Cli.numHabitacion);
-                cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.IDTipoHabitacion);
-                cmd.Parameters.AddWithValue("@Piso", Cli.Piso);
-                cmd.Parameters.AddWithValue("@Capacidad", Cli.Capacidad);
-                cmd.Parameters.AddWithValue("@Costo", Cli.Costo);
-                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+
+                cmd.Parameters.AddWithValue("@IDHabitacion", habitacion.ID);
+                cmd.Parameters.AddWithValue("@PisoHabitacion", habitacion.Piso);
+                cmd.Parameters.AddWithValue("@IDTipoHabitacion", habitacion.IDTipo);
+                cmd.Parameters.AddWithValue("@CapacidadHabitacion", habitacion.Capacidad);
+                cmd.Parameters.AddWithValue("@CostoHabitacion", habitacion.Costo);
+                cmd.Parameters.AddWithValue("@EstadoHabitacion", habitacion.Estado);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -123,24 +129,30 @@ namespace CapaDatos
                 throw e;
             }
             finally { cmd.Connection.Close(); }
+
             return edita;
         }
-        public Boolean DeshabilitarHabitacion(entHabitacion Cli)
+
+        //////////////Deshabilitando Tipo de Habitacion
+
+        public bool DeshabilitarTipoHabitacion(int idHabitacion)
         {
             SqlCommand cmd = null;
-            Boolean delete = false;
+            bool deshabilitado = false;
+
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDeshabilitarHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDHabitacion", Cli.IDHabitacion);
-                //cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+
+                cmd.Parameters.AddWithValue("@IDHabitacion", idHabitacion);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    delete = true;
+                    deshabilitado = true;
                 }
             }
             catch (Exception e)
@@ -148,7 +160,8 @@ namespace CapaDatos
                 throw e;
             }
             finally { cmd.Connection.Close(); }
-            return delete;
+
+            return deshabilitado;
         }
         #endregion metodos
     }
