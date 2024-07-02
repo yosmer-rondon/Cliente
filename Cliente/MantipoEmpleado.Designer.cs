@@ -49,10 +49,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(426, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(284, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(361, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(503, 331);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel1
@@ -96,7 +96,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(361, 349);
+            this.button4.Location = new System.Drawing.Point(376, 349);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(109, 38);
             this.button4.TabIndex = 10;
@@ -108,9 +108,9 @@
             this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button3.Location = new System.Drawing.Point(246, 349);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 38);
+            this.button3.Size = new System.Drawing.Size(124, 38);
             this.button3.TabIndex = 9;
-            this.button3.Text = "Eliminar ";
+            this.button3.Text = "Deshabilitar";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
