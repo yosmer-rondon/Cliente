@@ -22,7 +22,7 @@ namespace Cliente
             InitializeComponent();
             listar();
             groupBox1.Enabled = false;
-            textIDEmpleado.Enabled = false;
+            id.Enabled = false;
 
         }
 
@@ -51,12 +51,12 @@ namespace Cliente
             try
             {
                 entEmpleado c = new entEmpleado();
-                c.nombre = textNombre.Text.Trim();
-                c.tipoempleado = comboBox1.Text.Trim();
-                c.direccion = textdireccion.Text.Trim();
-                c.Telefono = int.Parse(texttelefono.Text.Trim());
-                c.correo = textcorreo.Text.Trim();
-                c.dni = int.Parse(textdni.Text.Trim());
+                c.nombre = nombre.Text.Trim();
+                c.tipoempleado = tipoempleado.Text.Trim();
+                c.direccion = direccion.Text.Trim();
+                c.Telefono = int.Parse(telefono.Text.Trim());
+                c.correo = correo.Text.Trim();
+                c.dni = int.Parse(dni.Text.Trim());
 
                 LogEmpleado.Instancia.InsertarEmpleado(c);
             }
@@ -70,13 +70,13 @@ namespace Cliente
         }
         private void LimpiarVariables()
         {
-            textNombre.Text = "";
-            comboBox1.Text = " ";
-            textdireccion.Text = " ";
-            texttelefono.Text = " ";
-            textcorreo.Text = " ";
-            textdni.Text = " ";
-            texttelefono.Text = " ";
+            nombre.Text = "";
+            tipoempleado.Text = " ";
+            direccion.Text = " ";
+            telefono.Text = " ";
+            correo.Text = " ";
+            dni.Text = " ";
+            telefono.Text = " ";
         }
         public void listar()
         {
@@ -101,14 +101,14 @@ namespace Cliente
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow filaActual = dgvEmpleado.Rows[e.RowIndex]; //
-            textIDEmpleado.Text = filaActual.Cells[0].Value.ToString();
-            textNombre.Text = filaActual.Cells[1].Value.ToString();
-            comboBox1.Text = filaActual.Cells[2].Value.ToString();
-            textdireccion.Text = filaActual.Cells[3].Value.ToString();
-            texttelefono.Text = filaActual.Cells[4].Value.ToString();
-            textcorreo.Text = filaActual.Cells[5].Value.ToString();
-            textdni.Text = filaActual.Cells[6].Value.ToString();
-            dtfechareg.Text = filaActual.Cells[7].Value.ToString();
+            id.Text = filaActual.Cells[0].Value.ToString();
+            nombre.Text = filaActual.Cells[1].Value.ToString();
+            tipoempleado.Text = filaActual.Cells[2].Value.ToString();
+            direccion.Text = filaActual.Cells[3].Value.ToString();
+            telefono.Text = filaActual.Cells[4].Value.ToString();
+            correo.Text = filaActual.Cells[5].Value.ToString();
+            dni.Text = filaActual.Cells[6].Value.ToString();
+            fechareg.Text = filaActual.Cells[7].Value.ToString();
 
         }
 
@@ -125,13 +125,13 @@ namespace Cliente
             try
             {
                 entEmpleado c = new entEmpleado();
-                c.Idempleado = int.Parse(textIDEmpleado.Text.Trim());
-                c.nombre = textNombre.Text.Trim();
-                c.tipoempleado = comboBox1.Text.Trim();
-                c.direccion = textdireccion.Text.Trim();
-                c.Telefono = int.Parse(texttelefono.Text.Trim());
-                c.correo = textcorreo.Text.Trim();
-                c.dni = int.Parse(textdni.Text.Trim());
+                c.Idempleado = int.Parse(id.Text.Trim());
+                c.nombre = nombre.Text.Trim();
+                c.tipoempleado = tipoempleado.Text.Trim();
+                c.direccion = direccion.Text.Trim();
+                c.Telefono = int.Parse(telefono.Text.Trim());
+                c.correo = correo.Text.Trim();
+                c.dni = int.Parse(dni.Text.Trim());
                 LogEmpleado.Instancia.EditarEmpleado(c);
             }
             catch (Exception ex)

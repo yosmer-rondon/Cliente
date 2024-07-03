@@ -72,7 +72,7 @@ namespace CapaDatos
                 cmd = new SqlCommand("spInsertarEmpleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
-                cmd.Parameters.AddWithValue("@tipoempleado", Cli.tipoempleado);
+                cmd.Parameters.AddWithValue("@tipoempleado", Cli.nombre_tipo);
                 cmd.Parameters.AddWithValue("@direccion", Cli.direccion);
                 cmd.Parameters.AddWithValue("@telefono", Cli.Telefono);
                 cmd.Parameters.AddWithValue("@correo", Cli.correo);
