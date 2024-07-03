@@ -114,6 +114,35 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return edita;
         }
+        public List<entTipoEmpleado> nombredetipos()
+        {
+            SqlCommand cmd = null;
+            List<entTipoEmpleado> lista = new List<entTipoEmpleado>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("listartiposdeempleado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entTipoEmpleado emp = new entTipoEmpleado();
+                    emp.nombre = dr["nombre"].ToString();
+                    lista.Add(emp);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
         #endregion metodos
     }
 }

@@ -34,20 +34,24 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spListarEmpleado", cn);
+                cmd = new SqlCommand("ListarEmpleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entEmpleado Cli = new entEmpleado();
-                    Cli.nombre = dr["nombre"].ToString();
-                    Cli.tipoempleado = dr["tipoempleado"].ToString();
-                    Cli.direccion = dr["direccion"].ToString();
-                    Cli.Telefono = Convert.ToInt32(dr["telefono"]);
-                    Cli.correo = dr["correo"].ToString();
-                    Cli.dni = Convert.ToInt32(dr["dni"]);
-                    lista.Add(Cli);
+                    entEmpleado emp = new entEmpleado();
+                    emp.Idempleado = Convert.ToInt32(dr["id"]);
+                    emp.nombre = dr["nombre"].ToString();
+                    emp.apellidos = dr["apellidos"].ToString();
+                    emp.direccion = dr["direccion"].ToString();
+                    emp.Telefono = Convert.ToInt32(dr["telefono"]);
+                    emp.correo = dr["correo"].ToString();
+                    emp.dni = Convert.ToInt32(dr["dni"]);
+                    emp.estado = dr["estado"].ToString();
+                    emp.idtipoempledo = dr["tipo_empleado_id"].ToString();
+                    emp.Idempleado = Convert.ToInt32(dr["tipo_empleado_id"]);
+                    lista.Add(emp);
                 }
 
             }
@@ -62,21 +66,23 @@ namespace CapaDatos
             return lista;
         }
         /////////////////////////Insertar Empleado
-        public Boolean InsertarEmpleado(entEmpleado Cli)
+        public Boolean InsertarEmpleado(entEmpleado emp)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarEmpleado", cn);
+                cmd = new SqlCommand("InsertarEmpleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
-                cmd.Parameters.AddWithValue("@tipoempleado", Cli.nombre_tipo);
-                cmd.Parameters.AddWithValue("@direccion", Cli.direccion);
-                cmd.Parameters.AddWithValue("@telefono", Cli.Telefono);
-                cmd.Parameters.AddWithValue("@correo", Cli.correo);
-                cmd.Parameters.AddWithValue("@dni", Cli.dni);
+                cmd.Parameters.AddWithValue("@nombre", emp.nombre);
+                cmd.Parameters.AddWithValue("@apellidos", emp.apellidos);
+                cmd.Parameters.AddWithValue("@direccion", emp.direccion);
+                cmd.Parameters.AddWithValue("@telefono", emp.Telefono);
+                cmd.Parameters.AddWithValue("@correo", emp.correo);
+                cmd.Parameters.AddWithValue("@dni", emp.dni);
+                cmd.Parameters.AddWithValue("@estado", emp.estado);
+                cmd.Parameters.AddWithValue("@nombre_tipo", emp.nombre_tipo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -103,12 +109,12 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Idempleado", Cli.Idempleado);
                 cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
-                cmd.Parameters.AddWithValue("@tipoempleado", Cli.tipoempleado);
                 cmd.Parameters.AddWithValue("@direccion", Cli.direccion);
                 cmd.Parameters.AddWithValue("@telefono", Cli.Telefono);
                 cmd.Parameters.AddWithValue("@correo", Cli.correo);
                 cmd.Parameters.AddWithValue("@dni", Cli.dni);
                 cmd.Parameters.AddWithValue("@dni", Cli.estado);
+                cmd.Parameters.AddWithValue("@dni", Cli.idtipoempledo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

@@ -20,8 +20,8 @@ namespace Cliente
         public Manempleado()
         {
             InitializeComponent();
+            LlenarComboBoxdetipos();
             listar();
-            groupBox1.Enabled = false;
             id.Enabled = false;
 
         }
@@ -52,11 +52,13 @@ namespace Cliente
             {
                 entEmpleado c = new entEmpleado();
                 c.nombre = nombre.Text.Trim();
-                c.tipoempleado = tipoempleado.Text.Trim();
+                c.apellidos = apellidos.Text.Trim();
                 c.direccion = direccion.Text.Trim();
                 c.Telefono = int.Parse(telefono.Text.Trim());
                 c.correo = correo.Text.Trim();
                 c.dni = int.Parse(dni.Text.Trim());
+                c.estado = estado.Text.Trim();
+                c.nombre_tipo = nombretipo.Text.Trim();
 
                 LogEmpleado.Instancia.InsertarEmpleado(c);
             }
@@ -81,6 +83,7 @@ namespace Cliente
         public void listar()
         {
             dgvEmpleado.DataSource = LogEmpleado.Instancia.ListarEmpleado();
+            dgvEmpleado.Columns["nombre_tipo"].Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -103,13 +106,12 @@ namespace Cliente
             DataGridViewRow filaActual = dgvEmpleado.Rows[e.RowIndex]; //
             id.Text = filaActual.Cells[0].Value.ToString();
             nombre.Text = filaActual.Cells[1].Value.ToString();
-            tipoempleado.Text = filaActual.Cells[2].Value.ToString();
+            apellidos.Text = filaActual.Cells[2].Value.ToString();  
             direccion.Text = filaActual.Cells[3].Value.ToString();
             telefono.Text = filaActual.Cells[4].Value.ToString();
             correo.Text = filaActual.Cells[5].Value.ToString();
             dni.Text = filaActual.Cells[6].Value.ToString();
-            fechareg.Text = filaActual.Cells[7].Value.ToString();
-
+            estado.Text = filaActual.Cells[7].Value.ToString();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -127,7 +129,7 @@ namespace Cliente
                 entEmpleado c = new entEmpleado();
                 c.Idempleado = int.Parse(id.Text.Trim());
                 c.nombre = nombre.Text.Trim();
-                c.tipoempleado = tipoempleado.Text.Trim();
+                c.apellidos = apellidos.Text.Trim();
                 c.direccion = direccion.Text.Trim();
                 c.Telefono = int.Parse(telefono.Text.Trim());
                 c.correo = correo.Text.Trim();
@@ -167,6 +169,24 @@ namespace Cliente
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        private void LlenarComboBoxdetipos()
+        {
+            try
+            {
+                List<entTipoEmpleado> listartipos = logTipoEmpleado.Instancia.listarnombrestipos();
+
+                nombretipo.Items.Clear(); // Limpiar los ítems existentes
+
+                foreach (var tipoEmpleado in listartipos)
+                {
+                    nombretipo.Items.Add(tipoEmpleado.nombre.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los números de habitaciones: " + ex.Message);
+            }
         }
     }
 }

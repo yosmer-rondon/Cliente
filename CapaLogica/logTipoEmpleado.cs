@@ -52,6 +52,10 @@ namespace CapaLogica
         {
             return datTipoEmpleado.Instancia.ListarTipoEmpleado();
         }
+        public List<entTipoEmpleado> listarnombrestipos()
+        {
+            return datTipoEmpleado._instancia.nombredetipos();
+        }
 
         #endregion metodos
     }
