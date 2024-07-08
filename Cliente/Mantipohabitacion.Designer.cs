@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBoxDatosTipoHabitacion = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textEstado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Descripcion = new System.Windows.Forms.TextBox();
             this.NombreTipo = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.btnEditarTipo = new System.Windows.Forms.Button();
             this.btnNuevoTipo = new System.Windows.Forms.Button();
             this.dgvTipoHabitacion = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxDatosTipoHabitacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoHabitacion)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             this.groupBoxDatosTipoHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.label2);
-            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textBox1);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textEstado);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.label4);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.Descripcion);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.NombreTipo);
@@ -72,12 +72,24 @@
             this.groupBoxDatosTipoHabitacion.Text = "Datos de Tipo Habitacion";
             this.groupBoxDatosTipoHabitacion.Enter += new System.EventHandler(this.groupBoxDatosTipoHabitacion_Enter);
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(71, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(78, 20);
-            this.textBox1.TabIndex = 21;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.PowderBlue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Descripcion";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // textEstado
+            // 
+            this.textEstado.Location = new System.Drawing.Point(71, 167);
+            this.textEstado.Name = "textEstado";
+            this.textEstado.Size = new System.Drawing.Size(78, 20);
+            this.textEstado.TabIndex = 21;
             // 
             // label4
             // 
@@ -259,18 +271,6 @@
             this.dgvTipoHabitacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoHabitacion_CellClick);
             this.dgvTipoHabitacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.PowderBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 16);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Descripcion";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
             // Mantipohabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,7 +311,7 @@
         private System.Windows.Forms.Button btnNuevoTipo;
         private System.Windows.Forms.DataGridView dgvTipoHabitacion;
         private System.Windows.Forms.TextBox Descripcion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textEstado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
     }

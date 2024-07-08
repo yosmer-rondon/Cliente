@@ -45,11 +45,10 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entTipoHabitacion Cli = new entTipoHabitacion();
-                    Cli.IDTipoHabitacion = Convert.ToInt32(dr["IDTipoHabitacion"]);
-                    Cli.Nombre = dr["Nombre"].ToString();
-                    Cli.Vistas = dr["Vistas"].ToString();
-                    Cli.Costo = Convert.ToInt32(dr["Costo"]);
-                    Cli.Estado = (dr["Estado"]).ToString();
+                    Cli.id = Convert.ToInt32(dr["id"]);
+                    Cli.nombre = dr["nombre"].ToString();
+                    Cli.descripcion = dr["descripcion"].ToString();
+                    Cli.estado = (dr["estado"]).ToString();
                     lista.Add(Cli);
                 }
 
@@ -74,10 +73,9 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertarTipoHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
-                cmd.Parameters.AddWithValue("@Vistas", Cli.Vistas);
-                cmd.Parameters.AddWithValue("@Costo", Cli.Costo);
-                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+                cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@descripcion", Cli.descripcion);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -104,11 +102,10 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEditarTipoHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.IDTipoHabitacion);
-                cmd.Parameters.AddWithValue("@Nombre", Cli.Nombre);
-                cmd.Parameters.AddWithValue("@Vistas", Cli.Vistas);
-                cmd.Parameters.AddWithValue("@Costo", Cli.Costo);
-                cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
+                cmd.Parameters.AddWithValue("@id", Cli.id);
+                cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@descripcion", Cli.descripcion);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -135,7 +132,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDeshabilitarTipoHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.IDTipoHabitacion);
+                cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.id);
                 //cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
