@@ -35,7 +35,6 @@ namespace Cliente
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@ namespace Cliente
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -126,19 +126,6 @@ namespace Cliente
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenedores";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DimGray;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(462, 93);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(207, 65);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Tipos de empleado";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button9
             // 
@@ -244,7 +231,8 @@ namespace Cliente
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "hotel_ms",
-            "HOTELFINAL"});
+            "Hotel Proyecto Moanso",
+            "Hotel"});
             this.comboBox2.Location = new System.Drawing.Point(285, 63);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(230, 33);
@@ -312,6 +300,19 @@ namespace Cliente
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(960, 193);
             this.tabControl1.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DimGray;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(462, 93);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(207, 65);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Tipos de empleado";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Formprincipal
             // 
