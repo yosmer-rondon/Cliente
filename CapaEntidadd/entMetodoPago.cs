@@ -10,7 +10,7 @@ namespace CapaEntidadd
     {
         public int IDMetodopago  {get; set; }
         public string nombre { get; set; }
-        public int descripcion { get; set; }
+        public string descripcion { get; set; }
         public string estado { get; set; }
     }
 }

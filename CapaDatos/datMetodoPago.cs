@@ -14,38 +14,38 @@ namespace CapaDatos
         #region sigleton
         //Patron Singleton
         // Variable estática para la instancia
-        public static readonly datTipotrabajo _instancia = new datTipotrabajo();
+        public static readonly datMetodoPago _instancia = new datMetodoPago();
         //privado para evitar la instanciación directa
-        public static datTipotrabajo Instancia
+        public static datMetodoPago Instancia
         {
             get
             {
-                return datTipotrabajo._instancia;
+                return datMetodoPago._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
         ////////////////////listado de Clientes
-        public List<entTipoTrabajo> Listartipotrabajo()
+        public List<entMetodoPago> Listarmetodopago()
         {
             SqlCommand cmd = null;
-            List<entTipoTrabajo> lista = new List<entTipoTrabajo>();
+            List<entMetodoPago> lista = new List<entMetodoPago>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("listartipotrabajo", cn);
+                cmd = new SqlCommand("listarmetodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entTipoTrabajo ttra = new entTipoTrabajo();
-                    ttra.IDTipoTrabajo = Convert.ToInt32(dr["id"]);
-                    ttra.nombre = dr["nombre"].ToString();
-                    ttra.descripcion = dr["descripcion"].ToString();
-                    ttra.estado = dr["estado"].ToString();
-                    lista.Add(ttra);
+                    entMetodoPago mep = new entMetodoPago();
+                    mep.IDMetodopago = Convert.ToInt32(dr["id"]);
+                    mep.nombre = dr["nombre"].ToString();
+                    mep.descripcion = dr["descripcion"].ToString();
+                    mep.estado = dr["estado"].ToString();
+                    lista.Add(mep);
                 }
 
             }
@@ -60,18 +60,18 @@ namespace CapaDatos
             return lista;
         }
         /////////////////////////Insertando Cliente
-        public Boolean Insertartipotrabajo(entTipoTrabajo ttra)
+        public Boolean Insertarmetodopago(entMetodoPago mep)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("Insertartipotrabajo", cn);
+                cmd = new SqlCommand("Insertarmetodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@nombre", ttra.nombre);
-                cmd.Parameters.AddWithValue("@descripcion", ttra.descripcion);
-                cmd.Parameters.AddWithValue("@estado", ttra.estado);
+                cmd.Parameters.AddWithValue("@nombre", mep.nombre);
+                cmd.Parameters.AddWithValue("@descripcion", mep.descripcion);
+                cmd.Parameters.AddWithValue("@estado", mep.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

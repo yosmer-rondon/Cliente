@@ -17,14 +17,22 @@ namespace Cliente
         public ManMetodoDePago()
         {
             InitializeComponent();
+            listar();
         }
+        public void listar()
+        {
+            dgvMetodoPago.DataSource = logMetodoPago.Instancia.Listarmetodopago();
+        }
+        private void LimpiarVariables()
+        {
+            nombre.Text = "";
+            descripcion.Text = " ";
+            estado.Text = " ";
+        }
+
         private void ManMetodoPago_Load(object sender, EventArgs e)
         {
         
-        }
-        public void llenarDatos()
-        {
-
         }
         private void dgvMetodoPago_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -54,8 +62,21 @@ namespace Cliente
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                entMetodoPago mep = new entMetodoPago();
+                mep.nombre = nombre.Text.Trim();
+                mep.descripcion = descripcion.Text.Trim();
+                mep.estado = estado.Text.Trim();
+                logMetodoPago.Instancia.Insertarmetodopago(mep);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listar();
 
-            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
