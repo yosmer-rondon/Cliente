@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.descripcion = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.dgvMetodoPago = new System.Windows.Forms.DataGridView();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -37,12 +39,12 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtNomMetodoPago = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.estado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodoPago)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +52,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Cornsilk;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.estado);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.descripcion);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dgvMetodoPago);
             this.groupBox1.Controls.Add(this.btnDeshabilitar);
@@ -60,7 +64,7 @@
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnAgregar);
-            this.groupBox1.Controls.Add(this.txtNomMetodoPago);
+            this.groupBox1.Controls.Add(this.nombre);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label1);
@@ -73,6 +77,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS METODO DE PAGO";
+            // 
+            // descripcion
+            // 
+            this.descripcion.Location = new System.Drawing.Point(118, 106);
+            this.descripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.descripcion.Multiline = true;
+            this.descripcion.Name = "descripcion";
+            this.descripcion.Size = new System.Drawing.Size(123, 65);
+            this.descripcion.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 109);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Descripcion";
             // 
             // dgvMetodoPago
             // 
@@ -170,13 +193,13 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txtNomMetodoPago
+            // nombre
             // 
-            this.txtNomMetodoPago.Location = new System.Drawing.Point(118, 68);
-            this.txtNomMetodoPago.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNomMetodoPago.Name = "txtNomMetodoPago";
-            this.txtNomMetodoPago.Size = new System.Drawing.Size(123, 20);
-            this.txtNomMetodoPago.TabIndex = 3;
+            this.nombre.Location = new System.Drawing.Point(118, 68);
+            this.nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(123, 20);
+            this.nombre.TabIndex = 3;
             // 
             // label2
             // 
@@ -206,24 +229,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Metodo de Pago";
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 109);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Descripcion";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 191);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Estado";
             // 
-            // textBox1
+            // estado
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 106);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 65);
-            this.textBox1.TabIndex = 15;
+            this.estado.Location = new System.Drawing.Point(118, 188);
+            this.estado.Margin = new System.Windows.Forms.Padding(2);
+            this.estado.Name = "estado";
+            this.estado.Size = new System.Drawing.Size(75, 20);
+            this.estado.TabIndex = 17;
             // 
             // ManMetodoDePago
             // 
@@ -243,7 +265,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtNomMetodoPago;
+        private System.Windows.Forms.TextBox nombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
@@ -256,6 +278,8 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox descripcion;
+        private System.Windows.Forms.TextBox estado;
+        private System.Windows.Forms.Label label4;
     }
 }
