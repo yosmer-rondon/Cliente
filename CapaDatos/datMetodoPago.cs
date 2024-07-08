@@ -14,6 +14,7 @@ namespace CapaDatos
         #region sigleton
         //Patron Singleton
         // Variable estática para la instancia
+
         public static readonly datMetodoPago _instancia = new datMetodoPago();
         //privado para evitar la instanciación directa
         public static datMetodoPago Instancia
@@ -23,10 +24,11 @@ namespace CapaDatos
                 return datMetodoPago._instancia;
             }
         }
+       
         #endregion singleton
 
         #region metodos
-        ////////////////////listado de Clientes
+
         public List<entMetodoPago> Listarmetodopago()
         {
             SqlCommand cmd = null;
@@ -34,18 +36,20 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("listarmetodopago", cn);
+                cmd = new SqlCommand("listartipotrabajo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
+ 
                     entMetodoPago mep = new entMetodoPago();
                     mep.IDMetodopago = Convert.ToInt32(dr["id"]);
                     mep.nombre = dr["nombre"].ToString();
                     mep.descripcion = dr["descripcion"].ToString();
                     mep.estado = dr["estado"].ToString();
                     lista.Add(mep);
+
                 }
 
             }
@@ -60,7 +64,8 @@ namespace CapaDatos
             return lista;
         }
         /////////////////////////Insertando Cliente
-        public Boolean Insertarmetodopago(entMetodoPago mep)
+
+        public Boolean Insertarmetodopago(entMetodoPago mep) 
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
@@ -72,6 +77,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@nombre", mep.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", mep.descripcion);
                 cmd.Parameters.AddWithValue("@estado", mep.estado);
+ 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -88,5 +94,6 @@ namespace CapaDatos
         }
         #endregion metodos
     }
+            
 
 }
