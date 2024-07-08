@@ -106,7 +106,6 @@ namespace Cliente
             NombreTipo.Text = filaActual.Cells[1].Value.ToString();
             Descripcion.Text = filaActual.Cells[2].Value.ToString();
             textEstado.Text = filaActual.Cells[2].Value.ToString();
-            checkBoxEstadoTipo.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
 
         }
 
