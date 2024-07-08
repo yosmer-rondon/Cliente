@@ -66,7 +66,7 @@ namespace Cliente
                entTipoHabitacion c = new entTipoHabitacion();
                 c.nombre = NombreTipo.Text.Trim();
                 c.descripcion = Descripcion.Text.Trim();
-                c.estado = Descripcion.Text.Trim();
+                c.estado = textEstado.Text.Trim();
 
 
                 logTipoHabitacion.Instancia.InsertarTipoHabitacion(c);
