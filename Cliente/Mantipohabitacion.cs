@@ -23,7 +23,7 @@ namespace Cliente
             InitializeComponent();
             listar();
             groupBoxDatosTipoHabitacion.Enabled = false;
-            textIDTipoHabitacion.Enabled = false;
+            IDTipoHabitacion.Enabled = false;
         }
 
         public void listar()
@@ -64,8 +64,8 @@ namespace Cliente
             try
             {
                entTipoHabitacion c = new entTipoHabitacion();
-                c.Nombre = textNombreTipo.Text.Trim();
-                c.Vistas = textVistasTipo.Text.Trim();
+                c.Nombre = NombreTipo.Text.Trim();
+                c.Vistas = Descripcion.Text.Trim();
                 c.Costo = int.Parse(textCosto.Text.Trim());
 
 
@@ -81,8 +81,8 @@ namespace Cliente
         }
         private void LimpiarVariables()
         {
-            textNombreTipo.Text = "";
-            textVistasTipo.Text = " ";
+            NombreTipo.Text = "";
+            Descripcion.Text = " ";
             textCosto.Text = " ";
             checkBoxEstadoTipo.Text = " ";
         }
@@ -102,9 +102,9 @@ namespace Cliente
         {
 
             DataGridViewRow filaActual = dgvTipoHabitacion.Rows[e.RowIndex]; //
-            textIDTipoHabitacion.Text = filaActual.Cells[0].Value.ToString();
-            textNombreTipo.Text = filaActual.Cells[1].Value.ToString();
-            textVistasTipo.Text = filaActual.Cells[2].Value.ToString();
+            IDTipoHabitacion.Text = filaActual.Cells[0].Value.ToString();
+            NombreTipo.Text = filaActual.Cells[1].Value.ToString();
+            Descripcion.Text = filaActual.Cells[2].Value.ToString();
             textCosto.Text = filaActual.Cells[3].Value.ToString();
             checkBoxEstadoTipo.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
 
@@ -115,9 +115,9 @@ namespace Cliente
             try
             {
                 entTipoHabitacion c = new entTipoHabitacion();
-                c.IDTipoHabitacion = int.Parse(textIDTipoHabitacion.Text.Trim());
-                c.Nombre = textNombreTipo.Text.Trim();
-                c.Vistas = textVistasTipo.Text.Trim();
+                c.IDTipoHabitacion = int.Parse(IDTipoHabitacion.Text.Trim());
+                c.Nombre = NombreTipo.Text.Trim();
+                c.Vistas = Descripcion.Text.Trim();
                 c.Costo = int.Parse(textCosto.Text.Trim());;
                 c.Estado = textBox1.Text.Trim();
                 logTipoHabitacion.Instancia.EditarTipoHabitacion(c);
@@ -138,7 +138,7 @@ namespace Cliente
             {
                 entTipoHabitacion c = new entTipoHabitacion();
 
-                c.IDTipoHabitacion = int.Parse(textIDTipoHabitacion.Text.Trim());
+                c.IDTipoHabitacion = int.Parse(IDTipoHabitacion.Text.Trim());
                 logTipoHabitacion.Instancia.DeshabilitarTipoHabitacion(c);
             }
             catch (Exception ex)
@@ -153,6 +153,11 @@ namespace Cliente
         }
 
         private void groupBoxDatosTipoHabitacion_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textNombreTipo_TextChanged(object sender, EventArgs e)
         {
 
         }

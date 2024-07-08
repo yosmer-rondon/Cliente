@@ -29,25 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBoxDatosTipoHabitacion = new System.Windows.Forms.GroupBox();
-            this.textVistasTipo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textNombreTipo = new System.Windows.Forms.TextBox();
-            this.XD = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Descripcion = new System.Windows.Forms.TextBox();
+            this.NombreTipo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textCosto = new System.Windows.Forms.TextBox();
-            this.textIDTipoHabitacion = new System.Windows.Forms.TextBox();
-            this.checkBoxEstadoTipo = new System.Windows.Forms.CheckBox();
+            this.IDTipoHabitacion = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.checkBoxEstadoTipo = new System.Windows.Forms.CheckBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnDeshabilitarTipo = new System.Windows.Forms.Button();
             this.btnEditarTipo = new System.Windows.Forms.Button();
             this.btnNuevoTipo = new System.Windows.Forms.Button();
             this.dgvTipoHabitacion = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxDatosTipoHabitacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoHabitacion)).BeginInit();
             this.SuspendLayout();
@@ -55,16 +53,14 @@
             // groupBoxDatosTipoHabitacion
             // 
             this.groupBoxDatosTipoHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.label2);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.textBox1);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.label4);
-            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textVistasTipo);
-            this.groupBoxDatosTipoHabitacion.Controls.Add(this.label2);
-            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textNombreTipo);
-            this.groupBoxDatosTipoHabitacion.Controls.Add(this.XD);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.Descripcion);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.NombreTipo);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.label3);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.label1);
-            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textCosto);
-            this.groupBoxDatosTipoHabitacion.Controls.Add(this.textIDTipoHabitacion);
+            this.groupBoxDatosTipoHabitacion.Controls.Add(this.IDTipoHabitacion);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.btnAgregar);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.btnModificar);
             this.groupBoxDatosTipoHabitacion.Controls.Add(this.btnCancelar);
@@ -76,44 +72,40 @@
             this.groupBoxDatosTipoHabitacion.Text = "Datos de Tipo Habitacion";
             this.groupBoxDatosTipoHabitacion.Enter += new System.EventHandler(this.groupBoxDatosTipoHabitacion_Enter);
             // 
-            // textVistasTipo
+            // textBox1
             // 
-            this.textVistasTipo.Location = new System.Drawing.Point(71, 86);
-            this.textVistasTipo.Multiline = true;
-            this.textVistasTipo.Name = "textVistasTipo";
-            this.textVistasTipo.Size = new System.Drawing.Size(180, 39);
-            this.textVistasTipo.TabIndex = 19;
+            this.textBox1.Location = new System.Drawing.Point(71, 167);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(78, 20);
+            this.textBox1.TabIndex = 21;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.PowderBlue;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 16);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Vistas";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.PowderBlue;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Estado";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // textNombreTipo
+            // Descripcion
             // 
-            this.textNombreTipo.Location = new System.Drawing.Point(71, 60);
-            this.textNombreTipo.Name = "textNombreTipo";
-            this.textNombreTipo.Size = new System.Drawing.Size(180, 20);
-            this.textNombreTipo.TabIndex = 17;
+            this.Descripcion.Location = new System.Drawing.Point(99, 86);
+            this.Descripcion.Multiline = true;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Size = new System.Drawing.Size(152, 39);
+            this.Descripcion.TabIndex = 19;
             // 
-            // XD
+            // NombreTipo
             // 
-            this.XD.AutoSize = true;
-            this.XD.BackColor = System.Drawing.Color.PowderBlue;
-            this.XD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.XD.Location = new System.Drawing.Point(8, 133);
-            this.XD.Name = "XD";
-            this.XD.Size = new System.Drawing.Size(184, 16);
-            this.XD.TabIndex = 16;
-            this.XD.Text = "Costo de Tipo Habitacion";
-            this.XD.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.NombreTipo.Location = new System.Drawing.Point(71, 60);
+            this.NombreTipo.Name = "NombreTipo";
+            this.NombreTipo.Size = new System.Drawing.Size(180, 20);
+            this.NombreTipo.TabIndex = 17;
+            this.NombreTipo.TextChanged += new System.EventHandler(this.textNombreTipo_TextChanged);
             // 
             // label3
             // 
@@ -139,30 +131,12 @@
             this.label1.Text = "ID Tipo Habitacion";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // textCosto
+            // IDTipoHabitacion
             // 
-            this.textCosto.Location = new System.Drawing.Point(198, 129);
-            this.textCosto.Name = "textCosto";
-            this.textCosto.Size = new System.Drawing.Size(53, 20);
-            this.textCosto.TabIndex = 11;
-            // 
-            // textIDTipoHabitacion
-            // 
-            this.textIDTipoHabitacion.Location = new System.Drawing.Point(150, 28);
-            this.textIDTipoHabitacion.Name = "textIDTipoHabitacion";
-            this.textIDTipoHabitacion.Size = new System.Drawing.Size(101, 20);
-            this.textIDTipoHabitacion.TabIndex = 8;
-            // 
-            // checkBoxEstadoTipo
-            // 
-            this.checkBoxEstadoTipo.AutoSize = true;
-            this.checkBoxEstadoTipo.Location = new System.Drawing.Point(223, 377);
-            this.checkBoxEstadoTipo.Name = "checkBoxEstadoTipo";
-            this.checkBoxEstadoTipo.Size = new System.Drawing.Size(137, 17);
-            this.checkBoxEstadoTipo.TabIndex = 5;
-            this.checkBoxEstadoTipo.Text = "Estado Tipo Habitacion";
-            this.checkBoxEstadoTipo.UseVisualStyleBackColor = true;
-            this.checkBoxEstadoTipo.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.IDTipoHabitacion.Location = new System.Drawing.Point(150, 28);
+            this.IDTipoHabitacion.Name = "IDTipoHabitacion";
+            this.IDTipoHabitacion.Size = new System.Drawing.Size(101, 20);
+            this.IDTipoHabitacion.TabIndex = 8;
             // 
             // btnAgregar
             // 
@@ -205,6 +179,17 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // checkBoxEstadoTipo
+            // 
+            this.checkBoxEstadoTipo.AutoSize = true;
+            this.checkBoxEstadoTipo.Location = new System.Drawing.Point(223, 377);
+            this.checkBoxEstadoTipo.Name = "checkBoxEstadoTipo";
+            this.checkBoxEstadoTipo.Size = new System.Drawing.Size(137, 17);
+            this.checkBoxEstadoTipo.TabIndex = 5;
+            this.checkBoxEstadoTipo.Text = "Estado Tipo Habitacion";
+            this.checkBoxEstadoTipo.UseVisualStyleBackColor = true;
+            this.checkBoxEstadoTipo.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // btnSalir
             // 
@@ -274,24 +259,17 @@
             this.dgvTipoHabitacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoHabitacion_CellClick);
             this.dgvTipoHabitacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.PowderBlue;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Estado";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(71, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(53, 20);
-            this.textBox1.TabIndex = 21;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.PowderBlue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Descripcion";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // Mantipohabitacion
             // 
@@ -319,12 +297,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxDatosTipoHabitacion;
-        private System.Windows.Forms.TextBox textNombreTipo;
-        private System.Windows.Forms.Label XD;
+        private System.Windows.Forms.TextBox NombreTipo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textCosto;
-        private System.Windows.Forms.TextBox textIDTipoHabitacion;
+        private System.Windows.Forms.TextBox IDTipoHabitacion;
         private System.Windows.Forms.CheckBox checkBoxEstadoTipo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
@@ -334,9 +310,9 @@
         private System.Windows.Forms.Button btnEditarTipo;
         private System.Windows.Forms.Button btnNuevoTipo;
         private System.Windows.Forms.DataGridView dgvTipoHabitacion;
-        private System.Windows.Forms.TextBox textVistasTipo;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Descripcion;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
     }
 }
