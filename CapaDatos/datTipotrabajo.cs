@@ -6,50 +6,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaEntidad;
-using CapaDatos;
 using CapaEntidadd;
 
 namespace CapaDatos
 {
-    public class datHabitacion
+    public class datTipotrabajo
     {
         #region sigleton
         //Patron Singleton
         // Variable estática para la instancia
-        public static readonly datHabitacion _instancia = new datHabitacion();
+        public static readonly datTipotrabajo _instancia = new datTipotrabajo();
         //privado para evitar la instanciación directa
-        public static datHabitacion Instancia
+        public static datTipotrabajo Instancia
         {
             get
             {
-                return datHabitacion._instancia;
+                return datTipotrabajo._instancia;
             }
         }
         #endregion singleton
 
         #region metodos
-        ////////////////////listado de Habitaciones
-        public List<entHabitacion> ListarHabitacion()
+        ////////////////////listado de Clientes
+        public List<entTipoTrabajo> Listartipotrabajo()
         {
             SqlCommand cmd = null;
-            List<entHabitacion> lista = new List<entHabitacion>();
+            List<entTipoTrabajo> lista = new List<entTipoTrabajo>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spListarHabitacion", cn);
+                cmd = new SqlCommand("listartipotrabajo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    lista.Add(new entHabitacion
-                    {
-                        ID = Convert.ToInt32(dr["IDHabitacion"]),
-                        Capacidad = Convert.ToInt32(dr["CapacidadHabitacion"]),
-                        Costo = Convert.ToDecimal(dr["CostoHabitacion"]),
-                        Estado = Convert.ToBoolean(dr["EstadoHabitacion"])
-                    });
+                    entTipoTrabajo ttra = new entTipoTrabajo();
+                    ttra.IDTipoTrabajo = Convert.ToInt32(dr["id"]);
+                    ttra.nombre = dr["nombre"].ToString();
+                    ttra.descripcion = dr["descripcion"].ToString();
+                    ttra.estado = dr["estado"].ToString();
+                    lista.Add(ttra);
                 }
+
             }
             catch (Exception e)
             {
@@ -61,22 +60,19 @@ namespace CapaDatos
             }
             return lista;
         }
-        /////////////////////////Insertar Tipo Habitacion
-        public bool InsertarHabitacion(entHabitacion habitacion)
+        /////////////////////////Insertando Cliente
+        public Boolean Insertartipotrabajo(entTipoTrabajo ttra)
         {
             SqlCommand cmd = null;
-            bool inserta = false;
-
+            Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spInsertarHabitacion", cn);
+                cmd = new SqlCommand("Insertartipotrabajo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@CapacidadHabitacion", habitacion.Capacidad);
-                cmd.Parameters.AddWithValue("@CostoHabitacion", habitacion.Costo);
-                cmd.Parameters.AddWithValue("@EstadoHabitacion", habitacion.Estado);
-
+                cmd.Parameters.AddWithValue("@nombre", ttra.nombre);
+                cmd.Parameters.AddWithValue("@descripcion", ttra.descripcion);
+                cmd.Parameters.AddWithValue("@estado", ttra.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -89,27 +85,26 @@ namespace CapaDatos
                 throw e;
             }
             finally { cmd.Connection.Close(); }
-
             return inserta;
         }
 
-
-        //////////////////////////////////Editando Tipo Habitacion
-        public bool EditarHabitacion(entHabitacion habitacion)
+        //////////////////////////////////Editando Cliente
+        public Boolean EditarCliente(entCliente Cli)
         {
             SqlCommand cmd = null;
-            bool edita = false;
-
+            Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarHabitacion", cn);
+                cmd = new SqlCommand("spEditarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDHabitacion", habitacion.ID);
-                cmd.Parameters.AddWithValue("@CapacidadHabitacion", habitacion.Capacidad);
-                cmd.Parameters.AddWithValue("@CostoHabitacion", habitacion.Costo);
-                cmd.Parameters.AddWithValue("@EstadoHabitacion", habitacion.Estado);
-
+                cmd.Parameters.AddWithValue("@IDCliente", Cli.id);
+                cmd.Parameters.AddWithValue("@Nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@Apellido", Cli.apellido);
+                cmd.Parameters.AddWithValue("@DNI", Cli.dni);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.telefono);
+                cmd.Parameters.AddWithValue("@Correo", Cli.correo);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -122,30 +117,25 @@ namespace CapaDatos
                 throw e;
             }
             finally { cmd.Connection.Close(); }
-
             return edita;
         }
+        ///////////////////////// Deshabilitando Cliente
 
-        //////////////Deshabilitando Tipo de Habitacion
-
-        public bool DeshabilitarHabitacion(int idHabitacion)
+        public Boolean DeshabilitarCliente(entCliente Cli)
         {
             SqlCommand cmd = null;
-            bool deshabilitado = false;
-
+            Boolean delete = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarHabitacion", cn);
+                cmd = new SqlCommand("spDeshabilitarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@IDHabitacion", idHabitacion);
-
+                cmd.Parameters.AddWithValue("@IDCliente", Cli.id);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    deshabilitado = true;
+                    delete = true;
                 }
             }
             catch (Exception e)
@@ -153,8 +143,7 @@ namespace CapaDatos
                 throw e;
             }
             finally { cmd.Connection.Close(); }
-
-            return deshabilitado;
+            return delete;
         }
         #endregion metodos
     }

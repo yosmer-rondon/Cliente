@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logTipoTrabajo.cs" />
     <Compile Include="logCliente.cs" />
     <Compile Include="LogEmpleado.cs" />
     <Compile Include="logHabitacion.cs" />

@@ -66,7 +66,6 @@ namespace Cliente
                entTipoHabitacion c = new entTipoHabitacion();
                 c.Nombre = NombreTipo.Text.Trim();
                 c.Vistas = Descripcion.Text.Trim();
-                c.Costo = int.Parse(textCosto.Text.Trim());
 
 
                 logTipoHabitacion.Instancia.InsertarTipoHabitacion(c);
@@ -83,7 +82,7 @@ namespace Cliente
         {
             NombreTipo.Text = "";
             Descripcion.Text = " ";
-            textCosto.Text = " ";
+
             checkBoxEstadoTipo.Text = " ";
         }
 
@@ -105,7 +104,6 @@ namespace Cliente
             IDTipoHabitacion.Text = filaActual.Cells[0].Value.ToString();
             NombreTipo.Text = filaActual.Cells[1].Value.ToString();
             Descripcion.Text = filaActual.Cells[2].Value.ToString();
-            textCosto.Text = filaActual.Cells[3].Value.ToString();
             checkBoxEstadoTipo.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
 
         }
@@ -118,7 +116,6 @@ namespace Cliente
                 c.IDTipoHabitacion = int.Parse(IDTipoHabitacion.Text.Trim());
                 c.Nombre = NombreTipo.Text.Trim();
                 c.Vistas = Descripcion.Text.Trim();
-                c.Costo = int.Parse(textCosto.Text.Trim());;
                 c.Estado = textBox1.Text.Trim();
                 logTipoHabitacion.Instancia.EditarTipoHabitacion(c);
             }

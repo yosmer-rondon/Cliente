@@ -35,6 +35,7 @@ namespace Cliente
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@ namespace Cliente
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -110,6 +111,7 @@ namespace Cliente
             // 
             this.tabPage2.BackgroundImage = global::Cliente.Properties.Resources.marco;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button9);
             this.tabPage2.Controls.Add(this.button8);
@@ -122,10 +124,23 @@ namespace Cliente
             this.tabPage2.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(952, 164);
+            this.tabPage2.Size = new System.Drawing.Size(952, 251);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenedores";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DimGray;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(462, 141);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(207, 65);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Tipos de empleado";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button9
             // 
@@ -134,7 +149,7 @@ namespace Cliente
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Location = new System.Drawing.Point(690, 28);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(188, 103);
+            this.button9.Size = new System.Drawing.Size(188, 77);
             this.button9.TabIndex = 5;
             this.button9.Text = "Metodos de pago";
             this.button9.UseVisualStyleBackColor = false;
@@ -147,7 +162,7 @@ namespace Cliente
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(462, 28);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(207, 47);
+            this.button8.Size = new System.Drawing.Size(207, 77);
             this.button8.TabIndex = 4;
             this.button8.Text = "Tipos de habitacion";
             this.button8.UseVisualStyleBackColor = false;
@@ -158,9 +173,9 @@ namespace Cliente
             this.button4.BackColor = System.Drawing.Color.DimGray;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(232, 28);
+            this.button4.Location = new System.Drawing.Point(29, 137);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(207, 103);
+            this.button4.Size = new System.Drawing.Size(181, 41);
             this.button4.TabIndex = 3;
             this.button4.Text = "Habitacion";
             this.button4.UseVisualStyleBackColor = false;
@@ -207,7 +222,7 @@ namespace Cliente
             this.tabPage1.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(952, 164);
+            this.tabPage1.Size = new System.Drawing.Size(952, 251);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Conexion sql";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -295,24 +310,24 @@ namespace Cliente
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(1, 512);
+            this.tabControl1.Location = new System.Drawing.Point(1, 425);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(960, 193);
+            this.tabControl1.Size = new System.Drawing.Size(960, 280);
             this.tabControl1.TabIndex = 0;
             // 
-            // button6
+            // button10
             // 
-            this.button6.BackColor = System.Drawing.Color.DimGray;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(462, 93);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(207, 65);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Tipos de empleado";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button10.BackColor = System.Drawing.Color.DimGray;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(690, 141);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(188, 65);
+            this.button10.TabIndex = 7;
+            this.button10.Text = "Tipo de trabajo";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Formprincipal
             // 
@@ -353,6 +368,7 @@ namespace Cliente
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button10;
     }
 }
 

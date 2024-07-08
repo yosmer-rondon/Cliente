@@ -103,5 +103,11 @@ namespace Cliente
             MantipoEmpleado mtp = new MantipoEmpleado();
             mtp.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            ManTipoTrabajo ttra = new ManTipoTrabajo();
+            ttra.Show();
+        }
     }
 }
