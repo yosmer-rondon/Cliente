@@ -86,21 +86,19 @@ namespace Cliente
             try
             {
                 entMetodoPago c = new entMetodoPago();
-                c.idCliente = int.Parse(txtidCliente.Text.Trim());
-                c.razonSocial = txtRazonSocial.Text.Trim();
-                c.idTipoCliente = int.Parse(txtidTipoCliente.Text.Trim());
-                c.fecRegCliente = dtPickerRegCliente.Value;
-                c.idCiudad = int.Parse(txtidCiudad.Text.Trim());
-                c.estCliente = cbkEstadoCliente.Checked;
-                logMetodoPago.Instancia.Insertarmetodopago(c);
+                c.IDMetodopago = int.Parse(txtId.Text.Trim());
+                c.nombre = nombre.Text.Trim();
+                c.descripcion = descripcion.Text.Trim();
+                c.estado = estado.Text.Trim();
+                logMetodoPago.Instancia.Editarmetodopago(c);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            grupBoxDatos.Enabled = false;
-            listarCliente();
+            groupBox1.Enabled = false;
+            listar();
 
 
         }
