@@ -50,7 +50,6 @@ namespace CapaDatos
                     emp.dni = Convert.ToInt32(dr["dni"]);
                     emp.estado = dr["estado"].ToString();
                     emp.idtipoempledo = dr["tipo_empleado_id"].ToString();
-                    emp.Idempleado = Convert.ToInt32(dr["tipo_empleado_id"]);
                     lista.Add(emp);
                 }
 
@@ -108,13 +107,14 @@ namespace CapaDatos
                 cmd = new SqlCommand("EditarEmpleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Idempleado", Cli.Idempleado);
-                cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
-                cmd.Parameters.AddWithValue("@direccion", Cli.direccion);
-                cmd.Parameters.AddWithValue("@telefono", Cli.Telefono);
-                cmd.Parameters.AddWithValue("@correo", Cli.correo);
-                cmd.Parameters.AddWithValue("@dni", Cli.dni);
-                cmd.Parameters.AddWithValue("@dni", Cli.estado);
-                cmd.Parameters.AddWithValue("@dni", Cli.idtipoempledo);
+                cmd.Parameters.AddWithValue("@Nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@Apellido", Cli.apellidos);
+                cmd.Parameters.AddWithValue("@Direccion", Cli.direccion);
+                cmd.Parameters.AddWithValue("@Telefono", Cli.Telefono);
+                cmd.Parameters.AddWithValue("@Correo", Cli.correo);
+                cmd.Parameters.AddWithValue("@DNI", Cli.dni);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
+                cmd.Parameters.AddWithValue("@nombretipo", Cli.nombre_tipo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -129,6 +129,9 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return edita;
         }
+
+
+
         #endregion metodos
     }
 }

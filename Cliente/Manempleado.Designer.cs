@@ -35,6 +35,8 @@ namespace Cliente
             this.btnEditar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nombretipo = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
@@ -59,8 +61,8 @@ namespace Cliente
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.nombretipo = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.ID_empleado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.SuspendLayout();
@@ -106,6 +108,8 @@ namespace Cliente
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.groupBox1.Controls.Add(this.ID_empleado);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.nombretipo);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.button1);
@@ -145,6 +149,24 @@ namespace Cliente
             this.groupBox1.Text = "Registro de empleados";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // nombretipo
+            // 
+            this.nombretipo.FormattingEnabled = true;
+            this.nombretipo.Location = new System.Drawing.Point(169, 412);
+            this.nombretipo.Name = "nombretipo";
+            this.nombretipo.Size = new System.Drawing.Size(154, 30);
+            this.nombretipo.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(9, 415);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(146, 22);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Tipo Empleado:";
+            // 
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.Black;
@@ -178,12 +200,12 @@ namespace Cliente
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Britannic Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmpleado.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEmpleado.Location = new System.Drawing.Point(360, 11);
+            this.dgvEmpleado.Location = new System.Drawing.Point(357, 10);
             this.dgvEmpleado.Name = "dgvEmpleado";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -200,7 +222,7 @@ namespace Cliente
             // 
             // estado
             // 
-            this.estado.Location = new System.Drawing.Point(92, 333);
+            this.estado.Location = new System.Drawing.Point(90, 360);
             this.estado.Name = "estado";
             this.estado.Size = new System.Drawing.Size(73, 30);
             this.estado.TabIndex = 30;
@@ -209,7 +231,7 @@ namespace Cliente
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(10, 336);
+            this.label8.Location = new System.Drawing.Point(8, 363);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 22);
             this.label8.TabIndex = 29;
@@ -217,7 +239,7 @@ namespace Cliente
             // 
             // apellidos
             // 
-            this.apellidos.Location = new System.Drawing.Point(119, 77);
+            this.apellidos.Location = new System.Drawing.Point(117, 104);
             this.apellidos.Name = "apellidos";
             this.apellidos.Size = new System.Drawing.Size(206, 30);
             this.apellidos.TabIndex = 28;
@@ -226,7 +248,7 @@ namespace Cliente
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(11, 80);
+            this.label10.Location = new System.Drawing.Point(9, 107);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(96, 22);
             this.label10.TabIndex = 27;
@@ -260,35 +282,35 @@ namespace Cliente
             // 
             // dni
             // 
-            this.dni.Location = new System.Drawing.Point(64, 280);
+            this.dni.Location = new System.Drawing.Point(62, 307);
             this.dni.Name = "dni";
             this.dni.Size = new System.Drawing.Size(239, 30);
             this.dni.TabIndex = 23;
             // 
             // direccion
             // 
-            this.direccion.Location = new System.Drawing.Point(124, 125);
+            this.direccion.Location = new System.Drawing.Point(122, 152);
             this.direccion.Name = "direccion";
             this.direccion.Size = new System.Drawing.Size(201, 30);
             this.direccion.TabIndex = 20;
             // 
             // telefono
             // 
-            this.telefono.Location = new System.Drawing.Point(110, 178);
+            this.telefono.Location = new System.Drawing.Point(108, 205);
             this.telefono.Name = "telefono";
             this.telefono.Size = new System.Drawing.Size(193, 30);
             this.telefono.TabIndex = 19;
             // 
             // correo
             // 
-            this.correo.Location = new System.Drawing.Point(101, 231);
+            this.correo.Location = new System.Drawing.Point(99, 258);
             this.correo.Name = "correo";
             this.correo.Size = new System.Drawing.Size(202, 30);
             this.correo.TabIndex = 18;
             // 
             // nombre
             // 
-            this.nombre.Location = new System.Drawing.Point(110, 27);
+            this.nombre.Location = new System.Drawing.Point(108, 54);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(215, 30);
             this.nombre.TabIndex = 17;
@@ -298,7 +320,7 @@ namespace Cliente
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(11, 288);
+            this.label7.Location = new System.Drawing.Point(9, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 22);
             this.label7.TabIndex = 13;
@@ -308,7 +330,7 @@ namespace Cliente
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(10, 186);
+            this.label6.Location = new System.Drawing.Point(8, 213);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 22);
             this.label6.TabIndex = 12;
@@ -318,7 +340,7 @@ namespace Cliente
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(11, 133);
+            this.label5.Location = new System.Drawing.Point(9, 160);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 22);
             this.label5.TabIndex = 11;
@@ -328,7 +350,7 @@ namespace Cliente
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(11, 239);
+            this.label4.Location = new System.Drawing.Point(9, 266);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 10;
@@ -349,7 +371,7 @@ namespace Cliente
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(10, 27);
+            this.label1.Location = new System.Drawing.Point(8, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 22);
             this.label1.TabIndex = 7;
@@ -394,23 +416,22 @@ namespace Cliente
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label9
+            // label11
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(11, 388);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 22);
-            this.label9.TabIndex = 31;
-            this.label9.Text = "Tipo Empleado:";
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(8, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 22);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "ID;";
             // 
-            // nombretipo
+            // ID_empleado
             // 
-            this.nombretipo.FormattingEnabled = true;
-            this.nombretipo.Location = new System.Drawing.Point(171, 385);
-            this.nombretipo.Name = "nombretipo";
-            this.nombretipo.Size = new System.Drawing.Size(154, 30);
-            this.nombretipo.TabIndex = 32;
+            this.ID_empleado.Location = new System.Drawing.Point(108, 23);
+            this.ID_empleado.Name = "ID_empleado";
+            this.ID_empleado.Size = new System.Drawing.Size(124, 30);
+            this.ID_empleado.TabIndex = 34;
             // 
             // Manempleado
             // 
@@ -461,5 +482,7 @@ namespace Cliente
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox nombretipo;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox ID_empleado;
+        private System.Windows.Forms.Label label11;
     }
 }

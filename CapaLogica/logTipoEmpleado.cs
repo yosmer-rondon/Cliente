@@ -57,6 +57,10 @@ namespace CapaLogica
             return datTipoEmpleado._instancia.nombredetipos();
         }
 
+        public List<entTipoEmpleado> bucarnombresconidtipo(int id_tipocliente)
+        {
+            return datTipoEmpleado._instancia.bucarnombreconidtipoempleado(id_tipocliente);
+        }
         #endregion metodos
     }
 }

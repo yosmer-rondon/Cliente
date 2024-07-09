@@ -34,7 +34,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("ListarEmpleado", cn);
+                cmd = new SqlCommand("ListartípoEmpleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -140,6 +140,38 @@ namespace CapaDatos
             finally
             {
                 cmd.Connection.Close();
+            }
+            return lista;
+        }
+        public List<entTipoEmpleado> bucarnombreconidtipoempleado(int id_tipocliente)
+        {
+            SqlCommand cmd = null;
+            List<entTipoEmpleado> lista = new List<entTipoEmpleado>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("BUCANOMBRETIPOEMPLEADO", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_tipocliente", id_tipocliente);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entTipoEmpleado temp = new entTipoEmpleado();
+                    temp.nombre = dr["nombre"].ToString();
+                    lista.Add(temp);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
             }
             return lista;
         }
