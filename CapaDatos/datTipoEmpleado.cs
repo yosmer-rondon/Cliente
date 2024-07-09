@@ -94,10 +94,10 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("EditarTipoEmpleado", cn);
+                cmd = new SqlCommand("Editartipoempleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", temp.IDTipoEmpleado);
-                cmd.Parameters.AddWithValue("@nombre", temp.nombre);
+                cmd.Parameters.AddWithValue("@ID", temp.IDTipoEmpleado);
+                cmd.Parameters.AddWithValue("@Nombre", temp.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", temp.descripcion);
                 cmd.Parameters.AddWithValue("@estado", temp.estado);
                 cn.Open();
@@ -174,6 +174,30 @@ namespace CapaDatos
                 }
             }
             return lista;
+        }
+        public Boolean Deshabilitartipoempleado(entTipoEmpleado ttra)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("Deshabilitartipoempleado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID", ttra.IDTipoEmpleado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
         }
         #endregion metodos
     }
