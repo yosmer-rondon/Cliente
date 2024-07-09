@@ -106,12 +106,12 @@ namespace CapaDatos
                 cmd = new SqlCommand("spEditarHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id", Cli.id);
-                cmd.Parameters.AddWithValue("@Nombre", Cli.numhabitacion);
-                cmd.Parameters.AddWithValue("@Apellido", Cli.piso);
-                cmd.Parameters.AddWithValue("@DNI", Cli.capacidad);
-                cmd.Parameters.AddWithValue("@Telefono", Cli.costo);
-                cmd.Parameters.AddWithValue("@Correo", Cli.estado);
-                cmd.Parameters.AddWithValue("@estado", Cli.nombre);
+                cmd.Parameters.AddWithValue("@numhabitacion", Cli.numhabitacion);
+                cmd.Parameters.AddWithValue("@piso", Cli.piso);
+                cmd.Parameters.AddWithValue("@capacidad", Cli.capacidad);
+                cmd.Parameters.AddWithValue("@costo", Cli.costo);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
+                cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -138,7 +138,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDeshabilitarHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDCliente", Cli.id);
+                cmd.Parameters.AddWithValue("@id", Cli.id);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)

@@ -25,12 +25,14 @@ namespace Cliente
             groupHabitacion.Enabled = false;
             textIDHabitacion.Enabled = false;
             LlenarComboBoxHabitaciones();
+            
 
         }
 
         public void listar()
         {
             dgvHabitaciones.DataSource = logHabitacion.Instancia.ListarHabitacion();
+            dgvHabitaciones.Columns["nombre"].Visible = false;
         }
 
 
