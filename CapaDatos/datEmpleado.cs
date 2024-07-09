@@ -49,7 +49,7 @@ namespace CapaDatos
                     emp.correo = dr["correo"].ToString();
                     emp.dni = Convert.ToInt32(dr["dni"]);
                     emp.estado = dr["estado"].ToString();
-                    emp.idtipoempledo = dr["tipo_empleado_id"].ToString();
+                    emp.idtipoempledo = Convert.ToInt32(dr["tipo_empleado_id"]);
                     lista.Add(emp);
                 }
 
@@ -103,6 +103,7 @@ namespace CapaDatos
             Boolean edita = false;
             try
             {
+
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("EditarEmpleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -131,7 +132,73 @@ namespace CapaDatos
         }
 
 
+        public Boolean Deshabilitarempleado(entEmpleado Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("Deshabilitarempleado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@IDempleado", Cli.Idempleado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
 
+        public List<entEmpleado> BuscarEmpleadoPorId(int idEmpleado)
+        {
+            SqlCommand cmd = null;
+            List<entEmpleado> lista = new List<entEmpleado>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); // singleton
+                cmd = new SqlCommand("bucarempleado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", idEmpleado);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entEmpleado emp = new entEmpleado
+                    {
+                        Idempleado = Convert.ToInt32(dr["id"]),
+                        nombre = dr["nombre"].ToString(),
+                        apellidos = dr["apellidos"].ToString(),
+                        direccion = dr["direccion"].ToString(),
+                        Telefono = Convert.ToInt32(dr["telefono"]),
+                        correo = dr["correo"].ToString(),
+                        dni = Convert.ToInt32(dr["dni"]),
+                        estado = dr["estado"].ToString(),
+                        idtipoempledo = Convert.ToInt32(dr["tipo_empleado_id"])
+                    };
+                    lista.Add(emp);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return lista;
+        }
         #endregion metodos
     }
 }

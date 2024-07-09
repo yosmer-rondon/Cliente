@@ -16,7 +16,7 @@ namespace CapaEntidadd
         public string correo { get; set; }
         public int dni { get; set; }
         public string estado { get; set; }
-        public string idtipoempledo { get; set; }
+        public int idtipoempledo { get; set; }
         public string nombre_tipo { get; set; }
 
     }

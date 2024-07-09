@@ -25,7 +25,10 @@ namespace CapaLogica
         }
 
 
-        //INSERTA
+        #endregion singleton
+
+        #region metodos
+
         public void InsertarEmpleado(entEmpleado Cli)
         {
             datEmpleado.Instancia.InsertarEmpleado(Cli);
@@ -37,18 +40,21 @@ namespace CapaLogica
             datEmpleado.Instancia.EditarEmpleado(Cli);
         }
 
-        #endregion singleton
-
-        #region metodos
-
         ///listado
 
         public List<entEmpleado> ListarEmpleado()
         {
                 return datEmpleado.Instancia.ListarEmpleado();
         }
-
-            #endregion metodos
+        public void Deshabilitarempleado(entEmpleado Cli)
+        {
+            datEmpleado.Instancia.Deshabilitarempleado(Cli);
         }
+        public List<entEmpleado> BuscarEmpleadoPorId(int idEmpleado)
+        {
+            return datEmpleado.Instancia.BuscarEmpleadoPorId(idEmpleado);
+        }
+        #endregion metodos
+    }
     }
 

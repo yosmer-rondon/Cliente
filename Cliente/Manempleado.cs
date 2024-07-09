@@ -22,7 +22,6 @@ namespace Cliente
             InitializeComponent();
             LlenarComboBoxdetipos();
             listar();
-            id.Enabled = false;
 
         }
 
@@ -33,7 +32,7 @@ namespace Cliente
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            LimpiarVariables();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -97,30 +96,57 @@ namespace Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int idEmpleado = int.Parse(ID_empleado.Text.Trim());
+                List<entEmpleado> empleados = LogEmpleado.Instancia.BuscarEmpleadoPorId(idEmpleado);
 
+                dgvEmpleado.DataSource = empleados;
+            
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow filaActual = dgvEmpleado.Rows[e.RowIndex]; //
-            ID_empleado.Text = filaActual.Cells[0].Value.ToString();
-            nombre.Text = filaActual.Cells[1].Value.ToString();
-            apellidos.Text = filaActual.Cells[2].Value.ToString();  
-            direccion.Text = filaActual.Cells[3].Value.ToString();
-            telefono.Text = filaActual.Cells[4].Value.ToString();
-            correo.Text = filaActual.Cells[5].Value.ToString();
-            dni.Text = filaActual.Cells[6].Value.ToString();
-            estado.Text = filaActual.Cells[7].Value.ToString();
-            int idTipoEmpleado = int.Parse(filaActual.Cells[8].Value.ToString());
-            
-            List<entTipoEmpleado> tipoEmpleadoList = logTipoEmpleado.Instancia.bucarnombresconidtipo(idTipoEmpleado);
-   
-            if (tipoEmpleadoList.Count > 0)
+            try
             {
-                string nombreTipoEmpleado = tipoEmpleadoList[0].nombre;
+                DataGridViewRow filaActual = dgvEmpleado.Rows[e.RowIndex];
+                ID_empleado.Text = filaActual.Cells[0].Value.ToString();
+                nombre.Text = filaActual.Cells[1].Value.ToString();
+                apellidos.Text = filaActual.Cells[2].Value.ToString();
+                direccion.Text = filaActual.Cells[3].Value.ToString();
+                telefono.Text = filaActual.Cells[4].Value.ToString();
+                correo.Text = filaActual.Cells[5].Value.ToString();
+                dni.Text = filaActual.Cells[6].Value.ToString();
+                estado.Text = filaActual.Cells[7].Value.ToString();
+                int idTipoEmpleado = int.Parse(filaActual.Cells[8].Value.ToString());
 
-                // Seleccionar el nombre del tipo de empleado en el ComboBox
-                nombretipo.SelectedItem = nombretipo.Items.Cast<string>().FirstOrDefault(item => item == nombreTipoEmpleado);
+                // Obtener el nombre del tipo de empleado
+                List<entTipoEmpleado> tipoEmpleadoList = logTipoEmpleado.Instancia.bucarnombresconidtipo(idTipoEmpleado);
+                if (tipoEmpleadoList.Count > 0)
+                {
+                    string nombreTipoEmpleado = tipoEmpleadoList[0].nombre;
+
+                    // Limpiar y seleccionar el nombre del tipo de empleado en el ComboBox
+                    nombretipo.SelectedIndex = -1; // Deseleccionar cualquier ítem seleccionado previamente
+                    for (int i = 0; i < nombretipo.Items.Count; i++)
+                    {
+                        if (nombretipo.Items[i].ToString() == nombreTipoEmpleado)
+                        {
+                            nombretipo.SelectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
             }
         }
 
@@ -153,12 +179,6 @@ namespace Cliente
             listar();
 
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            groupBox1.Enabled = false;
-        }
-
         private void textNombre_TextChanged(object sender, EventArgs e)
         {
 
@@ -195,6 +215,23 @@ namespace Cliente
             {
                 MessageBox.Show("Error al cargar los números de habitaciones: " + ex.Message);
             }
+        }
+
+        private void btnDeshabilitar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entEmpleado c = new entEmpleado();
+
+                c.Idempleado = int.Parse(ID_empleado.Text.Trim());
+                LogEmpleado.Instancia.Deshabilitarempleado(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listar();
         }
     }
 }
