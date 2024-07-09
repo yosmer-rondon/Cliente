@@ -132,7 +132,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDeshabilitarTipoHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.id);
+                cmd.Parameters.AddWithValue("@id", Cli.id);
                 //cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
