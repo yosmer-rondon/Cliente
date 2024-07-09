@@ -101,7 +101,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarCliente", cn);
+                cmd = new SqlCommand("EditarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IDCliente", Cli.id);
                 cmd.Parameters.AddWithValue("@Nombre", Cli.nombre);
