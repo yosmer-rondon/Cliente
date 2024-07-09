@@ -24,6 +24,7 @@ namespace Cliente
             listar();
             groupHabitacion.Enabled = false;
             textIDHabitacion.Enabled = false;
+            LlenarComboBoxHabitaciones();
 
         }
 
@@ -91,29 +92,6 @@ namespace Cliente
             this.Close();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            //insertar
-            try
-            {
-                entHabitacion c = new entHabitacion();
-                c.numhabitacion = int.Parse(numHabitacion.Text.Trim());
-                c.piso = int.Parse(nudPiso.Text.Trim());
-                c.capacidad = int.Parse(nudCapacidad.Text.Trim());
-                c.costo = int.Parse(txtCosto.Text.Trim());
-                c.estado = Estado.Text.Trim();
-                c.nombre = TipoHabitacion.Text.Trim();
-                logHabitacion.Instancia.InsertarHabitacion(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupHabitacion.Enabled = false;
-            listar();
-
-        }
 
         private void LimpiarVariables()
         {
@@ -182,6 +160,29 @@ namespace Cliente
         private void dgvHabitaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            //insertar
+            try
+            {
+                entHabitacion c = new entHabitacion();
+                c.numhabitacion = int.Parse(numHabitacion.Text.Trim());
+                c.piso = int.Parse(nudPiso.Text.Trim());
+                c.capacidad = int.Parse(nudCapacidad.Text.Trim());
+                c.costo = double.Parse(txtCosto.Text.Trim());
+                c.estado = Estado.Text.Trim();
+                c.nombre = TipoHabitacion.Text.Trim();
+                logHabitacion.Instancia.InsertarHabitacion(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            groupHabitacion.Enabled = false;
+            listar();
         }
     }
 
