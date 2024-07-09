@@ -113,5 +113,10 @@ namespace Cliente
             descripcion.Text = filaActual.Cells[2].Value.ToString();
             estado.Text = filaActual.Cells[3].Value.ToString();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LimpiarVariables();
+        }
     }
 }
