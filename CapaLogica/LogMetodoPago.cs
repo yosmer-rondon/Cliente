@@ -27,6 +27,12 @@ namespace CapaLogica
             datMetodoPago.Instancia.Insertarmetodopago(mep);
         }
 
+        //EDITAR
+        public bool EditarMetodoPago(entMetodoPago cli)
+        {
+            return datMetodoPago.Instancia.EditarMetodoPago(cli);
+        }
+
         #endregion singleton
 
         #region metodos

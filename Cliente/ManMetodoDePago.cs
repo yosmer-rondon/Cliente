@@ -95,5 +95,10 @@ namespace Cliente
         {
 
         }
+
+        private void dgvMetodoPago_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("listartipotrabajo", cn);
+                cmd = new SqlCommand("listarmetodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -91,6 +91,36 @@ namespace CapaDatos
             }
             finally { cmd.Connection.Close(); }
             return inserta;
+        }
+
+        //////////////////////////////////Editando MetodoPago
+        public Boolean EditarMetodoPago(entMetodoPago Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("EditartipoMetodoPago", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", Cli.IDMetodopago);
+                cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@descripcion", Cli.descripcion);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
         }
         #endregion metodos
     }
