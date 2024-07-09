@@ -117,7 +117,6 @@ namespace Cliente
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBox1.Enabled = false;
             listar();
 
         }
@@ -150,7 +149,6 @@ namespace Cliente
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBox1.Enabled = false;
             listar();
 
         }

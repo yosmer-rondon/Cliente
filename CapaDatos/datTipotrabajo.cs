@@ -89,22 +89,19 @@ namespace CapaDatos
         }
 
         //////////////////////////////////Editando Cliente
-        public Boolean EditarCliente(entCliente Cli)
+        public Boolean Editartipotrabajo(entTipoTrabajo ttra)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarCliente", cn);
+                cmd = new SqlCommand("Editartipotrabajo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDCliente", Cli.id);
-                cmd.Parameters.AddWithValue("@Nombre", Cli.nombre);
-                cmd.Parameters.AddWithValue("@Apellido", Cli.apellido);
-                cmd.Parameters.AddWithValue("@DNI", Cli.dni);
-                cmd.Parameters.AddWithValue("@Telefono", Cli.telefono);
-                cmd.Parameters.AddWithValue("@Correo", Cli.correo);
-                cmd.Parameters.AddWithValue("@estado", Cli.estado);
+                cmd.Parameters.AddWithValue("@ID", ttra.IDTipoTrabajo);
+                cmd.Parameters.AddWithValue("@Nombre", ttra.nombre);
+                cmd.Parameters.AddWithValue("@descripcion", ttra.descripcion);
+                cmd.Parameters.AddWithValue("@estado", ttra.estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -121,16 +118,16 @@ namespace CapaDatos
         }
         ///////////////////////// Deshabilitando Cliente
 
-        public Boolean DeshabilitarCliente(entCliente Cli)
+        public Boolean Deshabilitartipotrabajo(entTipoTrabajo ttra)
         {
             SqlCommand cmd = null;
             Boolean delete = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarCliente", cn);
+                cmd = new SqlCommand("Deshabilitartipotrabajo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDCliente", Cli.id);
+                cmd.Parameters.AddWithValue("@ID", ttra.IDTipoTrabajo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
