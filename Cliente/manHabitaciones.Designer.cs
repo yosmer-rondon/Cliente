@@ -33,7 +33,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.groupHabitacion = new System.Windows.Forms.GroupBox();
             this.nudCapacidad = new System.Windows.Forms.NumericUpDown();
             this.nudPiso = new System.Windows.Forms.NumericUpDown();
             this.lblCosto = new System.Windows.Forms.Label();
@@ -42,14 +42,17 @@
             this.lblPiso = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.txtCosto = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.tipohabitacion = new System.Windows.Forms.ComboBox();
-            this.chkEstado = new System.Windows.Forms.CheckBox();
+            this.textIDHabitacion = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Estado = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numHabitacion = new System.Windows.Forms.TextBox();
+            this.TipoHabitacion = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
-            this.gbDatos.SuspendLayout();
+            this.groupHabitacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCapacidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPiso)).BeginInit();
             this.SuspendLayout();
@@ -135,28 +138,31 @@
             this.btnSalir.EnabledChanged += new System.EventHandler(this.btnsPrincipal_EnabledChanged);
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // gbDatos
+            // groupHabitacion
             // 
-            this.gbDatos.Controls.Add(this.nudCapacidad);
-            this.gbDatos.Controls.Add(this.nudPiso);
-            this.gbDatos.Controls.Add(this.lblCosto);
-            this.gbDatos.Controls.Add(this.lblCapacidad);
-            this.gbDatos.Controls.Add(this.lblTipo);
-            this.gbDatos.Controls.Add(this.lblPiso);
-            this.gbDatos.Controls.Add(this.lblID);
-            this.gbDatos.Controls.Add(this.txtCosto);
-            this.gbDatos.Controls.Add(this.txtID);
-            this.gbDatos.Controls.Add(this.tipohabitacion);
-            this.gbDatos.Controls.Add(this.chkEstado);
-            this.gbDatos.Controls.Add(this.btnAgregar);
-            this.gbDatos.Controls.Add(this.btnModificar);
-            this.gbDatos.Controls.Add(this.btnCancelar);
-            this.gbDatos.Location = new System.Drawing.Point(58, 264);
-            this.gbDatos.Name = "gbDatos";
-            this.gbDatos.Size = new System.Drawing.Size(835, 180);
-            this.gbDatos.TabIndex = 5;
-            this.gbDatos.TabStop = false;
-            this.gbDatos.Text = "Datos de Habitacion";
+            this.groupHabitacion.Controls.Add(this.TipoHabitacion);
+            this.groupHabitacion.Controls.Add(this.numHabitacion);
+            this.groupHabitacion.Controls.Add(this.label2);
+            this.groupHabitacion.Controls.Add(this.Estado);
+            this.groupHabitacion.Controls.Add(this.label1);
+            this.groupHabitacion.Controls.Add(this.nudCapacidad);
+            this.groupHabitacion.Controls.Add(this.nudPiso);
+            this.groupHabitacion.Controls.Add(this.lblCosto);
+            this.groupHabitacion.Controls.Add(this.lblCapacidad);
+            this.groupHabitacion.Controls.Add(this.lblTipo);
+            this.groupHabitacion.Controls.Add(this.lblPiso);
+            this.groupHabitacion.Controls.Add(this.lblID);
+            this.groupHabitacion.Controls.Add(this.txtCosto);
+            this.groupHabitacion.Controls.Add(this.textIDHabitacion);
+            this.groupHabitacion.Controls.Add(this.btnAgregar);
+            this.groupHabitacion.Controls.Add(this.btnModificar);
+            this.groupHabitacion.Controls.Add(this.btnCancelar);
+            this.groupHabitacion.Location = new System.Drawing.Point(58, 264);
+            this.groupHabitacion.Name = "groupHabitacion";
+            this.groupHabitacion.Size = new System.Drawing.Size(835, 192);
+            this.groupHabitacion.TabIndex = 5;
+            this.groupHabitacion.TabStop = false;
+            this.groupHabitacion.Text = "Datos de Habitacion";
             // 
             // nudCapacidad
             // 
@@ -263,41 +269,18 @@
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(92, 20);
             this.txtCosto.TabIndex = 11;
-            this.txtCosto.Text = "0.00";
             this.txtCosto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCosto_KeyPress);
             this.txtCosto.Validated += new System.EventHandler(this.txtCosto_Validated);
             // 
-            // txtID
+            // textIDHabitacion
             // 
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(110, 31);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(101, 20);
-            this.txtID.TabIndex = 8;
-            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tipohabitacion
-            // 
-            this.tipohabitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tipohabitacion.Enabled = false;
-            this.tipohabitacion.FormattingEnabled = true;
-            this.tipohabitacion.Location = new System.Drawing.Point(130, 114);
-            this.tipohabitacion.Name = "tipohabitacion";
-            this.tipohabitacion.Size = new System.Drawing.Size(121, 21);
-            this.tipohabitacion.TabIndex = 6;
-            this.tipohabitacion.SelectedIndexChanged += new System.EventHandler(this.tipohabitacion_SelectedIndexChanged);
-            // 
-            // chkEstado
-            // 
-            this.chkEstado.AutoSize = true;
-            this.chkEstado.Enabled = false;
-            this.chkEstado.Location = new System.Drawing.Point(334, 34);
-            this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(130, 17);
-            this.chkEstado.TabIndex = 5;
-            this.chkEstado.Text = "Estado Habitación";
-            this.chkEstado.UseVisualStyleBackColor = true;
+            this.textIDHabitacion.Enabled = false;
+            this.textIDHabitacion.Location = new System.Drawing.Point(110, 31);
+            this.textIDHabitacion.Name = "textIDHabitacion";
+            this.textIDHabitacion.Size = new System.Drawing.Size(101, 20);
+            this.textIDHabitacion.TabIndex = 8;
+            this.textIDHabitacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnAgregar
             // 
@@ -347,13 +330,63 @@
             this.btnCancelar.EnabledChanged += new System.EventHandler(this.btnsPrincipal_EnabledChanged);
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FloralWhite;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(331, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Estado";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // Estado
+            // 
+            this.Estado.Enabled = false;
+            this.Estado.Location = new System.Drawing.Point(417, 31);
+            this.Estado.Name = "Estado";
+            this.Estado.Size = new System.Drawing.Size(101, 20);
+            this.Estado.TabIndex = 20;
+            this.Estado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FloralWhite;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Numero Habitacion";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // numHabitacion
+            // 
+            this.numHabitacion.Enabled = false;
+            this.numHabitacion.Location = new System.Drawing.Point(150, 158);
+            this.numHabitacion.Name = "numHabitacion";
+            this.numHabitacion.Size = new System.Drawing.Size(101, 20);
+            this.numHabitacion.TabIndex = 22;
+            this.numHabitacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TipoHabitacion
+            // 
+            this.TipoHabitacion.FormattingEnabled = true;
+            this.TipoHabitacion.Location = new System.Drawing.Point(140, 116);
+            this.TipoHabitacion.Name = "TipoHabitacion";
+            this.TipoHabitacion.Size = new System.Drawing.Size(121, 21);
+            this.TipoHabitacion.TabIndex = 23;
+            // 
             // manHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(950, 449);
-            this.Controls.Add(this.gbDatos);
+            this.ClientSize = new System.Drawing.Size(950, 468);
+            this.Controls.Add(this.groupHabitacion);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDeshabilitar);
             this.Controls.Add(this.btnEditar);
@@ -365,8 +398,8 @@
             this.Text = "manHabitaciones";
             this.Load += new System.EventHandler(this.manHabitaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
-            this.gbDatos.ResumeLayout(false);
-            this.gbDatos.PerformLayout();
+            this.groupHabitacion.ResumeLayout(false);
+            this.groupHabitacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCapacidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPiso)).EndInit();
             this.ResumeLayout(false);
@@ -380,13 +413,11 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.GroupBox gbDatos;
+        private System.Windows.Forms.GroupBox groupHabitacion;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.ComboBox tipohabitacion;
-        private System.Windows.Forms.CheckBox chkEstado;
+        private System.Windows.Forms.TextBox textIDHabitacion;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtCosto;
         private System.Windows.Forms.Label lblCosto;
@@ -395,5 +426,10 @@
         private System.Windows.Forms.Label lblPiso;
         private System.Windows.Forms.NumericUpDown nudPiso;
         private System.Windows.Forms.NumericUpDown nudCapacidad;
+        private System.Windows.Forms.TextBox Estado;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox numHabitacion;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox TipoHabitacion;
     }
 }

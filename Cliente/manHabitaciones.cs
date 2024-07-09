@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidadd;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using CapaEntidad;
 
 namespace Cliente
 {
@@ -21,6 +22,9 @@ namespace Cliente
         {
             InitializeComponent();
             listar();
+            groupHabitacion.Enabled = false;
+            textIDHabitacion.Enabled = false;
+
         }
 
         public void listar()
@@ -65,7 +69,12 @@ namespace Cliente
 
         private void btnNueva_Click(object sender, EventArgs e)
         {
-            
+            groupHabitacion.Enabled = true;
+
+            btnAgregar.Visible = true;
+            LimpiarVariables();
+            btnModificar.Visible = false;
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -84,8 +93,40 @@ namespace Cliente
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            //insertar
+            try
+            {
+                entHabitacion c = new entHabitacion();
+                c.numhabitacion = int.Parse(numHabitacion.Text.Trim());
+                c.piso = int.Parse(nudPiso.Text.Trim());
+                c.capacidad = int.Parse(nudCapacidad.Text.Trim());
+                c.costo = int.Parse(txtCosto.Text.Trim());
+                c.estado = Estado.Text.Trim();
+                c.nombre = TipoHabitacion.Text.Trim();
+                logHabitacion.Instancia.InsertarHabitacion(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            groupHabitacion.Enabled = false;
+            listar();
 
         }
+
+        private void LimpiarVariables()
+        {
+            numHabitacion.Text = "";
+            nudPiso.Text = " ";
+            nudCapacidad.Text = "";
+            txtCosto.Text = "";
+            Estado.Text = "";
+            TipoHabitacion.Text = "";
+            //cbkEstadoCliente.Checked = false;
+
+        }
+
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
@@ -125,11 +166,11 @@ namespace Cliente
             {
                 List<entTipoHabitacion> listaHabitacionesTipo = logTipoHabitacion.Instancia.nombrestipohabitacion();
 
-                tipohabitacion.Items.Clear(); // Limpiar los ítems existentes
+                TipoHabitacion.Items.Clear(); // Limpiar los ítems existentes
 
                 foreach (var tipohabitaciones in listaHabitacionesTipo)
                 {
-                    tipohabitacion.Items.Add(tipohabitaciones.nombre.ToString());
+                    TipoHabitacion.Items.Add(tipohabitaciones.nombre.ToString());
                 }
             }
             catch (Exception ex)
