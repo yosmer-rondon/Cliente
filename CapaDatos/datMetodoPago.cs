@@ -36,7 +36,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("listartipotrabajo", cn);
+                cmd = new SqlCommand("listarmetodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -101,7 +101,7 @@ namespace CapaDatos
             {
 
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("EditarEmpleado", cn);
+                cmd = new SqlCommand("EditartipoMetodoPago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id", Cli.IDMetodopago);
                 cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
