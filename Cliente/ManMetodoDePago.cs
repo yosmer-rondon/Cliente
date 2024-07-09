@@ -53,6 +53,19 @@ namespace Cliente
 
         private void btnDeshabilitar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                entMetodoPago c = new entMetodoPago();
+
+                c.IDMetodopago = int.Parse(txtId.Text.Trim());
+                logMetodoPago.Instancia.Deshabilitarmetodopago(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listar();
 
 
         }
@@ -97,7 +110,6 @@ namespace Cliente
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBox1.Enabled = false;
             listar();
 
 

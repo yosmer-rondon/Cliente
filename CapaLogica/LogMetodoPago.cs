@@ -34,6 +34,11 @@ namespace CapaLogica
             return datMetodoPago.Instancia.Editarmetodopago(cli);
         }
 
+        public bool Deshabilitarmetodopago(entMetodoPago Cli)
+        {
+            return datMetodoPago.Instancia.Deshabilitarmetodopago(Cli);
+        }
+
         #endregion singleton
 
         #region metodos
