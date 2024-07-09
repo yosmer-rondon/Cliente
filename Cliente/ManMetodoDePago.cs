@@ -1,4 +1,6 @@
-﻿using CapaEntidadd;
+﻿using CapaDatos;
+using CapaEntidad;
+using CapaEntidadd;
 using CapaLogica;
 using System;
 using System.Collections.Generic;
@@ -81,7 +83,25 @@ namespace Cliente
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                entMetodoPago c = new entMetodoPago();
+                c.idCliente = int.Parse(txtidCliente.Text.Trim());
+                c.razonSocial = txtRazonSocial.Text.Trim();
+                c.idTipoCliente = int.Parse(txtidTipoCliente.Text.Trim());
+                c.fecRegCliente = dtPickerRegCliente.Value;
+                c.idCiudad = int.Parse(txtidCiudad.Text.Trim());
+                c.estCliente = cbkEstadoCliente.Checked;
+                logMetodoPago.Instancia.Insertarmetodopago(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            grupBoxDatos.Enabled = false;
+            listarCliente();
+
 
         }
 
@@ -98,7 +118,11 @@ namespace Cliente
 
         private void dgvMetodoPago_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            DataGridViewRow filaActual = dgvMetodoPago.Rows[e.RowIndex]; //
+            txtId.Text = filaActual.Cells[0].Value.ToString();
+            nombre.Text = filaActual.Cells[1].Value.ToString();
+            descripcion.Text = filaActual.Cells[2].Value.ToString();
+            estado.Text = filaActual.Cells[3].Value.ToString();
         }
     }
 }
