@@ -37,9 +37,9 @@ namespace CapaLogica
         }
 
         //DESHABILITAR
-        public bool DeshabilitarHabitacion(int idHabitacion)
+        public bool DeshabilitarHabitacion(entHabitacion Cli)
         {
-            return datHabitacion.Instancia.DeshabilitarHabitacion(idHabitacion);
+            return datHabitacion.Instancia.DeshabilitarHabitacion(Cli);
         }
 
         #endregion singleton

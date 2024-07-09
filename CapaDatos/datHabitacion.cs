@@ -128,7 +128,8 @@ namespace CapaDatos
         }
         ///////////////////////// Deshabilitando Cliente
 
-        public Boolean DeshabilitarCliente(entCliente Cli)
+        public Boolean DeshabilitarHabitacion(entHabitacion
+            Cli)
         {
             SqlCommand cmd = null;
             Boolean delete = false;

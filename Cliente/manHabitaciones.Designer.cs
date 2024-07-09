@@ -43,7 +43,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.txtCosto = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
+            this.tipohabitacion = new System.Windows.Forms.ComboBox();
             this.chkEstado = new System.Windows.Forms.CheckBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -72,6 +72,7 @@
             this.dgvHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvHabitaciones.Size = new System.Drawing.Size(835, 161);
             this.dgvHabitaciones.TabIndex = 0;
+            this.dgvHabitaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHabitaciones_CellContentClick);
             this.dgvHabitaciones.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHabitaciones_CellEnter);
             // 
             // btnNueva
@@ -145,7 +146,7 @@
             this.gbDatos.Controls.Add(this.lblID);
             this.gbDatos.Controls.Add(this.txtCosto);
             this.gbDatos.Controls.Add(this.txtID);
-            this.gbDatos.Controls.Add(this.cboTipo);
+            this.gbDatos.Controls.Add(this.tipohabitacion);
             this.gbDatos.Controls.Add(this.chkEstado);
             this.gbDatos.Controls.Add(this.btnAgregar);
             this.gbDatos.Controls.Add(this.btnModificar);
@@ -276,15 +277,16 @@
             this.txtID.TabIndex = 8;
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // cboTipo
+            // tipohabitacion
             // 
-            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipo.Enabled = false;
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(130, 114);
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(121, 21);
-            this.cboTipo.TabIndex = 6;
+            this.tipohabitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipohabitacion.Enabled = false;
+            this.tipohabitacion.FormattingEnabled = true;
+            this.tipohabitacion.Location = new System.Drawing.Point(130, 114);
+            this.tipohabitacion.Name = "tipohabitacion";
+            this.tipohabitacion.Size = new System.Drawing.Size(121, 21);
+            this.tipohabitacion.TabIndex = 6;
+            this.tipohabitacion.SelectedIndexChanged += new System.EventHandler(this.tipohabitacion_SelectedIndexChanged);
             // 
             // chkEstado
             // 
@@ -383,7 +385,7 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.ComboBox cboTipo;
+        private System.Windows.Forms.ComboBox tipohabitacion;
         private System.Windows.Forms.CheckBox chkEstado;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtCosto;

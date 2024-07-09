@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidadd;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cliente
 {
@@ -19,7 +20,14 @@ namespace Cliente
         public manHabitaciones()
         {
             InitializeComponent();
+            listar();
         }
+
+        public void listar()
+        {
+            dgvHabitaciones.DataSource = logHabitacion.Instancia.ListarHabitacion();
+        }
+
 
         private void LimpiarControles()
         {
@@ -105,6 +113,36 @@ namespace Cliente
         {
 
         }
+
+
+        private void tipohabitacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void LlenarComboBoxHabitaciones()
+        {
+            try
+            {
+                List<entTipoHabitacion> listaHabitacionesTipo = logTipoHabitacion.Instancia.nombrestipohabitacion();
+
+                tipohabitacion.Items.Clear(); // Limpiar los ítems existentes
+
+                foreach (var tipohabitaciones in listaHabitacionesTipo)
+                {
+                    tipohabitacion.Items.Add(tipohabitaciones.nombre.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los números de habitaciones: " + ex.Message);
+            }
+        }
+
+        private void dgvHabitaciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
+
 }
 
