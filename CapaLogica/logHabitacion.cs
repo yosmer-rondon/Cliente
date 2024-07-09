@@ -53,6 +53,11 @@ namespace CapaLogica
             return datHabitacion.Instancia.ListarHabitacion();
         }
 
+        public List<entHabitacion> BuscarHabitacionPorId(int id)
+        {
+            return datHabitacion.Instancia.BuscarHabitacionPorId(id);
+        }
+
         #endregion metodos
     }
 

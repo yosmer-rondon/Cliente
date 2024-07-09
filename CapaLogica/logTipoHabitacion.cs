@@ -58,6 +58,11 @@ namespace CapaLogica
             return datTipoHabitacion.Instancia.ListarTipoHabitacion();
         }
 
+        public List<entTipoHabitacion> bucarnombreconidtipohabitacion(int id)
+        {
+            return datTipoHabitacion._instancia.bucarnombreconidtipohabitacion(id);
+        }
+
         #endregion metodos
     }
 }

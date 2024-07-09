@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    internal class datODReserva
+    public class datODReserva
     {
     }
 }

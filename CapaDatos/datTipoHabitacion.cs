@@ -177,6 +177,39 @@ namespace CapaDatos
             }
             return lista;
         }
+
+        public List<entTipoHabitacion> bucarnombreconidtipohabitacion(int id)
+        {
+            SqlCommand cmd = null;
+            List<entTipoHabitacion> lista = new List<entTipoHabitacion>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("BUCANOMBRETIPOHABITACION", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entTipoHabitacion temp = new entTipoHabitacion();
+                    temp.nombre = dr["nombre"].ToString();
+                    lista.Add(temp);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return lista;
+        }
         #endregion metodos
     }
 }

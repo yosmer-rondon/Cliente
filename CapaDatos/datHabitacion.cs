@@ -103,7 +103,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditarHabitacion", cn);
+                cmd = new SqlCommand("EditarHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id", Cli.id);
                 cmd.Parameters.AddWithValue("@numhabitacion", Cli.numhabitacion);
@@ -136,7 +136,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarHabitacion", cn);
+                cmd = new SqlCommand("DeshabilitarHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id", Cli.id);
                 cn.Open();
@@ -152,6 +152,47 @@ namespace CapaDatos
             }
             finally { cmd.Connection.Close(); }
             return delete;
+        }
+
+        public List<entHabitacion> BuscarHabitacionPorId(int id)
+        {
+            SqlCommand cmd = null;
+            List<entHabitacion> lista = new List<entHabitacion>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); // singleton
+                cmd = new SqlCommand("bucarhabitacion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entHabitacion emp = new entHabitacion
+                    {
+                        id = Convert.ToInt32(dr["id"]),
+                        numhabitacion = Convert.ToInt32(dr["numhabitacion"]),
+                        piso = Convert.ToInt32(dr["piso"]),
+                        capacidad = Convert.ToInt32(dr["capacidad"]),
+                        costo = Convert.ToInt32(dr["costo"]),
+                        estado = dr["estado"].ToString(),
+                        tipo_habitacion_id = Convert.ToInt32(dr["tipo_habitacion_id"])
+                    };
+                    lista.Add(emp);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return lista;
         }
 
         #endregion metodos
