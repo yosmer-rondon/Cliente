@@ -24,7 +24,7 @@ namespace CapaDatos
                 return datMetodoPago._instancia;
             }
         }
-       
+
         #endregion singleton
 
         #region metodos
@@ -42,7 +42,7 @@ namespace CapaDatos
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
- 
+
                     entMetodoPago mep = new entMetodoPago();
                     mep.IDMetodopago = Convert.ToInt32(dr["id"]);
                     mep.nombre = dr["nombre"].ToString();
@@ -65,7 +65,7 @@ namespace CapaDatos
         }
         /////////////////////////Insertando Cliente
 
-        public Boolean Insertarmetodopago(entMetodoPago mep) 
+        public Boolean Insertarmetodopago(entMetodoPago mep)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
@@ -77,7 +77,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@nombre", mep.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", mep.descripcion);
                 cmd.Parameters.AddWithValue("@estado", mep.estado);
- 
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -92,8 +92,35 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return inserta;
         }
-        #endregion metodos
-    }
-            
 
+        public Boolean Editarmetodopago(entMetodoPago Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("EditarEmpleado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", Cli.IDMetodopago);
+                cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@descripcion", Cli.descripcion);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
+            #endregion metodos
+        }
+    }    
 }
