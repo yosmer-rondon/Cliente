@@ -22,6 +22,10 @@ namespace CapaLogica
                 return logMetodoPago._instancia;
             }
         }
+        public void Insertarmetodopago(entMetodoPago mep)
+        {
+            datMetodoPago.Instancia.Insertarmetodopago(mep);
+        }
 
         #endregion singleton
 
@@ -32,10 +36,6 @@ namespace CapaLogica
         public List<entMetodoPago> Listarmetodopago()
         {
             return datMetodoPago.Instancia.Listarmetodopago();
-        }
-        public void Insertarmetodopago(entMetodoPago mep)
-        {
-            datMetodoPago.Instancia.Insertarmetodopago(mep);
         }
         #endregion metodos
 
