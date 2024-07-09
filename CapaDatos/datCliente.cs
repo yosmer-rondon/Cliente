@@ -133,7 +133,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spDeshabilitarCliente", cn);
+                cmd = new SqlCommand("DeshabilitarCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@IDCliente", Cli.id);
                 cn.Open();

@@ -89,6 +89,7 @@ namespace Cliente
         }
         private void LimpiarVariables()
         {
+            ID_cliente.Text = " ";
             nombre.Text = "";
             apellidos.Text = " ";
             estado.Text = " ";
