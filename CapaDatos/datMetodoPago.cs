@@ -12,7 +12,7 @@ namespace CapaDatos
     public class datMetodoPago
     {
         #region sigleton
-        //Patron Singleton
+        //Patron Singleton.
         // Variable estática para la instancia
 
         public static readonly datMetodoPago _instancia = new datMetodoPago();
