@@ -81,7 +81,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@fecha_salida", Cli.fecha_salida);
                 cmd.Parameters.AddWithValue("@estado", Cli.estado);
                 cmd.Parameters.AddWithValue("@num_habitacion", Cli.num_habitacion);
-                cmd.Parameters.AddWithValue("@nombre_metodo_pago", Cli.nombre_metpago);
+                cmd.Parameters.AddWithValue("@nombre_metpago", Cli.nombre_metpago);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
