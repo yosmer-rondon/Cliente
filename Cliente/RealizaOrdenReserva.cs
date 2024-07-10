@@ -98,5 +98,10 @@ namespace Cliente
         {
             CLIENTE.DataSource = logCliente.Instancia.ListarCliente();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            HABITACIONES.DataSource = logHabitacion.Instancia.habitaciondispobibles();
+        }
     }
 }

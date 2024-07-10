@@ -195,6 +195,41 @@ namespace CapaDatos
             return lista;
         }
 
+        public List<entHabitacion> habitacionesdisponibles()
+        {
+            SqlCommand cmd = null;
+            List<entHabitacion> lista = new List<entHabitacion>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("habitacionesdisponibles", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entHabitacion Cli = new entHabitacion();
+                    Cli.id = Convert.ToInt32(dr["id"]);
+                    Cli.numhabitacion = Convert.ToInt32(dr["numhabitacion"]);
+                    Cli.piso = Convert.ToInt32(dr["piso"]);
+                    Cli.capacidad = Convert.ToInt32(dr["capacidad"]);
+                    Cli.costo = Convert.ToDouble(dr["costo"]);
+                    Cli.estado = dr["estado"].ToString();
+                    Cli.tipo_habitacion_id = Convert.ToInt32(dr["tipo_habitacion_id"]);
+                    lista.Add(Cli);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
         #endregion metodos
     }
 }
