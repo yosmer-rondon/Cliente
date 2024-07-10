@@ -1,4 +1,6 @@
-﻿using CapaEntidadd;
+﻿using CapaDatos;
+using CapaEntidad;
+using CapaEntidadd;
 using CapaLogica;
 using System;
 using System.Collections.Generic;
@@ -51,6 +53,19 @@ namespace Cliente
 
         private void btnDeshabilitar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                entMetodoPago c = new entMetodoPago();
+
+                c.IDMetodopago = int.Parse(txtId.Text.Trim());
+                logMetodoPago.Instancia.Deshabilitarmetodopago(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listar();
 
 
         }
@@ -81,7 +96,22 @@ namespace Cliente
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                entMetodoPago c = new entMetodoPago();
+                c.IDMetodopago = int.Parse(txtId.Text.Trim());
+                c.nombre = nombre.Text.Trim();
+                c.descripcion = descripcion.Text.Trim();
+                c.estado = estado.Text.Trim();
+                logMetodoPago.Instancia.Editarmetodopago(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listar();
+
 
         }
 
@@ -94,6 +124,15 @@ namespace Cliente
         private void dgvMetodoPago_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dgvMetodoPago_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dgvMetodoPago.Rows[e.RowIndex]; //
+            txtId.Text = filaActual.Cells[0].Value.ToString();
+            nombre.Text = filaActual.Cells[1].Value.ToString();
+            descripcion.Text = filaActual.Cells[2].Value.ToString();
+            estado.Text = filaActual.Cells[3].Value.ToString();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace CapaDatos
         #region sigleton
         //Patron Singleton
         // Variable estática para la instancia
+
         public static readonly datMetodoPago _instancia = new datMetodoPago();
         //privado para evitar la instanciación directa
         public static datMetodoPago Instancia
@@ -23,10 +24,11 @@ namespace CapaDatos
                 return datMetodoPago._instancia;
             }
         }
+
         #endregion singleton
 
         #region metodos
-        ////////////////////listado de Clientes
+
         public List<entMetodoPago> Listarmetodopago()
         {
             SqlCommand cmd = null;
@@ -40,12 +42,14 @@ namespace CapaDatos
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
+
                     entMetodoPago mep = new entMetodoPago();
                     mep.IDMetodopago = Convert.ToInt32(dr["id"]);
                     mep.nombre = dr["nombre"].ToString();
                     mep.descripcion = dr["descripcion"].ToString();
                     mep.estado = dr["estado"].ToString();
                     lista.Add(mep);
+
                 }
 
             }
@@ -60,6 +64,7 @@ namespace CapaDatos
             return lista;
         }
         /////////////////////////Insertando Cliente
+
         public Boolean Insertarmetodopago(entMetodoPago mep)
         {
             SqlCommand cmd = null;
@@ -72,6 +77,7 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@nombre", mep.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", mep.descripcion);
                 cmd.Parameters.AddWithValue("@estado", mep.estado);
+
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -86,7 +92,62 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return inserta;
         }
-        #endregion metodos
-    }
 
+        public Boolean Deshabilitarmetodopago(entMetodoPago Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("DeshabilitarMetodopago", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", Cli.IDMetodopago);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
+        }
+
+            public Boolean Editarmetodopago(entMetodoPago Cli)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("EditartipoMetodoPago", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", Cli.IDMetodopago);
+                cmd.Parameters.AddWithValue("@nombre", Cli.nombre);
+                cmd.Parameters.AddWithValue("@descripcion", Cli.descripcion);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
+
+
+            #endregion metodos
+        }
+    }    
 }

@@ -22,7 +22,6 @@ namespace Cliente
             InitializeComponent();
             LlenarComboBoxdetipos();
             listar();
-            id.Enabled = false;
 
         }
 
@@ -33,12 +32,7 @@ namespace Cliente
 
         private void button4_Click(object sender, EventArgs e)
         {
-            groupBox1.Enabled = true;
-
-            btnAgregar.Visible = true;
             LimpiarVariables();
-            btnModificar.Visible = false;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,13 +66,17 @@ namespace Cliente
         }
         private void LimpiarVariables()
         {
+            ID_empleado.Text = "";
             nombre.Text = "";
-            tipoempleado.Text = " ";
+            apellidos.Text = "";
             direccion.Text = " ";
             telefono.Text = " ";
             correo.Text = " ";
             dni.Text = " ";
+            estado.Text = "";
             telefono.Text = " ";
+            nombretipo.Text = "";
+            
         }
         public void listar()
         {
@@ -98,27 +96,62 @@ namespace Cliente
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int idEmpleado = int.Parse(ID_empleado.Text.Trim());
+                List<entEmpleado> empleados = LogEmpleado.Instancia.BuscarEmpleadoPorId(idEmpleado);
 
+                dgvEmpleado.DataSource = empleados;
+            
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow filaActual = dgvEmpleado.Rows[e.RowIndex]; //
-            id.Text = filaActual.Cells[0].Value.ToString();
-            nombre.Text = filaActual.Cells[1].Value.ToString();
-            apellidos.Text = filaActual.Cells[2].Value.ToString();  
-            direccion.Text = filaActual.Cells[3].Value.ToString();
-            telefono.Text = filaActual.Cells[4].Value.ToString();
-            correo.Text = filaActual.Cells[5].Value.ToString();
-            dni.Text = filaActual.Cells[6].Value.ToString();
-            estado.Text = filaActual.Cells[7].Value.ToString();
+            try
+            {
+                DataGridViewRow filaActual = dgvEmpleado.Rows[e.RowIndex];
+                ID_empleado.Text = filaActual.Cells[0].Value.ToString();
+                nombre.Text = filaActual.Cells[1].Value.ToString();
+                apellidos.Text = filaActual.Cells[2].Value.ToString();
+                direccion.Text = filaActual.Cells[3].Value.ToString();
+                telefono.Text = filaActual.Cells[4].Value.ToString();
+                correo.Text = filaActual.Cells[5].Value.ToString();
+                dni.Text = filaActual.Cells[6].Value.ToString();
+                estado.Text = filaActual.Cells[7].Value.ToString();
+                int idTipoEmpleado = int.Parse(filaActual.Cells[8].Value.ToString());
+
+                // Obtener el nombre del tipo de empleado
+                List<entTipoEmpleado> tipoEmpleadoList = logTipoEmpleado.Instancia.bucarnombresconidtipo(idTipoEmpleado);
+                if (tipoEmpleadoList.Count > 0)
+                {
+                    string nombreTipoEmpleado = tipoEmpleadoList[0].nombre;
+
+                    // Limpiar y seleccionar el nombre del tipo de empleado en el ComboBox
+                    nombretipo.SelectedIndex = -1; // Deseleccionar cualquier ítem seleccionado previamente
+                    for (int i = 0; i < nombretipo.Items.Count; i++)
+                    {
+                        if (nombretipo.Items[i].ToString() == nombreTipoEmpleado)
+                        {
+                            nombretipo.SelectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            groupBox1.Enabled = true;
-            btnModificar.Visible = true;
-            btnAgregar.Visible = false;
 
         }
 
@@ -127,13 +160,15 @@ namespace Cliente
             try
             {
                 entEmpleado c = new entEmpleado();
-                c.Idempleado = int.Parse(id.Text.Trim());
+                c.Idempleado = int.Parse(ID_empleado.Text.Trim());
                 c.nombre = nombre.Text.Trim();
                 c.apellidos = apellidos.Text.Trim();
                 c.direccion = direccion.Text.Trim();
                 c.Telefono = int.Parse(telefono.Text.Trim());
                 c.correo = correo.Text.Trim();
                 c.dni = int.Parse(dni.Text.Trim());
+                c.estado = estado.Text.Trim();
+                c.nombre_tipo = nombretipo.Text.Trim();
                 LogEmpleado.Instancia.EditarEmpleado(c);
             }
             catch (Exception ex)
@@ -141,16 +176,9 @@ namespace Cliente
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBox1.Enabled = false;
             listar();
 
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            groupBox1.Enabled = false;
-        }
-
         private void textNombre_TextChanged(object sender, EventArgs e)
         {
 
@@ -187,6 +215,23 @@ namespace Cliente
             {
                 MessageBox.Show("Error al cargar los números de habitaciones: " + ex.Message);
             }
+        }
+
+        private void btnDeshabilitar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entEmpleado c = new entEmpleado();
+
+                c.Idempleado = int.Parse(ID_empleado.Text.Trim());
+                LogEmpleado.Instancia.Deshabilitarempleado(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listar();
         }
     }
 }

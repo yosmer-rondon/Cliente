@@ -39,14 +39,14 @@ namespace CapaLogica
             datTipotrabajo.Instancia.Insertartipotrabajo(ttra);
         }
 
-        public void EditarCliente(entCliente Cli)
+        public void Editartipotrabajo(entTipoTrabajo ttra)
         {
-            datCliente.Instancia.EditarCliente(Cli);
+            datTipotrabajo.Instancia.Editartipotrabajo(ttra);
         }
 
-        public void DeshabilitarCliente(entCliente Cli)
+        public void Deshabilitartipotrabajo(entTipoTrabajo ttra)
         {
-            datCliente.Instancia.DeshabilitarCliente(Cli);
+            datTipotrabajo.Instancia.Deshabilitartipotrabajo(ttra);
         }
 
 

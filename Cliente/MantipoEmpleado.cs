@@ -21,6 +21,8 @@ namespace Cliente
         {
             InitializeComponent();
             Listar();
+            id.Enabled = false;
+
         }
         public void Listar()
         {
@@ -62,9 +64,59 @@ namespace Cliente
         }
         private void LimpiarVariables()
         {
+            id.Text = "";
             nombre.Text = "";
             descripcion.Text = " ";
             estado.Text = " ";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTipoEmpleado c = new entTipoEmpleado();
+                c.IDTipoEmpleado = int.Parse(id.Text.Trim());
+                c.nombre = nombre.Text.Trim();
+                c.descripcion = descripcion.Text.Trim();
+                c.estado = estado.Text.Trim();
+                logTipoEmpleado.Instancia.EditarTipoHabitacion(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            Listar();
+        }
+
+        private void deshabilitar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entTipoEmpleado c = new entTipoEmpleado();
+                c.IDTipoEmpleado = int.Parse(id.Text.Trim());
+                logTipoEmpleado.Instancia.Deshabilitartipoempleado(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            Listar();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dataGridView1.Rows[e.RowIndex];
+            id.Text = filaActual.Cells[0].Value.ToString();
+            nombre.Text = filaActual.Cells[1].Value.ToString();
+            descripcion.Text = filaActual.Cells[2].Value.ToString();
+            estado.Text = filaActual.Cells[3].Value.ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LimpiarVariables();
         }
     }
 }

@@ -89,6 +89,7 @@ namespace Cliente
         }
         private void LimpiarVariables()
         {
+            ID_cliente.Text = " ";
             nombre.Text = "";
             apellidos.Text = " ";
             estado.Text = " ";
@@ -98,17 +99,17 @@ namespace Cliente
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
-        {/*
+        {
             try
             {
                 entCliente c = new entCliente();
-                c.IDCliente = int.Parse(ID_cliente.Text.Trim());
-                c.Nombre = nombre.Text.Trim();
-                c.Apellido = apellidos.Text.Trim();
-                c.DNI = int.Parse(dni.Text.Trim());
-                c.Telefono = int.Parse(telefono.Text.Trim());
-                c.Correo = correo.Text.Trim();
-                c.Estado = estado.Text.Trim();
+                c.id = int.Parse(ID_cliente.Text.Trim());
+                c.nombre = nombre.Text.Trim();
+                c.apellido = apellidos.Text.Trim();
+                c.dni = int.Parse(dni.Text.Trim());
+                c.telefono = int.Parse(telefono.Text.Trim());
+                c.correo = correo.Text.Trim();
+                c.estado = estado.Text.Trim();
                 logCliente.Instancia.EditarCliente(c);
             }
             catch (Exception ex)
@@ -116,22 +117,20 @@ namespace Cliente
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBox1.Enabled = false;
-            listar();*/
+            listar();
 
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow filaActual = dataGridView1.Rows[e.RowIndex]; //
+            DataGridViewRow filaActual = dataGridView1.Rows[e.RowIndex];
             ID_cliente.Text = filaActual.Cells[0].Value.ToString();
             nombre.Text = filaActual.Cells[1].Value.ToString();
             apellidos.Text = filaActual.Cells[2].Value.ToString();
             dni.Text = filaActual.Cells[3].Value.ToString();
             telefono.Text = filaActual.Cells[4].Value.ToString();
-            estado.Text = filaActual.Cells[5].Value.ToString();
-            correo.Text = filaActual.Cells[7].Value.ToString();
-            estado.Text = filaActual.Cells[8].Value.ToString();
+            correo.Text = filaActual.Cells[5].Value.ToString();
+            estado.Text = filaActual.Cells[6].Value.ToString();
             //cbkEstadoCliente.Checked = Convert.ToBoolean(filaActual.Cells[5].Value);
 
         }
@@ -150,7 +149,6 @@ namespace Cliente
                 MessageBox.Show("Error.." + ex);
             }
             LimpiarVariables();
-            groupBox1.Enabled = false;
             listar();
 
         }

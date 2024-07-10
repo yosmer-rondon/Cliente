@@ -132,7 +132,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spDeshabilitarTipoHabitacion", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@IDTipoHabitacion", Cli.id);
+                cmd.Parameters.AddWithValue("@id", Cli.id);
                 //cmd.Parameters.AddWithValue("@Estado", Cli.Estado);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -147,6 +147,68 @@ namespace CapaDatos
             }
             finally { cmd.Connection.Close(); }
             return delete;
+        }
+        public List<entTipoHabitacion> nombrestipohabitacion()
+        {
+            SqlCommand cmd = null;
+            List<entTipoHabitacion> lista = new List<entTipoHabitacion>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("Nombre_TipoHabitacion", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entTipoHabitacion Cli = new entTipoHabitacion();
+                    Cli.nombre = dr["nombre"].ToString();
+                    lista.Add(Cli);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
+
+        public List<entTipoHabitacion> bucarnombreconidtipohabitacion(int id)
+        {
+            SqlCommand cmd = null;
+            List<entTipoHabitacion> lista = new List<entTipoHabitacion>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("BUCANOMBRETIPOHABITACION", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", id);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entTipoHabitacion temp = new entTipoHabitacion();
+                    temp.nombre = dr["nombre"].ToString();
+                    lista.Add(temp);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return lista;
         }
         #endregion metodos
     }

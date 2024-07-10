@@ -23,7 +23,24 @@ namespace CapaLogica
             }
         }
 
-        //INSERTAR
+      
+        
+        #endregion singleton
+
+        #region metodos
+        public List<entTipoEmpleado> ListarTipoEmpleado()
+        {
+            return datTipoEmpleado.Instancia.ListarTipoEmpleado();
+        }
+        public List<entTipoEmpleado> listarnombrestipos()
+        {
+            return datTipoEmpleado._instancia.nombredetipos();
+        }
+
+        public List<entTipoEmpleado> bucarnombresconidtipo(int id_tipocliente)
+        {
+            return datTipoEmpleado._instancia.bucarnombreconidtipoempleado(id_tipocliente);
+        }
         public void InsertarTipoEmpleado(entTipoEmpleado temp)
         {
             datTipoEmpleado.Instancia.InsertarTipoEmpleado(temp);
@@ -35,28 +52,11 @@ namespace CapaLogica
             datTipoEmpleado.Instancia.EditarTipoempleado(temp);
         }
 
-        //DESHABILITAR
-        /*
-        public void DeshabiliaTipoHabitacion(entTipoEmpleado temp)
+
+        public void Deshabilitartipoempleado(entTipoEmpleado temp)
         {
-            datTipoEmpleado.Instancia.(temp);
+            datTipoEmpleado.Instancia.Deshabilitartipoempleado(temp);
         }
-        */
-        #endregion singleton
-
-        #region metodos
-
-        ///listado
-
-        public List<entTipoEmpleado> ListarTipoEmpleado()
-        {
-            return datTipoEmpleado.Instancia.ListarTipoEmpleado();
-        }
-        public List<entTipoEmpleado> listarnombrestipos()
-        {
-            return datTipoEmpleado._instancia.nombredetipos();
-        }
-
         #endregion metodos
     }
 }

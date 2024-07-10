@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.estado = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.descripcion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvMetodoPago = new System.Windows.Forms.DataGridView();
@@ -43,8 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.estado = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMetodoPago)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS METODO DE PAGO";
             // 
+            // estado
+            // 
+            this.estado.Location = new System.Drawing.Point(118, 188);
+            this.estado.Margin = new System.Windows.Forms.Padding(2);
+            this.estado.Name = "estado";
+            this.estado.Size = new System.Drawing.Size(75, 20);
+            this.estado.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 191);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Estado";
+            // 
             // descripcion
             // 
             this.descripcion.Location = new System.Drawing.Point(118, 106);
@@ -107,6 +125,7 @@
             this.dgvMetodoPago.RowTemplate.Height = 24;
             this.dgvMetodoPago.Size = new System.Drawing.Size(392, 229);
             this.dgvMetodoPago.TabIndex = 13;
+            this.dgvMetodoPago.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMetodoPago_CellClick);
             this.dgvMetodoPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMetodoPago_CellContentClick_1);
             // 
             // btnDeshabilitar
@@ -228,24 +247,6 @@
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Metodo de Pago";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 191);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Estado";
-            // 
-            // estado
-            // 
-            this.estado.Location = new System.Drawing.Point(118, 188);
-            this.estado.Margin = new System.Windows.Forms.Padding(2);
-            this.estado.Name = "estado";
-            this.estado.Size = new System.Drawing.Size(75, 20);
-            this.estado.TabIndex = 17;
             // 
             // ManMetodoDePago
             // 

@@ -42,6 +42,11 @@ namespace CapaLogica
             datTipoHabitacion.Instancia.DeshabilitarTipoHabitacion(Cli);
         }
 
+        public List<entTipoHabitacion> nombrestipohabitacion()
+        {
+            return datTipoHabitacion.Instancia.nombrestipohabitacion();
+        }
+
         #endregion singleton
 
         #region metodos
@@ -51,6 +56,11 @@ namespace CapaLogica
         public List<entTipoHabitacion> ListarTipoHabitacion()
         {
             return datTipoHabitacion.Instancia.ListarTipoHabitacion();
+        }
+
+        public List<entTipoHabitacion> bucarnombreconidtipohabitacion(int id)
+        {
+            return datTipoHabitacion._instancia.bucarnombreconidtipohabitacion(id);
         }
 
         #endregion metodos

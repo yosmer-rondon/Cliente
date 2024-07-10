@@ -34,7 +34,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("ListarEmpleado", cn);
+                cmd = new SqlCommand("ListartípoEmpleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -94,10 +94,10 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("EditarTipoEmpleado", cn);
+                cmd = new SqlCommand("Editartipoempleado", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", temp.IDTipoEmpleado);
-                cmd.Parameters.AddWithValue("@nombre", temp.nombre);
+                cmd.Parameters.AddWithValue("@ID", temp.IDTipoEmpleado);
+                cmd.Parameters.AddWithValue("@Nombre", temp.nombre);
                 cmd.Parameters.AddWithValue("@descripcion", temp.descripcion);
                 cmd.Parameters.AddWithValue("@estado", temp.estado);
                 cn.Open();
@@ -142,6 +142,62 @@ namespace CapaDatos
                 cmd.Connection.Close();
             }
             return lista;
+        }
+        public List<entTipoEmpleado> bucarnombreconidtipoempleado(int id_tipocliente)
+        {
+            SqlCommand cmd = null;
+            List<entTipoEmpleado> lista = new List<entTipoEmpleado>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("BUCANOMBRETIPOEMPLEADO", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_tipocliente", id_tipocliente);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entTipoEmpleado temp = new entTipoEmpleado();
+                    temp.nombre = dr["nombre"].ToString();
+                    lista.Add(temp);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return lista;
+        }
+        public Boolean Deshabilitartipoempleado(entTipoEmpleado ttra)
+        {
+            SqlCommand cmd = null;
+            Boolean delete = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("Deshabilitartipoempleado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ID", ttra.IDTipoEmpleado);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    delete = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return delete;
         }
         #endregion metodos
     }

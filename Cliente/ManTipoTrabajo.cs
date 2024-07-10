@@ -22,6 +22,7 @@ namespace Cliente
         {
             InitializeComponent();
             listar();
+            Id.Enabled = false;
         }
         public void listar()
         {
@@ -29,8 +30,9 @@ namespace Cliente
         }
         private void LimpiarVariables()
         {
+            Id.Text = "";
             nombre.Text = "";
-            descripcion.Text = " ";
+            descripcion.Text = "";
             estado.Text = " ";
         }
 
@@ -57,23 +59,56 @@ namespace Cliente
             listar();
         }
 
+
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                entTipoTrabajo c = new entTipoTrabajo();
+                c.IDTipoTrabajo = int.Parse(Id.Text.Trim());
+                c.nombre = nombre.Text.Trim();
+                c.descripcion = descripcion.Text.Trim();
+                c.estado = estado.Text.Trim();
+                logTipoTrabajo.Instancia.Editartipotrabajo(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listar();
 
         }
-
-        private void buttonLista_Click(object sender, EventArgs e)
-        {
-            
-        }
-
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                entTipoTrabajo c = new entTipoTrabajo();
+
+                c.IDTipoTrabajo = int.Parse(Id.Text.Trim());
+                logTipoTrabajo.Instancia.Deshabilitartipotrabajo(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listar();
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dataGridView1.Rows[e.RowIndex];
+            Id.Text = filaActual.Cells[0].Value.ToString();
+            nombre.Text = filaActual.Cells[1].Value.ToString();
+            descripcion.Text = filaActual.Cells[2].Value.ToString();
+            estado.Text = filaActual.Cells[3].Value.ToString();
+        }
 
+        private void limpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarVariables();
+        }
     }
 }
