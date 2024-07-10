@@ -153,7 +153,7 @@ namespace CapaDatos
                 List<entMetodoPago> lista = new List<entMetodoPago>();
                 try
                 {
-                    SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                    SqlConnection cn = Conexion.Instancia.Conectar(); //singleton.
                     cmd = new SqlCommand("obtenernombresdemetodopago", cn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cn.Open();
