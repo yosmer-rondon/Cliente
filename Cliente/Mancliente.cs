@@ -53,7 +53,6 @@ namespace Cliente
             btnModificar.Enabled = true;
             btnAgregar.Visible = true;
             LimpiarVariables();
-            btnModificar.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
