@@ -109,5 +109,11 @@ namespace Cliente
             ManTipoTrabajo ttra = new ManTipoTrabajo();
             ttra.Show();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            RealizaOrdenTrabajo ot = new RealizaOrdenTrabajo();
+            ot.Show();
+        }
     }
 }

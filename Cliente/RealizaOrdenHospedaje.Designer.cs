@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupHospedaje = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.habitacion = new System.Windows.Forms.ComboBox();
             this.Estado = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupHospedaje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +89,18 @@
             this.groupHospedaje.TabStop = false;
             this.groupHospedaje.Text = "HOSPEDAJE";
             this.groupHospedaje.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Peru;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(6, 508);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 55);
+            this.button2.TabIndex = 54;
+            this.button2.Text = "Agregar Cliente";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // habitacion
             // 
@@ -262,6 +274,7 @@
             this.btnListar.TabIndex = 18;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // IDHospedaje
             // 
@@ -301,18 +314,6 @@
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Peru;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(6, 508);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 55);
-            this.button2.TabIndex = 54;
-            this.button2.Text = "Agregar Cliente";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // RealizaOrdenHospedaje
             // 

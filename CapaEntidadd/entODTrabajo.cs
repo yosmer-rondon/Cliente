@@ -13,5 +13,7 @@ namespace CapaEntidadd
         public int idHabitacion { get; set; }
         public string descripcion { get; set; }
         public string estado { get; set; }
+        public string nombretipo { get; set; }
+        public int numhabitacion { get; set; }
     }
 }

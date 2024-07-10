@@ -48,7 +48,10 @@ namespace CapaLogica
         {
             datTipotrabajo.Instancia.Deshabilitartipotrabajo(ttra);
         }
-
+        public List<entTipoTrabajo> obtenernombrestipos()
+        {
+            return datTipotrabajo._instancia.obtenernombrestipostrabajo();
+        }
 
 
         #endregion metodos

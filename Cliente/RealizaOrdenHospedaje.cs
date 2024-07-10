@@ -133,5 +133,10 @@ namespace Cliente
             Mancliente manc = new Mancliente();
             manc.Show();
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

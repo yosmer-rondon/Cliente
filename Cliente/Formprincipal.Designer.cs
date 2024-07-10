@@ -32,6 +32,7 @@ namespace Cliente
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formprincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button11 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -49,7 +50,6 @@ namespace Cliente
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.button11 = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -80,6 +80,19 @@ namespace Cliente
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Transacciones";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.DimGray;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(21, 131);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(128, 33);
+            this.button11.TabIndex = 6;
+            this.button11.Text = "Orden trabajo";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button7
             // 
@@ -305,18 +318,6 @@ namespace Cliente
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(960, 327);
             this.tabControl1.TabIndex = 0;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.DimGray;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(21, 131);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(128, 33);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Orden trabajo";
-            this.button11.UseVisualStyleBackColor = false;
             // 
             // Formprincipal
             // 

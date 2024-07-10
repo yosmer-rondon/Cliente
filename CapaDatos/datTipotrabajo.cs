@@ -142,6 +142,35 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return delete;
         }
+        public List<entTipoTrabajo> obtenernombrestipostrabajo()
+        {
+            SqlCommand cmd = null;
+            List<entTipoTrabajo> lista = new List<entTipoTrabajo>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("obtenernombrestipotrabajo", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entTipoTrabajo emp = new entTipoTrabajo();
+                    emp.nombre = dr["nombre"].ToString();
+                    lista.Add(emp);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return lista;
+        }
         #endregion metodos
     }
 }

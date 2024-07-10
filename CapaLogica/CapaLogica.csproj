@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logHospedaje.cs" />
+    <Compile Include="logODtrabajo.cs" />
     <Compile Include="logTipoTrabajo.cs" />
     <Compile Include="logCliente.cs" />
     <Compile Include="LogEmpleado.cs" />

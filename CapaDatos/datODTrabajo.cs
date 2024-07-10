@@ -59,23 +59,19 @@ namespace CapaDatos
             }
             return lista;
         }
-        public Boolean Insertarordenreserva(entODReserva Cli)
+        public Boolean Insertarordentrabajo(entODTrabajo Cli)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("realizareserva", cn);
+                cmd = new SqlCommand("ingresarodtrabajo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@fecha_entrada", Cli.fecha_entrada);
-                cmd.Parameters.AddWithValue("@fecha_salida", Cli.fecha_salida);
-                cmd.Parameters.AddWithValue("@estado", Cli.estado);
                 cmd.Parameters.AddWithValue("@descripcion", Cli.descripcion);
-                cmd.Parameters.AddWithValue("@costo", Cli.costo);
-                cmd.Parameters.AddWithValue("@cliente_id", Cli.idCliente);
-                cmd.Parameters.AddWithValue("@nombre_metodo_pago", Cli.nombre_metpago);
-                cmd.Parameters.AddWithValue("@num", Cli.num_habitacion);
+                cmd.Parameters.AddWithValue("@estado", Cli.estado);
+                cmd.Parameters.AddWithValue("@nomtipo", Cli.nombretipo);
+                cmd.Parameters.AddWithValue("@num", Cli.numhabitacion);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -91,27 +87,6 @@ namespace CapaDatos
             return inserta;
         }
 
-        public void CulminarReserva(int idReserva)
-        {
-            SqlCommand cmd = null;
-            try
-            {
-                SqlConnection cn = Conexion.Instancia.Conectar(); // singleton
-                cmd = new SqlCommand("culminarreserva", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id_reserva", idReserva);
-                cn.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                cmd.Connection.Close();
-            }
-        }
         #endregion metodos
 
     }
