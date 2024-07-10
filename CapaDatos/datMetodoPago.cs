@@ -63,7 +63,7 @@ namespace CapaDatos
             }
             return lista;
         }
-        /////////////////////////Insertando Cliente
+        /////////////////////////Insertando Cliente.
 
         public Boolean Insertarmetodopago(entMetodoPago mep)
         {
