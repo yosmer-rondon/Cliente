@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidadd
 {
+    //CapaEntMetodo
     public class entMetodoPago
     {
         public int IDMetodopago  {get; set; }
