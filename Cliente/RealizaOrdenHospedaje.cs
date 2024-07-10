@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace Cliente
         public RealizaOrdenHospedaje()
         {
             InitializeComponent();
+            listar();
+        }
+
+        public void listar()
+        {
+            dataGridView1.DataSource = logHospedaje.Instancia.ListarHospedaje();
+            dataGridView1.Columns["nombre_metpago"].Visible = false;
+            dataGridView1.Columns["num_habitacion"].Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +49,11 @@ namespace Cliente
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

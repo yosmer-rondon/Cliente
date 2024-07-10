@@ -205,6 +205,7 @@
             this.costo.Name = "costo";
             this.costo.Size = new System.Drawing.Size(119, 29);
             this.costo.TabIndex = 21;
+            this.costo.TextChanged += new System.EventHandler(this.costo_TextChanged);
             // 
             // label6
             // 
@@ -346,6 +347,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(931, 658);
             this.panel1.TabIndex = 35;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
             // 
