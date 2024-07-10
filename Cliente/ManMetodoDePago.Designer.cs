@@ -153,7 +153,7 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Cyan;
-            this.btnEditar.Location = new System.Drawing.Point(351, 398);
+            this.btnEditar.Location = new System.Drawing.Point(354, 442);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(168, 50);
