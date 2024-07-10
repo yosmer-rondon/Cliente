@@ -64,7 +64,6 @@ namespace CapaDatos
             return lista;
         }
         /////////////////////////Insertando Cliente
-
         public Boolean Insertarmetodopago(entMetodoPago mep)
         {
             SqlCommand cmd = null;
