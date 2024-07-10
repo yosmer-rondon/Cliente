@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,7 @@ namespace Cliente
             InitializeComponent();
             LlenarComboBoxdemetodos();
             LlenarComboBoxdenumhabitacion();
+            listar();
             ID_reserva.Enabled = false;
             buscarreserva.Enabled = false;
             RESERVA.Enabled = true;
@@ -29,6 +31,10 @@ namespace Cliente
             CLIENTE.Visible = false;
             HABITACIONES.Enabled = false;
             HABITACIONES.Visible = false;
+        }
+        public void listar()
+        {
+            RESERVA.DataSource = logODReserva.Instancia.ListarOrdenreserva();
         }
         private void LlenarComboBoxdemetodos()
         {
@@ -66,6 +72,17 @@ namespace Cliente
                 MessageBox.Show("Error al cargar los números de habitaciones: " + ex.Message);
             }
         }
+        private void LimpiarVariables()
+        {
+            ID_reserva.Text = " ";
+            ID_cliente.Text = "";
+            costo.Text = " ";
+            estado.Text = " ";
+            Descripcion.Text = " ";
+            metodopago.Text = "";
+            numhabitacion.Text = "";
+        }
+
         private void label5_Click(object sender, EventArgs e)
         {
 

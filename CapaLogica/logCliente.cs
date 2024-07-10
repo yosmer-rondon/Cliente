@@ -24,21 +24,6 @@ namespace CapaLogica
                 return logCliente._instancia;
             }
         }
-        public void InsertarCliente(entCliente Cli)
-        {
-            datCliente.Instancia.InsertarCliente(Cli);
-        }
-
-        public void EditarCliente(entCliente Cli)
-        {
-            datCliente.Instancia.EditarCliente(Cli);
-        }
-
-        public void DeshabilitarCliente(entCliente Cli)
-        {
-            datCliente.Instancia.DeshabilitarCliente(Cli);
-        }
-
 
         #endregion singleton
 
@@ -55,6 +40,21 @@ namespace CapaLogica
         {
             return datCliente.Instancia.Buscarclienteid(idcliente);
         }
+        public void InsertarCliente(entCliente Cli)
+        {
+            datCliente.Instancia.InsertarCliente(Cli);
+        }
+
+        public void EditarCliente(entCliente Cli)
+        {
+            datCliente.Instancia.EditarCliente(Cli);
+        }
+
+        public void DeshabilitarCliente(entCliente Cli)
+        {
+            datCliente.Instancia.DeshabilitarCliente(Cli);
+        }
+
 
         #endregion metodos
     }
