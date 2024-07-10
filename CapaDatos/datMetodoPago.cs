@@ -13,10 +13,10 @@ namespace CapaDatos
     {
         #region sigleton
         //Patron Singleton.
-        // Variable estática para la instancia
+        // Variable estática para la instancia.
 
         public static readonly datMetodoPago _instancia = new datMetodoPago();
-        //privado para evitar la instanciación directa
+        //privado para evitar la instanciación directa.
         public static datMetodoPago Instancia
         {
             get
@@ -35,7 +35,7 @@ namespace CapaDatos
             List<entMetodoPago> lista = new List<entMetodoPago>();
             try
             {
-                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton.
                 cmd = new SqlCommand("listarmetodopago", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
