@@ -128,6 +128,12 @@ namespace Cliente
             }
             LimpiarVariables();
             listar();
+            RESERVA.Enabled = false;
+            RESERVA.Visible = false;
+            CLIENTE.Enabled = false;
+            CLIENTE.Visible = false;
+            HABITACIONES.Enabled = false;
+            HABITACIONES.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
