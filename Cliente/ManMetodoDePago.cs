@@ -120,7 +120,7 @@ namespace Cliente
 
 
         }
-
+        //se visualiza en el dgv
         private void dgvMetodoPago_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
