@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.HABITACIONES = new System.Windows.Forms.DataGridView();
             this.CLIENTE = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
@@ -58,53 +57,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listarclientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HABITACIONES)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CLIENTE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RESERVA)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.groupBox1.Controls.Add(this.HABITACIONES);
-            this.groupBox1.Controls.Add(this.CLIENTE);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.numhabitacion);
-            this.groupBox1.Controls.Add(this.metodopago);
-            this.groupBox1.Controls.Add(this.fechasalida);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.estado);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.costo);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.fechaentrada);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.ID_reserva);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.RESERVA);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.ID_cliente);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(1, -2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(886, 558);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "RESERVA";
             // 
             // HABITACIONES
             // 
             this.HABITACIONES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HABITACIONES.Location = new System.Drawing.Point(422, 280);
+            this.HABITACIONES.Location = new System.Drawing.Point(479, 268);
             this.HABITACIONES.Name = "HABITACIONES";
             this.HABITACIONES.Size = new System.Drawing.Size(441, 116);
             this.HABITACIONES.TabIndex = 34;
@@ -113,7 +77,7 @@
             // CLIENTE
             // 
             this.CLIENTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CLIENTE.Location = new System.Drawing.Point(422, 151);
+            this.CLIENTE.Location = new System.Drawing.Point(479, 149);
             this.CLIENTE.Name = "CLIENTE";
             this.CLIENTE.Size = new System.Drawing.Size(441, 116);
             this.CLIENTE.TabIndex = 33;
@@ -121,7 +85,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(322, 492);
+            this.button3.Location = new System.Drawing.Point(755, 403);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 55);
             this.button3.TabIndex = 32;
@@ -130,7 +94,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(242, 105);
+            this.button1.Location = new System.Drawing.Point(236, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 40);
             this.button1.TabIndex = 31;
@@ -142,7 +106,7 @@
             // 
             this.numhabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.numhabitacion.FormattingEnabled = true;
-            this.numhabitacion.Location = new System.Drawing.Point(17, 175);
+            this.numhabitacion.Location = new System.Drawing.Point(11, 149);
             this.numhabitacion.Name = "numhabitacion";
             this.numhabitacion.Size = new System.Drawing.Size(154, 33);
             this.numhabitacion.TabIndex = 30;
@@ -151,7 +115,7 @@
             // 
             this.metodopago.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.metodopago.FormattingEnabled = true;
-            this.metodopago.Location = new System.Drawing.Point(19, 429);
+            this.metodopago.Location = new System.Drawing.Point(13, 403);
             this.metodopago.Name = "metodopago";
             this.metodopago.Size = new System.Drawing.Size(198, 33);
             this.metodopago.TabIndex = 29;
@@ -160,7 +124,7 @@
             // 
             this.fechasalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechasalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.fechasalida.Location = new System.Drawing.Point(19, 356);
+            this.fechasalida.Location = new System.Drawing.Point(13, 330);
             this.fechasalida.Name = "fechasalida";
             this.fechasalida.Size = new System.Drawing.Size(200, 29);
             this.fechasalida.TabIndex = 28;
@@ -169,7 +133,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(19, 326);
+            this.label10.Location = new System.Drawing.Point(13, 300);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(151, 24);
             this.label10.TabIndex = 27;
@@ -179,7 +143,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Honeydew;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(452, 485);
+            this.button5.Location = new System.Drawing.Point(260, 578);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(102, 67);
             this.button5.TabIndex = 26;
@@ -190,7 +154,7 @@
             // estado
             // 
             this.estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estado.Location = new System.Drawing.Point(19, 499);
+            this.estado.Location = new System.Drawing.Point(13, 473);
             this.estado.Name = "estado";
             this.estado.Size = new System.Drawing.Size(162, 29);
             this.estado.TabIndex = 25;
@@ -199,7 +163,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 471);
+            this.label7.Location = new System.Drawing.Point(14, 445);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 25);
             this.label7.TabIndex = 24;
@@ -209,7 +173,7 @@
             // 
             this.button8.BackColor = System.Drawing.Color.Honeydew;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(560, 485);
+            this.button8.Location = new System.Drawing.Point(134, 550);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(102, 67);
             this.button8.TabIndex = 3;
@@ -220,7 +184,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(14, 401);
+            this.label9.Location = new System.Drawing.Point(8, 375);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(168, 25);
             this.label9.TabIndex = 22;
@@ -230,7 +194,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Honeydew;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(668, 485);
+            this.button2.Location = new System.Drawing.Point(19, 651);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 67);
             this.button2.TabIndex = 2;
@@ -240,7 +204,7 @@
             // costo
             // 
             this.costo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costo.Location = new System.Drawing.Point(17, 235);
+            this.costo.Location = new System.Drawing.Point(11, 209);
             this.costo.Name = "costo";
             this.costo.Size = new System.Drawing.Size(119, 29);
             this.costo.TabIndex = 21;
@@ -249,7 +213,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 207);
+            this.label6.Location = new System.Drawing.Point(8, 181);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 25);
             this.label6.TabIndex = 20;
@@ -259,7 +223,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 267);
+            this.label8.Location = new System.Drawing.Point(9, 241);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(167, 24);
             this.label8.TabIndex = 17;
@@ -269,7 +233,7 @@
             // 
             this.fechaentrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fechaentrada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.fechaentrada.Location = new System.Drawing.Point(19, 294);
+            this.fechaentrada.Location = new System.Drawing.Point(13, 268);
             this.fechaentrada.Name = "fechaentrada";
             this.fechaentrada.Size = new System.Drawing.Size(200, 29);
             this.fechaentrada.TabIndex = 16;
@@ -277,15 +241,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(458, 290);
+            this.label5.Location = new System.Drawing.Point(1038, 362);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 31);
+            this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 11;
             // 
             // ID_reserva
             // 
             this.ID_reserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_reserva.Location = new System.Drawing.Point(17, 61);
+            this.ID_reserva.Location = new System.Drawing.Point(11, 35);
             this.ID_reserva.Name = "ID_reserva";
             this.ID_reserva.Size = new System.Drawing.Size(119, 29);
             this.ID_reserva.TabIndex = 10;
@@ -294,7 +258,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 39);
+            this.label4.Location = new System.Drawing.Point(7, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 24);
             this.label4.TabIndex = 9;
@@ -303,7 +267,7 @@
             // RESERVA
             // 
             this.RESERVA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RESERVA.Location = new System.Drawing.Point(422, 19);
+            this.RESERVA.Location = new System.Drawing.Point(479, 20);
             this.RESERVA.Name = "RESERVA";
             this.RESERVA.Size = new System.Drawing.Size(441, 126);
             this.RESERVA.TabIndex = 1;
@@ -312,7 +276,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Honeydew;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(776, 485);
+            this.button4.Location = new System.Drawing.Point(479, 522);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 67);
             this.button4.TabIndex = 6;
@@ -324,7 +288,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 148);
+            this.label2.Location = new System.Drawing.Point(7, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 24);
             this.label2.TabIndex = 2;
@@ -333,7 +297,7 @@
             // ID_cliente
             // 
             this.ID_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_cliente.Location = new System.Drawing.Point(17, 116);
+            this.ID_cliente.Location = new System.Drawing.Point(11, 90);
             this.ID_cliente.Name = "ID_cliente";
             this.ID_cliente.Size = new System.Drawing.Size(193, 29);
             this.ID_cliente.TabIndex = 1;
@@ -342,32 +306,76 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 93);
+            this.label1.Location = new System.Drawing.Point(7, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID cliente";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listarclientes);
+            this.panel1.Controls.Add(this.ID_reserva);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.CLIENTE);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.RESERVA);
+            this.panel1.Controls.Add(this.HABITACIONES);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.costo);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.fechaentrada);
+            this.panel1.Controls.Add(this.ID_cliente);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.numhabitacion);
+            this.panel1.Controls.Add(this.estado);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.metodopago);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.fechasalida);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(1, -3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(931, 719);
+            this.panel1.TabIndex = 35;
+            // 
+            // listarclientes
+            // 
+            this.listarclientes.Location = new System.Drawing.Point(595, 413);
+            this.listarclientes.Name = "listarclientes";
+            this.listarclientes.Size = new System.Drawing.Size(129, 23);
+            this.listarclientes.TabIndex = 35;
+            this.listarclientes.Text = "Listar clientes";
+            this.listarclientes.UseVisualStyleBackColor = true;
+            this.listarclientes.Click += new System.EventHandler(this.listarclientes_Click);
+            // 
             // RealizaOrdenReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 557);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(938, 728);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label5);
             this.Name = "RealizaOrdenReserva";
             this.Text = "reservas";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HABITACIONES)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CLIENTE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RESERVA)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView RESERVA;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
@@ -396,5 +404,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView CLIENTE;
         private System.Windows.Forms.DataGridView HABITACIONES;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button listarclientes;
     }
 }

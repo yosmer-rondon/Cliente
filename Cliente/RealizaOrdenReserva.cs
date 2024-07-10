@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
+using CapaEntidad;
 using CapaEntidadd;
 using CapaLogica;
 
@@ -18,6 +19,7 @@ namespace Cliente
         public RealizaOrdenReserva()
         {
             InitializeComponent();
+            LlenarComboBoxdemetodos();
             RESERVA.Enabled = true;
             RESERVA.Visible = true;
             CLIENTE.Enabled = false;
@@ -70,25 +72,31 @@ namespace Cliente
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {/*
+        {
             try
             {
-                int idEmpleado = int.Parse(ID_empleado.Text.Trim());
-                List<entEmpleado> empleados = LogEmpleado.Instancia.BuscarEmpleadoPorId(idEmpleado);
+                int idcliente = int.Parse(ID_cliente.Text.Trim());
+                List<entCliente> cliente = logCliente.Instancia.buscarclienteporid(idcliente);
 
-                dgvEmpleado.DataSource = empleados;
+                CLIENTE.DataSource = cliente;
 
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error.." + ex);
-            }*/
+            }
         }
 
         private void HABITACIONES_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+
+        private void listarclientes_Click(object sender, EventArgs e)
+        {
+            CLIENTE.DataSource = logCliente.Instancia.ListarCliente();
         }
     }
 }

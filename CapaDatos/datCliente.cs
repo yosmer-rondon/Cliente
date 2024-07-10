@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaEntidad;
 using CapaDatos;
+using CapaEntidadd;
 namespace CapaDatos
 {
     public class datCliente
@@ -149,6 +150,46 @@ namespace CapaDatos
             }
             finally { cmd.Connection.Close(); }
             return delete;
+        }
+        public List<entCliente> Buscarclienteid(int idcliente)
+        {
+            SqlCommand cmd = null;
+            List<entCliente> lista = new List<entCliente>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); // singleton
+                cmd = new SqlCommand("bucarempleado", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", idcliente);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entCliente emp = new entCliente
+                    {
+                        id = Convert.ToInt32(dr["id"]),
+                        nombre = dr["nombre"].ToString(),
+                        apellido = dr["apellido"].ToString(),
+                        dni = Convert.ToInt32(dr["dni"]),
+                        telefono = Convert.ToInt32(dr["telefono"]),
+                        correo = dr["correo"].ToString(),
+                        estado = dr["estado"].ToString(),
+                    };
+                    lista.Add(emp);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return lista;
         }
 
         #endregion metodos

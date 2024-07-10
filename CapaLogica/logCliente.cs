@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
 using CapaEntidad;
+using CapaEntidadd;
 namespace CapaLogica
 {
 
@@ -48,6 +49,11 @@ namespace CapaLogica
         public List<entCliente> ListarCliente()
         {
             return datCliente.Instancia.ListarCliente();
+
+        }
+        public List<entCliente> buscarclienteporid(int idcliente)
+        {
+            return datCliente.Instancia.Buscarclienteid(idcliente);
         }
 
         #endregion metodos
