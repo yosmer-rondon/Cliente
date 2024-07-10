@@ -129,7 +129,7 @@
             // btnDeshabilitar
             // 
             this.btnDeshabilitar.BackColor = System.Drawing.Color.Cyan;
-            this.btnDeshabilitar.Location = new System.Drawing.Point(823, 453);
+            this.btnDeshabilitar.Location = new System.Drawing.Point(839, 453);
             this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
             this.btnDeshabilitar.Size = new System.Drawing.Size(168, 50);
@@ -141,7 +141,7 @@
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.Cyan;
-            this.btnNuevo.Location = new System.Drawing.Point(823, 399);
+            this.btnNuevo.Location = new System.Drawing.Point(839, 399);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(168, 50);
@@ -165,7 +165,7 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Cyan;
-            this.btnSalir.Location = new System.Drawing.Point(823, 341);
+            this.btnSalir.Location = new System.Drawing.Point(840, 341);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(168, 50);
@@ -177,7 +177,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Cyan;
-            this.btnCancelar.Location = new System.Drawing.Point(823, 287);
+            this.btnCancelar.Location = new System.Drawing.Point(839, 287);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(168, 50);
