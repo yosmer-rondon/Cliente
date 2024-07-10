@@ -66,5 +66,10 @@ namespace Cliente
                 MessageBox.Show("Error.." + ex);
             }
         }
+
+        private void HABITACIONES_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

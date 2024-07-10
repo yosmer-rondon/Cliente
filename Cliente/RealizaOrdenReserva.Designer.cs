@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.HABITACIONES = new System.Windows.Forms.DataGridView();
+            this.CLIENTE = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.numhabitacion = new System.Windows.Forms.ComboBox();
@@ -56,12 +58,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.CLIENTE = new System.Windows.Forms.DataGridView();
-            this.HABITACIONES = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RESERVA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CLIENTE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HABITACIONES)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CLIENTE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RESERVA)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -100,6 +100,23 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RESERVA";
+            // 
+            // HABITACIONES
+            // 
+            this.HABITACIONES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HABITACIONES.Location = new System.Drawing.Point(422, 280);
+            this.HABITACIONES.Name = "HABITACIONES";
+            this.HABITACIONES.Size = new System.Drawing.Size(441, 116);
+            this.HABITACIONES.TabIndex = 34;
+            this.HABITACIONES.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HABITACIONES_CellContentClick);
+            // 
+            // CLIENTE
+            // 
+            this.CLIENTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CLIENTE.Location = new System.Drawing.Point(422, 151);
+            this.CLIENTE.Name = "CLIENTE";
+            this.CLIENTE.Size = new System.Drawing.Size(441, 116);
+            this.CLIENTE.TabIndex = 33;
             // 
             // button3
             // 
@@ -331,22 +348,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID cliente";
             // 
-            // CLIENTE
-            // 
-            this.CLIENTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CLIENTE.Location = new System.Drawing.Point(422, 151);
-            this.CLIENTE.Name = "CLIENTE";
-            this.CLIENTE.Size = new System.Drawing.Size(441, 116);
-            this.CLIENTE.TabIndex = 33;
-            // 
-            // HABITACIONES
-            // 
-            this.HABITACIONES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HABITACIONES.Location = new System.Drawing.Point(422, 280);
-            this.HABITACIONES.Name = "HABITACIONES";
-            this.HABITACIONES.Size = new System.Drawing.Size(441, 116);
-            this.HABITACIONES.TabIndex = 34;
-            // 
             // RealizaOrdenReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,9 +358,9 @@
             this.Text = "reservas";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RESERVA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CLIENTE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HABITACIONES)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CLIENTE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RESERVA)).EndInit();
             this.ResumeLayout(false);
 
         }
