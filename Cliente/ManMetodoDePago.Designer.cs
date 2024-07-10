@@ -189,7 +189,7 @@
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Cyan;
-            this.btnModificar.Location = new System.Drawing.Point(187, 398);
+            this.btnModificar.Location = new System.Drawing.Point(180, 442);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(168, 50);
