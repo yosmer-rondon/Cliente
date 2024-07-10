@@ -49,6 +49,10 @@ namespace CapaLogica
         {
             return datMetodoPago.Instancia.Listarmetodopago();
         }
+        public List<entMetodoPago> obtenernombresmetodos()
+        {
+            return datMetodoPago._instancia.obtenernombresmetodopago();
+        }
         #endregion metodos
 
     }

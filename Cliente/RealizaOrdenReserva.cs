@@ -22,8 +22,27 @@ namespace Cliente
             RESERVA.Visible = true;
             CLIENTE.Enabled = false;
             CLIENTE.Visible = false;
+            HABITACIONES.Enabled = false;
+            HABITACIONES.Visible = false;
         }
+        private void LlenarComboBoxdemetodos()
+        {
+            try
+            {
+                List<entMetodoPago> listarmetodos = logMetodoPago.Instancia.obtenernombresmetodos();
 
+                metodopago.Items.Clear(); // Limpiar los ítems existentes
+
+                foreach (var metopago in listarmetodos)
+                {
+                    metodopago.Items.Add(metopago.nombre.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los números de habitaciones: " + ex.Message);
+            }
+        }
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -51,7 +70,7 @@ namespace Cliente
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 int idEmpleado = int.Parse(ID_empleado.Text.Trim());
@@ -64,7 +83,7 @@ namespace Cliente
             catch (Exception ex)
             {
                 MessageBox.Show("Error.." + ex);
-            }
+            }*/
         }
 
         private void HABITACIONES_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -118,7 +118,7 @@ namespace CapaDatos
             return delete;
         }
 
-            public Boolean Editarmetodopago(entMetodoPago Cli)
+        public Boolean Editarmetodopago(entMetodoPago Cli)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
@@ -145,9 +145,38 @@ namespace CapaDatos
             }
             finally { cmd.Connection.Close(); }
             return edita;
+        }
 
+            public List<entMetodoPago> obtenernombresmetodopago()
+            {
+                SqlCommand cmd = null;
+                List<entMetodoPago> lista = new List<entMetodoPago>();
+                try
+                {
+                    SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                    cmd = new SqlCommand("obtenernombresdemetodopago", cn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cn.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        entMetodoPago emp = new entMetodoPago();
+                        emp.nombre = dr["nombre"].ToString();
+                        lista.Add(emp);
+                    }
 
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    cmd.Connection.Close();
+                }
+                return lista;
+            }
             #endregion metodos
         }
     }    
-}
+

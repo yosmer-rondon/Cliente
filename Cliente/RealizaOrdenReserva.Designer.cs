@@ -35,7 +35,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.numhabitacion = new System.Windows.Forms.ComboBox();
-            this.formapago = new System.Windows.Forms.ComboBox();
+            this.metodopago = new System.Windows.Forms.ComboBox();
             this.fechasalida = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.numhabitacion);
-            this.groupBox1.Controls.Add(this.formapago);
+            this.groupBox1.Controls.Add(this.metodopago);
             this.groupBox1.Controls.Add(this.fechasalida);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.button5);
@@ -147,14 +147,14 @@
             this.numhabitacion.Size = new System.Drawing.Size(154, 33);
             this.numhabitacion.TabIndex = 30;
             // 
-            // formapago
+            // metodopago
             // 
-            this.formapago.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.formapago.FormattingEnabled = true;
-            this.formapago.Location = new System.Drawing.Point(19, 429);
-            this.formapago.Name = "formapago";
-            this.formapago.Size = new System.Drawing.Size(198, 33);
-            this.formapago.TabIndex = 29;
+            this.metodopago.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.metodopago.FormattingEnabled = true;
+            this.metodopago.Location = new System.Drawing.Point(19, 429);
+            this.metodopago.Name = "metodopago";
+            this.metodopago.Size = new System.Drawing.Size(198, 33);
+            this.metodopago.TabIndex = 29;
             // 
             // fechasalida
             // 
@@ -222,9 +222,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(14, 401);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(157, 25);
+            this.label9.Size = new System.Drawing.Size(168, 25);
             this.label9.TabIndex = 22;
-            this.label9.Text = "Forma de pago";
+            this.label9.Text = "Metodo de pago";
             // 
             // button2
             // 
@@ -390,7 +390,7 @@
         private System.Windows.Forms.DateTimePicker fechasalida;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox numhabitacion;
-        private System.Windows.Forms.ComboBox formapago;
+        private System.Windows.Forms.ComboBox metodopago;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
