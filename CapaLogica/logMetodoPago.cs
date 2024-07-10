@@ -12,7 +12,7 @@ namespace CapaLogica
     {
         #region sigleton
         //Patron Singleton.
-        // Variable estática para la instancia
+        // Variable estática para la instancia.
         private static readonly logMetodoPago _instancia = new logMetodoPago();
         //privado para evitar la instanciación directa
         public static logMetodoPago Instancia
