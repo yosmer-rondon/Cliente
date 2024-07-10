@@ -201,7 +201,7 @@
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Cyan;
-            this.btnAgregar.Location = new System.Drawing.Point(6, 399);
+            this.btnAgregar.Location = new System.Drawing.Point(6, 442);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(168, 50);
