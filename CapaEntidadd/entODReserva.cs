@@ -12,10 +12,12 @@ namespace CapaEntidadd
         public int idCliente { get; set; }
         public int idHabitacion { get; set; }
         public int idMetodoPago { get; set; }
-        public DateTime fecha_reserva { get; set; }
-        public DateTime fecha_atencion { get; set; }
+        public DateTime fecha_entrada { get; set; }
+        public DateTime fecha_salida { get; set; }
         public string estado { get; set; }
         public string descripcion { get; set; }
-
+        public double costo { get; set; }
+        public double num_habitacion{ get; set; }
+        public double nombre_metpago { get; set; }
     }
 }
