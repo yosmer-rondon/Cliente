@@ -57,11 +57,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listarclientes = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Descripcion = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.Descripcion = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.listarclientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HABITACIONES)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CLIENTE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RESERVA)).BeginInit();
@@ -87,6 +87,7 @@
             this.CLIENTE.Size = new System.Drawing.Size(639, 351);
             this.CLIENTE.TabIndex = 33;
             this.CLIENTE.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CLIENTE_CellClick);
+            this.CLIENTE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CLIENTE_CellContentClick);
             // 
             // habitaciondisponible
             // 
@@ -346,15 +347,35 @@
             this.panel1.Size = new System.Drawing.Size(931, 658);
             this.panel1.TabIndex = 35;
             // 
-            // listarclientes
+            // button2
             // 
-            this.listarclientes.Location = new System.Drawing.Point(666, 403);
-            this.listarclientes.Name = "listarclientes";
-            this.listarclientes.Size = new System.Drawing.Size(129, 46);
-            this.listarclientes.TabIndex = 35;
-            this.listarclientes.Text = "Listar clientes";
-            this.listarclientes.UseVisualStyleBackColor = true;
-            this.listarclientes.Click += new System.EventHandler(this.listarclientes_Click);
+            this.button2.BackColor = System.Drawing.Color.Honeydew;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(235, 581);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 67);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "Culminar reservar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Descripcion.Location = new System.Drawing.Point(13, 528);
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Size = new System.Drawing.Size(162, 24);
+            this.Descripcion.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 507);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 18);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Descripcion";
             // 
             // button3
             // 
@@ -368,35 +389,15 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
-            // label3
+            // listarclientes
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 507);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 18);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Descripcion";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcion.Location = new System.Drawing.Point(13, 528);
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Size = new System.Drawing.Size(162, 24);
-            this.Descripcion.TabIndex = 38;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Honeydew;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(235, 581);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 67);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Culminar reservar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.listarclientes.Location = new System.Drawing.Point(666, 403);
+            this.listarclientes.Name = "listarclientes";
+            this.listarclientes.Size = new System.Drawing.Size(129, 46);
+            this.listarclientes.TabIndex = 35;
+            this.listarclientes.Text = "Listar clientes";
+            this.listarclientes.UseVisualStyleBackColor = true;
+            this.listarclientes.Click += new System.EventHandler(this.listarclientes_Click);
             // 
             // RealizaOrdenReserva
             // 

@@ -235,5 +235,10 @@ namespace Cliente
             }
             listar();
         }
+
+        private void CLIENTE_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
