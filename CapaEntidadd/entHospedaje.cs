@@ -16,5 +16,7 @@ namespace CapaEntidadd
         public DateTime fecha_entrada { get; set; }
         public DateTime fecha_salida { get; set; }
         public string estado { get; set; }
+        public int num_habitacion { get; set; }
+        public string nombre_metpago { get; set; }
     }
 }

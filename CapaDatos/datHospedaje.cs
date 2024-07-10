@@ -66,23 +66,22 @@ namespace CapaDatos
             }
             return lista;
         }
-        public Boolean Insertarordenreserva(entODReserva Cli)
+        public Boolean InsertarHospedaje(entHospedaje Cli)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("realizareserva", cn);
+                cmd = new SqlCommand("RealizarHospedaje", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_cliente", Cli.id_cliente);
+                cmd.Parameters.AddWithValue("@costo", Cli.costo);
                 cmd.Parameters.AddWithValue("@fecha_entrada", Cli.fecha_entrada);
                 cmd.Parameters.AddWithValue("@fecha_salida", Cli.fecha_salida);
                 cmd.Parameters.AddWithValue("@estado", Cli.estado);
-                cmd.Parameters.AddWithValue("@descripcion", Cli.descripcion);
-                cmd.Parameters.AddWithValue("@costo", Cli.costo);
-                cmd.Parameters.AddWithValue("@cliente_id", Cli.idCliente);
+                cmd.Parameters.AddWithValue("@num_habitacion", Cli.num_habitacion);
                 cmd.Parameters.AddWithValue("@nombre_metodo_pago", Cli.nombre_metpago);
-                cmd.Parameters.AddWithValue("@num", Cli.num_habitacion);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
