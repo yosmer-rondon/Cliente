@@ -71,9 +71,9 @@
             // HABITACIONES
             // 
             this.HABITACIONES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HABITACIONES.Location = new System.Drawing.Point(479, 268);
+            this.HABITACIONES.Location = new System.Drawing.Point(281, 268);
             this.HABITACIONES.Name = "HABITACIONES";
-            this.HABITACIONES.Size = new System.Drawing.Size(441, 116);
+            this.HABITACIONES.Size = new System.Drawing.Size(639, 116);
             this.HABITACIONES.TabIndex = 34;
             this.HABITACIONES.CellBorderStyleChanged += new System.EventHandler(this.HABITACIONES_CellBorderStyleChanged);
             this.HABITACIONES.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HABITACIONES_CellClick);
@@ -82,9 +82,9 @@
             // CLIENTE
             // 
             this.CLIENTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CLIENTE.Location = new System.Drawing.Point(479, 149);
+            this.CLIENTE.Location = new System.Drawing.Point(281, 149);
             this.CLIENTE.Name = "CLIENTE";
-            this.CLIENTE.Size = new System.Drawing.Size(441, 116);
+            this.CLIENTE.Size = new System.Drawing.Size(639, 116);
             this.CLIENTE.TabIndex = 33;
             this.CLIENTE.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CLIENTE_CellClick);
             // 
@@ -101,9 +101,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(236, 90);
+            this.button1.Location = new System.Drawing.Point(108, 90);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 27);
+            this.button1.Size = new System.Drawing.Size(144, 24);
             this.button1.TabIndex = 31;
             this.button1.Text = "Buscar Cliente";
             this.button1.UseVisualStyleBackColor = true;
@@ -201,9 +201,9 @@
             // 
             this.buscarreserva.BackColor = System.Drawing.Color.Honeydew;
             this.buscarreserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buscarreserva.Location = new System.Drawing.Point(236, 35);
+            this.buscarreserva.Location = new System.Drawing.Point(108, 33);
             this.buscarreserva.Name = "buscarreserva";
-            this.buscarreserva.Size = new System.Drawing.Size(144, 29);
+            this.buscarreserva.Size = new System.Drawing.Size(144, 26);
             this.buscarreserva.TabIndex = 2;
             this.buscarreserva.Text = "Buscar Reserva";
             this.buscarreserva.UseVisualStyleBackColor = false;
@@ -258,7 +258,7 @@
             this.ID_reserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_reserva.Location = new System.Drawing.Point(11, 35);
             this.ID_reserva.Name = "ID_reserva";
-            this.ID_reserva.Size = new System.Drawing.Size(119, 24);
+            this.ID_reserva.Size = new System.Drawing.Size(87, 24);
             this.ID_reserva.TabIndex = 10;
             // 
             // label4
@@ -274,9 +274,9 @@
             // RESERVA
             // 
             this.RESERVA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RESERVA.Location = new System.Drawing.Point(479, 20);
+            this.RESERVA.Location = new System.Drawing.Point(281, 20);
             this.RESERVA.Name = "RESERVA";
-            this.RESERVA.Size = new System.Drawing.Size(441, 126);
+            this.RESERVA.Size = new System.Drawing.Size(639, 126);
             this.RESERVA.TabIndex = 1;
             // 
             // button4
@@ -306,7 +306,7 @@
             this.ID_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_cliente.Location = new System.Drawing.Point(11, 90);
             this.ID_cliente.Name = "ID_cliente";
-            this.ID_cliente.Size = new System.Drawing.Size(193, 24);
+            this.ID_cliente.Size = new System.Drawing.Size(87, 24);
             this.ID_cliente.TabIndex = 1;
             // 
             // label1
@@ -351,9 +351,9 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.fechasalida);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(1, -3);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 729);
+            this.panel1.Size = new System.Drawing.Size(931, 725);
             this.panel1.TabIndex = 35;
             // 
             // listarclientes

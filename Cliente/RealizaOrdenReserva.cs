@@ -12,6 +12,7 @@ using CapaDatos;
 using CapaEntidad;
 using CapaEntidadd;
 using CapaLogica;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Cliente
 {
@@ -35,6 +36,8 @@ namespace Cliente
         public void listar()
         {
             RESERVA.DataSource = logODReserva.Instancia.ListarOrdenreserva();
+            RESERVA.Enabled = true;
+            RESERVA.Visible = true;
         }
         private void LlenarComboBoxdemetodos()
         {
@@ -106,7 +109,25 @@ namespace Cliente
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                entODReserva c = new entODReserva();
+                c.fecha_entrada = fechaentrada.Value;
+                c.fecha_salida = fechasalida.Value;
+                c.estado = estado.Text.Trim();
+                c.descripcion= Descripcion.Text.Trim();
+                c.costo = double.Parse(costo.Text.Trim());
+                c.idCliente = int.Parse(ID_cliente.Text.Trim());
+                c.nombre_metpago = metodopago.Text.Trim();
+                c.num_habitacion = int.Parse(numhabitacion.Text.Trim());
+                logODReserva.Instancia.Insertarordenreserva(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listar();
         }
 
         private void button1_Click(object sender, EventArgs e)

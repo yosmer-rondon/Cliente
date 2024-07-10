@@ -33,6 +33,11 @@ namespace CapaLogica
             return datODReserva.Instancia.Listarreserva();
 
         }
+        public void Insertarordenreserva(entODReserva Cli)
+        {
+            datODReserva.Instancia.Insertarordenreserva(Cli);
+        }
+
         #endregion metodos
     }
 }
