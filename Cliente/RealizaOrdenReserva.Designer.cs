@@ -40,7 +40,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.estado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.buscarreserva = new System.Windows.Forms.Button();
             this.costo = new System.Windows.Forms.TextBox();
@@ -62,6 +61,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Descripcion = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HABITACIONES)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CLIENTE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RESERVA)).BeginInit();
@@ -71,9 +71,9 @@
             // HABITACIONES
             // 
             this.HABITACIONES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HABITACIONES.Location = new System.Drawing.Point(281, 268);
+            this.HABITACIONES.Location = new System.Drawing.Point(286, 13);
             this.HABITACIONES.Name = "HABITACIONES";
-            this.HABITACIONES.Size = new System.Drawing.Size(639, 116);
+            this.HABITACIONES.Size = new System.Drawing.Size(639, 351);
             this.HABITACIONES.TabIndex = 34;
             this.HABITACIONES.CellBorderStyleChanged += new System.EventHandler(this.HABITACIONES_CellBorderStyleChanged);
             this.HABITACIONES.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HABITACIONES_CellClick);
@@ -82,16 +82,16 @@
             // CLIENTE
             // 
             this.CLIENTE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CLIENTE.Location = new System.Drawing.Point(281, 149);
+            this.CLIENTE.Location = new System.Drawing.Point(286, 13);
             this.CLIENTE.Name = "CLIENTE";
-            this.CLIENTE.Size = new System.Drawing.Size(639, 116);
+            this.CLIENTE.Size = new System.Drawing.Size(639, 351);
             this.CLIENTE.TabIndex = 33;
             this.CLIENTE.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CLIENTE_CellClick);
             // 
             // habitaciondisponible
             // 
             this.habitaciondisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.habitaciondisponible.Location = new System.Drawing.Point(755, 403);
+            this.habitaciondisponible.Location = new System.Drawing.Point(801, 403);
             this.habitaciondisponible.Name = "habitaciondisponible";
             this.habitaciondisponible.Size = new System.Drawing.Size(124, 46);
             this.habitaciondisponible.TabIndex = 32;
@@ -150,7 +150,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Honeydew;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(269, 649);
+            this.button5.Location = new System.Drawing.Point(127, 581);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(102, 67);
             this.button5.TabIndex = 26;
@@ -175,17 +175,6 @@
             this.label7.Size = new System.Drawing.Size(61, 18);
             this.label7.TabIndex = 24;
             this.label7.Text = "Estado";
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Honeydew;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(150, 649);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(102, 67);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "Anular Reserva";
-            this.button8.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
@@ -274,16 +263,17 @@
             // RESERVA
             // 
             this.RESERVA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RESERVA.Location = new System.Drawing.Point(281, 20);
+            this.RESERVA.Location = new System.Drawing.Point(289, 13);
             this.RESERVA.Name = "RESERVA";
-            this.RESERVA.Size = new System.Drawing.Size(639, 126);
+            this.RESERVA.Size = new System.Drawing.Size(639, 351);
             this.RESERVA.TabIndex = 1;
+            this.RESERVA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RESERVA_CellClick);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Honeydew;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(388, 649);
+            this.button4.Location = new System.Drawing.Point(823, 581);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 67);
             this.button4.TabIndex = 6;
@@ -321,6 +311,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.Descripcion);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button3);
@@ -331,7 +322,6 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.RESERVA);
             this.panel1.Controls.Add(this.HABITACIONES);
-            this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.buscarreserva);
             this.panel1.Controls.Add(this.costo);
             this.panel1.Controls.Add(this.label6);
@@ -353,12 +343,12 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 725);
+            this.panel1.Size = new System.Drawing.Size(931, 658);
             this.panel1.TabIndex = 35;
             // 
             // listarclientes
             // 
-            this.listarclientes.Location = new System.Drawing.Point(595, 403);
+            this.listarclientes.Location = new System.Drawing.Point(666, 403);
             this.listarclientes.Name = "listarclientes";
             this.listarclientes.Size = new System.Drawing.Size(129, 46);
             this.listarclientes.TabIndex = 35;
@@ -370,7 +360,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Honeydew;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(16, 649);
+            this.button3.Location = new System.Drawing.Point(19, 581);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(102, 67);
             this.button3.TabIndex = 36;
@@ -396,11 +386,23 @@
             this.Descripcion.Size = new System.Drawing.Size(162, 24);
             this.Descripcion.TabIndex = 38;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Honeydew;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(235, 581);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 67);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "Culminar reservar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // RealizaOrdenReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 728);
+            this.ClientSize = new System.Drawing.Size(938, 666);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Name = "RealizaOrdenReserva";
@@ -429,7 +431,6 @@
         private System.Windows.Forms.DateTimePicker fechaentrada;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox costo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
@@ -449,5 +450,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox Descripcion;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
     }
 }

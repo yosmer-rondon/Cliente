@@ -128,8 +128,8 @@ namespace Cliente
             }
             LimpiarVariables();
             listar();
-            RESERVA.Enabled = false;
-            RESERVA.Visible = false;
+            RESERVA.Enabled = true;
+            RESERVA.Visible = true;
             CLIENTE.Enabled = false;
             CLIENTE.Visible = false;
             HABITACIONES.Enabled = false;
@@ -208,6 +208,16 @@ namespace Cliente
         {
             ID_reserva.Enabled = true;
             buscarreserva.Enabled = true;
+        }
+
+        private void RESERVA_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
