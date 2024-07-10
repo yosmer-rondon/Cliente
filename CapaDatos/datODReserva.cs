@@ -97,6 +97,28 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return inserta;
         }
+
+        public void CulminarReserva(int idReserva)
+        {
+            SqlCommand cmd = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); // singleton
+                cmd = new SqlCommand("culminarreserva", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_reserva", idReserva);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+        }
         #endregion metodos
     }
 }

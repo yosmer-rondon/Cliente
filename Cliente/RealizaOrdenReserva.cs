@@ -214,12 +214,26 @@ namespace Cliente
 
         private void RESERVA_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            DataGridViewRow filaActual = RESERVA.Rows[e.RowIndex];
+            ID_reserva.Text = filaActual.Cells[0].Value.ToString();
+            ID_cliente.Text = filaActual.Cells[6].Value.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                
+                int idReserva = int.Parse(ID_reserva.Text.Trim());
+                logODReserva.Instancia.CulminarReserva(idReserva);
 
+                MessageBox.Show("Reserva culminada exitosamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al culminar la reserva: " + ex.Message);
+            }
+            listar();
         }
     }
 }

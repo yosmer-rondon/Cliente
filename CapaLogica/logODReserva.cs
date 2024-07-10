@@ -37,7 +37,10 @@ namespace CapaLogica
         {
             datODReserva.Instancia.Insertarordenreserva(Cli);
         }
-
+        public void CulminarReserva(int idReserva)
+        {
+            datODReserva.Instancia.CulminarReserva(idReserva);
+        }
         #endregion metodos
     }
 }
