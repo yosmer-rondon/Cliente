@@ -45,6 +45,7 @@
     <Compile Include="datCliente.cs" />
     <Compile Include="datEmpleado.cs" />
     <Compile Include="datHabitacion.cs" />
+    <Compile Include="datHospedaje.cs" />
     <Compile Include="datMetodoPago.cs" />
     <Compile Include="datODReserva.cs" />
     <Compile Include="datTipoEmpleado.cs" />
