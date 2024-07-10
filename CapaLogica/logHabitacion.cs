@@ -61,6 +61,10 @@ namespace CapaLogica
         {
             return datHabitacion.Instancia.habitacionesdisponibles();
         }
+        public List<entHabitacion> obtenernumeroshabitacion()
+        {
+            return datHabitacion._instancia.obtenernumerohabitacion();
+        }
         #endregion metodos
     }
 

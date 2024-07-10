@@ -158,9 +158,9 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); // singleton
-                cmd = new SqlCommand("bucarempleado", cn);
+                cmd = new SqlCommand("buscarcliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", idcliente);
+                cmd.Parameters.AddWithValue("@idcliente", idcliente);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
