@@ -36,6 +36,8 @@ namespace Cliente
         public void listar()
         {
             RESERVA.DataSource = logODReserva.Instancia.ListarOrdenreserva();
+            RESERVA.Columns["nombre_metpago"].Visible = false;
+            RESERVA.Columns["num_habitacion"].Visible = false;
             RESERVA.Enabled = true;
             RESERVA.Visible = true;
         }
