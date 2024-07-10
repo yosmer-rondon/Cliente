@@ -69,61 +69,59 @@
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox1.Location = new System.Drawing.Point(9, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(760, 430);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1013, 529);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS METODO DE PAGO";
             // 
             // estado
             // 
-            this.estado.Location = new System.Drawing.Point(118, 188);
-            this.estado.Margin = new System.Windows.Forms.Padding(2);
+            this.estado.Location = new System.Drawing.Point(157, 231);
+            this.estado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.estado.Name = "estado";
-            this.estado.Size = new System.Drawing.Size(75, 20);
+            this.estado.Size = new System.Drawing.Size(99, 22);
             this.estado.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 191);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(28, 235);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(50, 16);
             this.label4.TabIndex = 16;
             this.label4.Text = "Estado";
             // 
             // descripcion
             // 
-            this.descripcion.Location = new System.Drawing.Point(118, 106);
-            this.descripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.descripcion.Location = new System.Drawing.Point(157, 130);
+            this.descripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.descripcion.Multiline = true;
             this.descripcion.Name = "descripcion";
-            this.descripcion.Size = new System.Drawing.Size(123, 65);
+            this.descripcion.Size = new System.Drawing.Size(163, 79);
             this.descripcion.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 109);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(28, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 14;
             this.label3.Text = "Descripcion";
             // 
             // dgvMetodoPago
             // 
             this.dgvMetodoPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMetodoPago.Location = new System.Drawing.Point(364, 0);
-            this.dgvMetodoPago.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMetodoPago.Location = new System.Drawing.Point(485, 0);
+            this.dgvMetodoPago.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMetodoPago.Name = "dgvMetodoPago";
             this.dgvMetodoPago.RowHeadersWidth = 51;
             this.dgvMetodoPago.RowTemplate.Height = 24;
-            this.dgvMetodoPago.Size = new System.Drawing.Size(392, 229);
+            this.dgvMetodoPago.Size = new System.Drawing.Size(523, 282);
             this.dgvMetodoPago.TabIndex = 13;
             this.dgvMetodoPago.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMetodoPago_CellClick);
             this.dgvMetodoPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMetodoPago_CellContentClick_1);
@@ -131,10 +129,10 @@
             // btnDeshabilitar
             // 
             this.btnDeshabilitar.BackColor = System.Drawing.Color.Cyan;
-            this.btnDeshabilitar.Location = new System.Drawing.Point(630, 368);
-            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeshabilitar.Location = new System.Drawing.Point(840, 453);
+            this.btnDeshabilitar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(126, 41);
+            this.btnDeshabilitar.Size = new System.Drawing.Size(168, 50);
             this.btnDeshabilitar.TabIndex = 12;
             this.btnDeshabilitar.Text = "Deshabilitar";
             this.btnDeshabilitar.UseVisualStyleBackColor = false;
@@ -143,10 +141,10 @@
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.Cyan;
-            this.btnNuevo.Location = new System.Drawing.Point(630, 323);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Location = new System.Drawing.Point(840, 398);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(126, 41);
+            this.btnNuevo.Size = new System.Drawing.Size(168, 50);
             this.btnNuevo.TabIndex = 11;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -155,10 +153,10 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.Cyan;
-            this.btnEditar.Location = new System.Drawing.Point(264, 368);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Location = new System.Drawing.Point(351, 398);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(126, 41);
+            this.btnEditar.Size = new System.Drawing.Size(168, 50);
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -167,10 +165,10 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Cyan;
-            this.btnSalir.Location = new System.Drawing.Point(630, 278);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(840, 342);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(126, 41);
+            this.btnSalir.Size = new System.Drawing.Size(168, 50);
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -179,10 +177,10 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Cyan;
-            this.btnCancelar.Location = new System.Drawing.Point(630, 233);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Location = new System.Drawing.Point(840, 287);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(126, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(168, 50);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -191,10 +189,10 @@
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Cyan;
-            this.btnModificar.Location = new System.Drawing.Point(134, 368);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Location = new System.Drawing.Point(179, 453);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(126, 41);
+            this.btnModificar.Size = new System.Drawing.Size(168, 50);
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -203,10 +201,10 @@
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Cyan;
-            this.btnAgregar.Location = new System.Drawing.Point(4, 368);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(5, 453);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(126, 41);
+            this.btnAgregar.Size = new System.Drawing.Size(168, 50);
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -214,47 +212,45 @@
             // 
             // nombre
             // 
-            this.nombre.Location = new System.Drawing.Point(118, 68);
-            this.nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.nombre.Location = new System.Drawing.Point(157, 84);
+            this.nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(123, 20);
+            this.nombre.Size = new System.Drawing.Size(163, 22);
             this.nombre.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 73);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(28, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre";
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(118, 30);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Location = new System.Drawing.Point(157, 37);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(32, 20);
+            this.txtId.Size = new System.Drawing.Size(41, 22);
             this.txtId.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(28, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.Size = new System.Drawing.Size(124, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Metodo de Pago";
             // 
             // ManMetodoDePago
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 450);
+            this.ClientSize = new System.Drawing.Size(1037, 554);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManMetodoDePago";
             this.Text = "ManMetodoDePago";
             this.groupBox1.ResumeLayout(false);
